@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<div id="site-head"></div>
+    <link rel="stylesheet" href="CSS\respo nsive.css" />
+</head>
+<body>
+  
+  
+  <!-- Подключаем header -->
+  <div id="site-header"></div>
+
+  
+<section id="services" class="services">
+    <h2>Магазин услуг и товаров</h2>
+
+    <!-- Баннер со скидками -->
+    <div class="discount-banner">Скидка 10% за участие в конкурсе на портретную съемку! Успейте заказать до конца месяца!</div>
+
+    <!-- Услуги -->
+    <h3>Услуги</h3>
+    <div class="service-packages" >
+        <!-- Индивидуальная съемка -->
+        <div class="package" data-name="Индивидуальная съемка" data-price="3000" style="background-image: url('https://sun9-14.userapi.com/impg/p7-CHBxmnomH9p57CSujVGR4YRYhYSFIzX3ImQ/9wfvlErslyo.jpg?size=1440x2160&quality=95&sign=854a04532f01f4600867ac693684ef1f&type=album');">
+            <h3>Индивидуальная съемка</h3>
+            <p class="price">От 3 000 ₽</p>
+            <p class="description">Индивидуальная съемка – ваш уникальный стиль и профессионализм в каждом кадре.</p>
+            <button class="more-btn" onclick="showMoreInfo('individual')">Подробнее</button>
+            <button class="buy-btn" onclick="bookService()">Заказать</button>
+        </div>
+
+        <!-- Семейная съемка -->
+        <div class="package" data-name="Семейная съемка" data-price="4500" style="background-image: url('https://sun9-28.userapi.com/impg/icpUxXfLPPDNMTnpf8RhEMCf5OC8Y7aRvOS8yA/9U_a_vWWlq8.jpg?size=2560x1707&quality=95&sign=63ab16a2bc85c3d411d3b92f98180c23&type=album');">
+            <h3>Семейная съемка</h3>
+            <p class="price">От 4 500 ₽</p>
+            <p class="description">Сохраняйте искренние моменты вашей семьи вместе с нами.</p>
+            <button class="more-btn" onclick="showMoreInfo('family')">Подробнее</button>
+            <button class="buy-btn" onclick="bookService()">Заказать</button>
+        </div>
+
+        <!-- Love Story -->
+        <div class="package" data-name="Love Story" data-price="4000" style="background-image: url('https://sun9-55.userapi.com/impg/B_mx2OkuzybzhgVFO9CWxI0eMFWwKhrt1DHNYA/fpSb_a4mYF8.jpg?size=1920x1280&quality=95&sign=56f1148830f70f86ed40f8bf3b0cefb1&type=album');">
+            <h3>Love Story</h3>
+            <p class="price">От 4 000 ₽</p>
+            <p class="description">Расскажите вашу уникальную историю любви вместе со мной.</p>
+            <button class="more-btn" onclick="showMoreInfo('lovestory')">Подробнее</button>
+            <button class="buy-btn" onclick="bookService()">Заказать</button>
+        </div>
+
+<!-- Group Shoot -->
+<div class="package" data-name="Групповая съёмка" data-price="4500" style="background-image: url('https://sun9-40.userapi.com/impg/Sph9sTKmSmcZr3Xh2T0e3ADdCeRMbB-VJrqukQ/_PxcdYRRCiE.jpg?size=2560x1707&quality=95&sign=814d9181cd76c9e23fed6a4b5388856f&type=album');">
+    <h3>Групповая съемка</h3>
+    <p class="price">От 4 500 ₽</p>
+    <p class="description">Съемка для групп и коллективов, чтобы запечатлеть лучшие моменты вместе.</p>
+    <button class="more-btn" onclick="showMoreInfo('group')">Подробнее</button>
+    <button class="buy-btn" onclick="bookService()">Заказать</button>
+</div>
+
+        <!-- Съемка с питомцем -->
+        <div class="package" data-name="Съёмка с питомцем" data-price="3500" style="background-image: url('https://sun9-54.userapi.com/impg/WVaNHfZ47ieJcETl8iSpk_oWzF4B7UhVB4porg/toc9DKxfMtc.jpg?size=1440x2160&quality=95&sign=1f17e69c483ead3a929b1925f4d71230&type=album');">
+            <h3>Съемка с питомцем</h3>
+            <p class="price">От 3 500 ₽</p>
+            <p class="description">Сохраните теплые воспоминания с вашими незаменимыми друзьями.</p>
+            <button class="more-btn" onclick="showMoreInfo('pet')">Подробнее</button>
+            <button class="buy-btn" onclick="bookService()">Заказать</button>
+        </div>
+
+        <!-- Свадебная съемка -->
+        <div class="package" data-name="Свадебная" data-price="40000" style="background-image: url('https://sun9-46.userapi.com/impg/HdWwTFyLQdthWNr5WEOWms5M9nSsV42LzAreug/ztbgpP7zH9s.jpg?size=1440x2160&quality=95&sign=aef36baeabc1e74ab4df332e2b88b982&type=album');">
+            <h3>Свадебная съемка</h3>
+            <p class="price">От 40 000 ₽</p>
+            <p class="description">Запечатлейте историю вашей любви.</p>
+            <button class="more-btn" onclick="showMoreInfo('wedding')">Подробнее</button>
+            <button class="buy-btn" onclick="bookService()">Заказать</button>
+        </div>
+    </div>
+
+    <!-- Товары -->
+    <h3>Товары</h3>
+    <div class="product-packages">
+        <!-- Печать фотокниги -->
+        <div class="package1" style="background-image: url('https://sun9-6.userapi.com/s/v1/ig2/MTxEUeTKf6vhVJtese9QBB46QEgQiF06fjwf294ElNPF76o6EmvnECED_VLoBDQymtIai8CCFmJhukqtwoV0F45u.jpg?quality=95&as=32x53,48x79,72x119,108x178,160x264,240x396,360x593,480x791,540x890,640x1055,720x1187,1080x1780,1280x2110,1440x2374,1553x2560&from=bu&u=S9OkQh3JSE9OfTKJW_HJvIQMfCuSFLmpbe652PqPqQc&cs=490x807');">
+            <h3>Гайд по мужскому позированию
+</h3>
+            <p class="price">От 500 ₽</p>
+            <p class="description">Качественный цифровой фотожурнал с подробным описанием о мужском позировании - печать на заказ.</p>
+            <button class="buy-btn" onclick="openProductPopupUnique('Печать фотокниги')">Заказать</button>
+        </div>
+
+        <!-- Оформление рамок -->
+        <div class="package1" style="background-image: url('https://sun9-30.userapi.com/impg/SNo3cmrHk-a0sRj4lq3QgCmRBRnhK4QN-RFsjg/iggKL_AOKwo.jpg?size=853x1280&quality=95&sign=6a0d1b6799bca6ae374fdf96fc620e28&type=album');">
+            <h3>Подарочный сертификат</h3>
+            <p class="price">От 500 ₽</p>
+            <p class="description">ДАРИТЕ ВПЕЧАТЛЕНИЯ 📸
+<!-- Уважаемые друзья! Вы ищете идеальный подарок на любой случай жизни, для вашей девушки/мамы/подруги? -->
+Что может быть лучше подарка, который сохранит самые яркие моменты и эмоции на долгие годы?.</p>
+            <button class="buy-btn" onclick="openProductPopupUnique('Оформление рамок')">Заказать</button>
+        </div>
+
+        <!-- Печать фотографий -->
+        <div class="package1" style="background-image: url('https://sun9-40.userapi.com/impg/aMHbTPytZUu-FIWhaV88AUwUWJs5dDi_j61TOw/3jGl4GH1kNo.jpg?size=1280x853&quality=95&sign=3257bc17c09bdebef6aacc4302d2af25&type=album');">
+            <h3>Печать фотографий</h3>
+            <p class="price">От 100 ₽ за фото</p>
+            <p class="description">Печать ваших фотографий высокого качества в разных форматах.</p>
+            <button class="buy-btn" onclick="openProductPopupUnique('Печать фотографий')">Заказать</button>
+        </div>
+    </div>
+
+
+
+
+<!-- Модальное окно "Подробнее" -->
+<div id="more-info-popup" class="modal">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div id="more-info-content">
+      <!-- Динамически подгружаемая информация об услуге -->
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Всплывающее окно для товаров с уникальными классами и ID -->
+<div id="product-popup-unique" class="popup-unique" style="display: none;">
+    <div class="popup-content-unique">
+        <span class="close-btn-unique" onclick="closeProductPopupUnique()">×</span>
+        <h3 id="product-title-unique"></h3>
+        <p>Заполните данные для оформления заказа</p>
+
+        <label for="name-unique">Имя:</label>
+        <input type="text" id="name-unique" required>
+
+        <label for="email-unique">Email:</label>
+        <input type="email" id="email-unique" required>
+
+        <label for="phone-unique">Телефон:</label>
+        <input type="tel" id="phone-unique" required>
+
+        <label for="address-unique">Адрес:</label>
+        <input type="text" id="address-unique" required>
+
+        <label for="city-unique">Город:</label>
+        <input type="text" id="city-unique" required>
+
+        <label for="comments-unique">Комментарии к заказу:</label>
+        <textarea id="comments-unique" rows="3"></textarea>
+
+        <label for="vk-unique">Скидка за активность в VK (5%)</label>
+        <input type="checkbox" id="vk-unique">
+
+        <button onclick="submitProductOrderUnique()">Оформить заказ</button>
+
+        <!-- Временное сообщение с благодарностью -->
+        <div id="thank-you-message-unique" style="display: none; color: #ff5050; margin-top: 15px;">
+            Спасибо за ваш заказ! Мы отправили вам подтверждение на почту.
+        </div>
+    </div>
+</div>
+    
+    
+    <!-- Переход на отдельную страницу портфолио -->
+    <div id="portfolio-link">
+        <h3>Портфолио</h3>
+        <p>Ознакомьтесь с полным портфолио фотографа и вдохновляйтесь примерами работ.</p>
+        <button onclick="window.location.href='/portfolio/portfolio.html'">Перейти в портфолио</button>
+    </div>
+
+    <!-- Часто задаваемые вопросы (FAQ) -->
+    <div id="faq">
+        <h3>Часто задаваемые вопросы</h3>
+        <p><strong>Сколько длится обработка фотографий?</strong> Около 7-10 рабочих дней.</p>
+        <p><strong>Можно ли выбрать несколько локаций для съемки?</strong> Да, но возможны дополнительные расходы на транспорт.</p>
+        <p><strong>Есть ли у вас портфолио?</strong> Да, нажмите кнопку ниже, чтобы перейти в полное портфолио.</p>
+    </div>
+</section>
+
+<!-- Подключаем footer -->
+       <div id="site-footer"></div>
+
+<script src="JS/skript.js"></script>
+<script src="JS/services.js"></script>
+</body>
+</html>

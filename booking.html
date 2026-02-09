@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <div id="site-head"></div>
+
+</head>
+
+
+
+
+<body>
+<!-- Подключаем header -->
+    <div id="site-header"></div>
+
+<!-- Фоновое видео -->
+<section id="booking1" class="booking-window1">
+  <video autoplay muted loop id="video">
+    <source src="ima ges\gallery\1.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+</section>
+
+<!-- Основной раздел записи -->
+<section id="booking" class="booking-window">
+  <!-- Видео для дополнительного эффекта -->
+  <video autoplay muted loop id="video">
+    <source src="imag es\gallery\1.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+<!-- Шаг 1 -->
+  <form id="booking-form-step-1" class="form-step active">
+    <h2>Шаг 1: Ввод информации</h2>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" placeholder="Ваше имя" required />
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" placeholder="Ваш телефон" required />
+    <label for="date">Дата съемки:</label>
+    <input type="date" id="date" required />
+    <label for="time-slot">Рекомендованное время:</label>
+    <select id="time-slot" name="time-slot" required> 
+      <option value="" disabled selected>Выберите время</option>
+      <option value="09:00">09:00 - Раннее утро для уличной съемки</option>
+      <option value="12:00">12:00 - Лучшее дневное освещение</option>
+      <option value="15:00">15:00 - Послеобеденные снимки</option>
+      <option value="18:00">18:00 - Закатные снимки</option>
+      <option value="21:00">21:00 - Мне лучше в полной темноте</option>
+    </select><input type="time" id="time-slot" required />
+    
+    
+    
+    <button type="button" data-step="2">Далее</button>
+</form>
+
+<!-- Шаг 2 -->
+<form id="booking-form-step-2" class="form-step"  style="display: none">
+  <h2>Шаг 2: Настройка</h2>
+  <label for="shooting-type">Тип съемки:</label>
+  <select id="shooting-type" required>
+      <option value="#" data-price="0" disabled selected>--Выберите тип съемки--</option>
+      <!-- Опции будут добавлены динамически -->
+  </select>
+  <!-- Тематика съемки -->
+  <label for="shooting-theme">Тематика съемки (пожелания клиента):</label>
+  <textarea type="text" id="shooting-theme" name="shooting-theme" placeholder="Опишите стиль или тематику съемки"></textarea>
+  
+  <label for="special-requests">Особые пожелания:</label>
+  <textarea type="text" id="special-requests" name="special-requests" placeholder="Ваши пожелания"></textarea>
+  <!-- Количество участников -->
+  <label for="participants">Количество участников:</label>
+  <input type="number" id="participants" min="1" value="1" required />
+  <!-- Выбор локации съемки -->
+  <label for="location">Локация:</label>
+  <select id="location" name="location" required onchange="showStudioOptions();">
+      <option value="" disabled selected>Выберите локацию</option>
+      <option value="studio">Студия</option>
+    <option value="outdoors">На улице</option>
+    <option value="client-location">У клиента</option>
+  </select>
+  <!-- Показ опций студии -->
+  <div id="studio-options" style="display:none;">
+      <label for="studio-select">Выберите студию:</label>
+      <select id="studio-select" name="studio" onchange="updateStudioLink()">
+          <option value="#" data-price="0" disabled selected>-- Выберите студию --</option>
+          <option value="https://vk.com/fotostudiyaperm" data-price="1200">Фотостудия Лес</option>
+  <option value="https://vk.com/fotostudio24" data-price="1500">STUDIO24</option>
+  <option value="https://vk.com/novamaska" data-price="1000">Новая маска</option>
+  <option value="https://vk.com/history_studio_perm" data-price="1300">HISTORY</option>
+  <option value="https://vk.com/auraphotostudio" data-price="1400">AURA</option>
+  <option value="https://vk.com/oknastudio" data-price="1250">ОКНА</option>
+  <option value="https://vk.com/permiris" data-price="1100">Ирис</option>
+  <option value="https://vk.com/prestige_fotostudio" data-price="1600">PRESTIGE</option>
+  <option value="https://vk.com/psdavinci" data-price="1550">DaVinci</option>
+  <option value="https://vk.com/mozaikastudio" data-price="1150">Мозаика</option>
+  <option value="https://vk.com/karamelphotostudio" data-price="1200">Карамель</option>
+  <option value="https://vk.com/leikaphoto_perm" data-price="1000">Лейка</option>
+  <option value="https://vk.com/noframe_studio" data-price="1300">NOFRAME</option>
+  <option value="https://vk.com/svet_studio_perm" data-price="1400">Свет</option>
+  <option value="https://vk.com/chicagostudio_perm" data-price="1250">Chicago</option>
+  <option value="https://vk.com/arthouse_photo" data-price="1350">ARTHOUSE</option>
+  <option value="https://vk.com/fbperm" data-price="1450">FASHION BOX</option>
+  <option value="https://vk.com/fotosmileperm" data-price="1100">Smile</option>
+  <option value="https://vk.com/flaconstudios" data-price="1500">FLACON</option>
+</select>
+      <a id="studio-link" href="#" target="_blank" rel="noopener noreferrer" style="pointer-events: none; color: gray;">
+        Перейти на сайт студии
+      </a>
+  </div>
+
+  <div id="client-address" style="display:none;">
+      <label for="address">Адрес:</label>
+      <input type="text" id="address" name="address" placeholder="Введите адрес клиента" />
+  </div>
+  
+  <label for="shooting-time">Продолжительность (часов):</label>
+  <input type="range" id="shooting-time" min="0.5" max="5" step="0.5" value="0.5" />
+  <span id="shooting-time-label">30 минут</span>
+  <p>Итоговая стоимость: <span id="total-price">0.00 ₽</span></p>
+  <p>Предоплата (25%): <span id="partial-price">0.00 ₽</span></p>
+  <button type="button" data-step="3">Далее</button>
+  
+</form>
+
+ 
+
+  <!-- Шаг 3 -->
+<form id="booking-form-step-3" class="form-step"  style="display: none">
+  <h2> Шаг 3: Подтверждение</h2>
+   <!-- Уведомления -->
+   <label>Способ уведомлений:</label>
+   <div class="notification-options">
+     <label><input type="checkbox" name="notifications" value="email" checked> Email</label>
+     <label><input type="checkbox" name="notifications" value="sms"> SMS</label>
+     <label><input type="checkbox" name="notifications" value="tel"> Tel</label>
+   </div>
+   
+   <div class="pop">
+   <p>Имя: <span id="summary-name"></span></p>
+   <p>Телефон: <span id="summary-phone"></span></p>
+   <p>Дата: <span id="summary-date"></span></p>
+   <p>Время: <span id="summary-time"></span></p>
+   <p>Тип съемки: <span id="summary-shooting"></span></p>
+   <p>Количество участников: <span id="summary-participants"></span></p>
+   <p>Тема съемки: <span id="summary-shooting-theme"></span></p>
+   <p>Особые пожелания: <span id="summary-special-requests"></span></p>
+   <p>Локация: <span id="summary-location"></span></p>
+   <p>Студия: <span id="summary-studio"></span></p>
+   <p>Адрес: <span id="summary-address"></span></p>
+  </div>
+
+   <p>Итоговая стоимость: <span id="summary-total"></span></p>
+   
+   <div id="confirmation-step">
+    <button id="confirm-button">Подтвердить</button>
+    <p id="confirmation-message" style="display: none;">Данные подтверждены</p>
+    <button id="prepayment-button" style="display: none;" onclick="startPayment()">Предоплата(25%):<span id="summary-total1">0.00 ₽</span></button>
+    <p id="payment-message" style="display: none;"></p>
+</div>
+   
+   </form>
+   <p>
+     Пожалуйста, ознакомьтесь с 
+     <a href="poly.html" target="_blank" rel="noopener noreferrer">политикой отмены</a>.
+   </p>
+
+   
+
+  <!-- Спасибо -->
+<div id="thank-you-popup"  class="thank-you-popup" style="display:none;">
+  <h2>Спасибо за бронирование!</h2>
+  <p>Скоро мы свяжемся с вами для подтверждения деталей.</p>
+  <r href="services.html" class="back-to-services">Закрыть</r>
+</div>
+
+</section>
+
+<!-- Подключаем footer -->
+    <div id="site-footer"></div>
+
+
+
+  <script src="JS/skript.js"></script>
+  <script src="JS/booking.js"></script>
+
+
+
+</body>
+</html>

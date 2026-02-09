@@ -1,0 +1,170 @@
+/* Адаптация под планшеты (ширина до 992px) */
+@media (max-width: 992px) {
+    #services {
+        padding: 40px 15px;
+    }
+    .discount-banner {
+        font-size: 1em;
+        padding: 8px;
+    }
+    .service-packages, .product-packages {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    #portfolio-link h3, #faq h3 {
+        font-size: 1.5em;
+    }
+    .buy-btn, .more-btn, .compare-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .package h3, .package p, .price, .description, .rating {
+        padding: 3px 8px;
+        font-size: 0.9em;
+    }
+    .modal {
+        width: 80%;
+        max-width: 400px;
+        padding: 15px;
+    }
+}
+
+/* Адаптация под мобильные устройства (ширина до 768px) */
+@media (max-width: 768px) {
+    #services {
+        padding: 30px 10px;
+    }
+    .discount-banner {
+        font-size: 0.9em;
+        padding: 6px;
+    }
+    .service-packages, .product-packages {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .package {
+        padding: 15px;
+    }
+    .price, .description, .rating {
+        font-size: 0.85em;
+    }
+    #portfolio-link h3, #faq h3 {
+        font-size: 1.4em;
+    }
+    #portfolio-link p, #faq p {
+        font-size: 0.9em;
+    }
+    .buy-btn, .more-btn, .compare-btn {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+    .modal {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Адаптация под очень маленькие устройства (ширина до 480px) */
+@media (max-width: 480px) {
+    #services {
+        padding: 20px 8px;
+    }
+    .discount-banner {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+    .price, .description, .rating {
+        font-size: 0.8em;
+    }
+    .buy-btn, .more-btn, .compare-btn {
+        padding: 5px 8px;
+        font-size: 0.8em;
+    }
+    .modal h3 {
+        font-size: 1.1em;
+    }
+    #portfolio-link h3, #faq h3 {
+        font-size: 1.2em;
+    }
+}
+/* Адаптация под планшеты (ширина до 992px) */
+@media (max-width: 992px) {
+    .modal, .popup-unique {
+        width: 80%;
+        max-width: 400px;
+        padding: 20px;
+    }
+    .popup-content, .popup-content-unique {
+        gap: 8px;
+    }
+    .close-btn, .close-btn-unique {
+        font-size: 1.3em;
+    }
+    .modal h3, .popup-unique h3 {
+        font-size: 1.3em;
+    }
+    .popup-unique p {
+        font-size: 0.9em;
+    }
+    button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+    #thank-you-message-unique {
+        font-size: 1em;
+    }
+}
+
+/* Адаптация под мобильные устройства (ширина до 768px) */
+@media (max-width: 768px) {
+    .modal, .popup-unique {
+        width: 90%;
+        max-width: 350px;
+        padding: 15px;
+    }
+    .close-btn, .close-btn-unique {
+        font-size: 1.2em;
+        top: 10px;
+        right: 10px;
+    }
+    .modal h3, .popup-unique h3 {
+        font-size: 1.2em;
+    }
+    .popup-unique p {
+        font-size: 0.85em;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+        padding: 10px;
+    }
+    .services button {
+        font-size: 0.85em;
+        padding: 8px 15px;
+    }
+    #thank-you-message-unique {
+        font-size: 0.95em;
+    }
+}
+
+/* Адаптация под очень маленькие устройства (ширина до 480px) */
+@media (max-width: 480px) {
+    .modal, .popup-unique {
+        width: 95%;
+        padding: 10px;
+    }
+    .modal h3, .popup-unique h3 {
+        font-size: 1.1em;
+    }
+    .popup-unique p, label {
+        font-size: 0.8em;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+        padding: 8px;
+        margin: 3px 0 10px 0;
+    }
+    button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    #thank-you-message-unique {
+        font-size: 0.9em;
+    }
+}

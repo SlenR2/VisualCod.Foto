@@ -1,0 +1,528 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Базовый размер текста */
+}
+
+body {
+ font-family: 'Roboto', sans-serif;
+
+    
+    background-color: #141414;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #555;
+}
+
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222222;
+    z-index: 10;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
+#Hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    max-width: 70%;
+    margin: 0 auto;
+    
+
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    
+    color: #cccccc;
+    margin: 15px 0;
+}
+
+.hero-text p {
+    
+    
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 0.9;
+    font-style: italic;
+    color: #cccccc;
+    margin: 5px 0;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5050;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background: #cc4040;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Основные стили для секции "Обо мне" */
+#about {
+    margin-top:-210px;
+    top: 110;
+    left: 0;
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(1deg,  rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.596) 75%, rgba(0, 0, 0, 0) 90%), url('JB-00 57.jpg');
+    background-size: cover;
+    
+}
+.about-content {
+    display: flex;
+    /*align-items:;*/
+    margin-top: 60px;
+    
+    gap: 400px;
+    max-width: 1300px;
+}
+
+/* Блок с изображениями */
+.about-images {
+    width: 50%;
+    
+    gap: 20px;
+    position: relative;
+}
+
+/* Градиентное затухание */
+.overlay-images {
+    position: absolute;
+ display: grid;
+    width: 50%;
+    
+    gap: 5px;
+    margin-top: 0px;
+}
+
+.image-fade1 {
+  flex-direction: center;
+  width: 280px;
+
+}
+.image-fade1 img {
+
+    width: 120%;
+    border-radius: 8px;
+   
+    position: relative;
+    z-index: 1;
+}
+
+.overlay-image {
+    width: 180px;
+    position: relative;
+    top: -490px;
+    left: 350px;
+    z-index: 1;
+    
+}
+.overlay-image img {
+    width: 120%;
+    
+    border-radius: 8px;
+}
+
+/* Верхнее наложенное изображение с меньшим размером и градиентом */
+.overlay-image.smaller {
+    width: 180px;
+    position: relative;
+    top: -520px;
+    left: 290px;
+    z-index: 3;
+    opacity: 1;
+    
+}
+.overlay-image.smaller img {
+    width: 120%;
+    border-radius: 8px;
+}
+
+/* Текстовая часть */
+.about-text {
+    max-width: 2000px;
+    text-align: left;
+}
+.about-text h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.about-text p {
+    font-size: 1em;
+    line-height: 1.0;
+    color: #cccccc;
+    margin: 10px 0;
+}
+.about-text a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #a5a5ff;
+    text-decoration: underline;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+.about-text li {
+    font-size: 0.8em;
+    line-height: 0.8;
+    font-style: italic;
+    color: #cccccc;
+    margin: 10px 0;
+}
+.about-text a:hover {
+    color: #ffffff;
+}
+.about-text h3 {
+    color: #ff5050;
+    font-size: 1.9em;
+    margin-bottom: 16px;
+}
+.about-text ul {
+    font-size:  18px;
+    line-height: 0.9;
+    margin-bottom: 15px;
+}
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+.about-text ul li::before {
+    content: "• ";
+    color: #ff5050;
+}
+
+
+
+
+
+
+
+
+/* Общие стили для галереи */
+.gallery {
+    margin-top: 30px;
+    text-align: center;
+  } 
+  
+  .gallery h3 {
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #eaeaea;
+  }
+  
+  .gallery-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .image-frame {
+    width: 590px;
+    height: 900px;
+    border: 5px solid #141414;
+    border-radius: 15px;
+    background-color: #141414;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scattered-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .scattered-images img {
+    width: 35%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: absolute;
+  }
+  
+  
+
+  .scattered-images figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    z-index: 29;
+}
+  
+  /* Хаотичное расположение изображений с использованием JavaScript */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Отзывы (слайдер) */
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden; /* Обрезка содержимого за пределами контейнера */
+}
+
+
+.testimonials {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.testimonials h3 {
+    margin-bottom: 15px;
+    font-size: 1.6em;
+    color: #eaeaea;
+}
+
+.testimonial-slider {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap; /* Запрещаем перенос элементов на следующую строку */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+    scrollbar-width: none; /* Скрываем скроллбар для Firefox */
+}
+
+.testimonial-slider::-webkit-scrollbar {
+    display: none; /* Скрываем скроллбар для Chrome */
+}
+
+.testimonial-slider blockquote {
+    min-width: 300px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #ff5050;
+    color: #fff;
+    text-align: left;
+    position: relative;
+}
+
+.testimonial-slider blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #ccc;
+}
+
+.arrow {
+    background: #ff5050;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+}
+
+.arrow:hover {
+    background: #ff3030;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 5px;
+    z-index: 1;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 5px;
+    z-index: 1;
+}
+
+
+
+
+/* Кнопки навигации слайдера (при необходимости) */
+.slider-nav {
+    cursor: pointer;
+    color: #ff5050;
+    font-size: 2em;
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Форма обратной связи с прозрачным градиентом */
+.contact-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(135deg,  #333, rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px); /* добавляет размытость фона для улучшения читаемости */
+    border-radius: 8px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form h3 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #eaeaea;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.932); /* полупрозрачный фон для полей ввода */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff5050;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: vertical;
+    
+}
+
+.contact-form button {
+    background-color: #ff5050;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #cc4040;
+}
+
+/* Стили для иконок социальных сетей */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.2em;
+    color: #ddd;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #ff5050;
+}
+

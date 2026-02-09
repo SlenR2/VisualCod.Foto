@@ -1,0 +1,204 @@
+
+
+
+@media (max-width: 1300px) {
+    #about {
+       padding: 150px;
+       
+   }
+   
+   .about-content {
+       gap:250px;
+       margin-top: 80px;
+   }
+   .about-images {
+       width: 20%;
+   }
+   
+   .image-fade1 img {
+       width: 80%;
+   }
+   
+   .overlay-image {
+       top: -330px;
+       left: 240px;
+   }
+   .overlay-image img {
+       width: 70%;
+   }
+   
+   .overlay-image.smaller {
+       top: -370px;
+       left: 190px;
+   }
+   .overlay-image.smaller img {
+       width: 80%;
+      
+   }
+   
+   .about-text h2 {
+           font-size: 1.4em;
+       }
+   
+   .about-text p {
+           font-size: 0.85em;
+       } 
+   }
+
+/* Адаптация для планшетов */
+@media (max-width: 768px) {
+    #about {
+            padding: 150px;
+            
+            
+        }
+    .about-content {
+            display:grid;
+            flex-direction: column;
+            margin-top: 80px;
+            gap: 60px;
+        }
+    
+    .about-images {
+            justify-content:flex-end;
+            gap: 30px;
+            width: 50%;
+        }
+    .overlay-images {
+        justify-content:flex-end;
+        
+        width:  110%;
+        gap: 0px;
+        margin-top: 0px;
+    }
+      
+    .image-fade1 img {
+        width: 120%;
+    top: -0px;
+        left: -60px;
+    }
+    
+    .overlay-image {
+        top: -450px;
+        left: 290px;
+    }
+    .overlay-image img {
+        width: 100%;
+    }
+    
+    .overlay-image.smaller {
+        top: -490px;
+        left: 160px;
+    }
+    .overlay-image.smaller img {
+        width: 100%;
+       
+    }
+     
+    
+    .about-text {
+            max-width:100;
+            text-align: center;
+        }
+    
+    .about-text h2 {
+            font-size: 1.8em;
+        }
+    
+    .about-text p {
+            font-size: 0.85em;
+        }
+    }
+
+    /* Адаптация для мобильных устройств */
+@media (max-width: 480px) {
+    #about {
+        padding: 100px;
+    }
+    .about-content {
+        gap: 60px;
+    }
+
+    .about-images img {
+        max-width: 240px;
+    }
+.overlay-images {
+    width:  65%;
+}
+
+.image-fade1 img {
+    width: 100%;
+  left: -95px;
+}
+
+.overlay-image {
+    top: -320px;
+    left: 240px;
+}
+.overlay-image img {
+    width: 80%;
+}
+
+.overlay-image.smaller {
+    top: -365px;
+    left: 240px;
+}
+.overlay-image.smaller img {
+    width: 80%;
+   
+}
+.about-text h2 {
+    font-size: 1.6em;
+    }
+.about-text p {
+    font-size: 0.9em;
+    }
+
+.about-text a {
+    font-size: 0.9em;
+    }
+}
+
+
+
+
+
+
+/* Адаптация под мобильные устройства */
+@media screen and (max-width: 768px) {
+    .testimonial-slider {
+        gap: 15px; /* Уменьшаем расстояние между блоками */
+        padding: 5px; /* Сужаем отступы для экономии пространства */
+        flex-wrap: nowrap; /* Обеспечиваем горизонтальное расположение */
+    }
+
+    .arrow {
+        width: 30px; /* Уменьшаем размер кнопок */
+        height: 30px;
+        font-size: 1.2rem;
+        
+    }
+
+    .testimonial-slider blockquote {
+        min-width: 250px; /* Сужаем карточки на меньших экранах */
+        padding: 10px; /* Уменьшаем отступы внутри блоков */
+    }
+}
+
+/* Адаптация под очень маленькие экраны */
+@media screen and (max-width: 480px) {
+    .testimonial-slider blockquote {
+        
+        min-width: 220px; /* Ещё больше сужаем блоки */
+        font-size: 0.85rem; /* Уменьшаем текст */
+    }
+
+    .arrow {
+        
+        display: none; /* Скрываем стрелки, оставляя только скролл */
+    }
+
+    .testimonial-slider {
+        flex-wrap: nowrap; /* Горизонтальное расположение */
+    }
+}

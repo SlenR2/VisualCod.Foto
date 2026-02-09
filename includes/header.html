@@ -1,0 +1,330 @@
+<!-- ==========================
+     ПРОФЕССИОНАЛЬНОЕ МЕНЮ
+     ========================== -->
+<header id="header">
+  <div class="logo-container">
+    <img
+      src="images\gallery\vWcerz7k050.jpg"
+      alt="Juliett.B Logo"
+      class="logo-image"
+    />
+    <span class="logo-text">Juliett.B</span>
+  </div>
+
+     <!-- Переключатель языка -->
+      <div class="language-switcher" role="group" aria-label="Переключение языка">
+        <button class="lang-btn active" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+  <!-- Бургер‑кнопка -->
+  <button class="menu-toggle" aria-label="Открыть меню">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Навигация -->
+  <nav class="navigation" aria-label="Основное меню">
+    <ul>
+      <li><a href="index.html" data-tooltip="Главная"><i class="fas fa-home"></i><span> Главная </span></a></li>
+      <li><a href="about.html" data-tooltip="Обо мне"><i class="fas fa-user"></i><span>Обо мне</span></a></li>
+      <li><a href="gallery.html" data-tooltip="Галерея"><i class="fas fa-image"></i><span>Галерея</span></a></li>
+      <li><a href="portfolio.html" data-tooltip="Портфолио"><i class="fas fa-camera-retro"></i><span>Портфолио</span></a></li>
+      <li><a href="services.html" data-tooltip="Услуги"><i class="fas fa-concierge-bell"></i><Span>Услуги</Span></a></li>
+      <li><a href="reviews.html" data-tooltip="Отзывы"><i class="fas fa-comments"></i><Span>Отзывы</Span></a></li>
+
+      <li><a href="booking.html" data-tooltip="Онлайн-запись"><i class="fas fa-window-maximize"></i><Span>Онлайн Запись</Span></a></li>
+      <li><a href="contact.html" data-tooltip="Контакты"><i class="fas fa-envelope"></i><Span>Контакты</Span></a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<style>
+
+    /* Основной стиль шапки */
+/********************************************************************
+ *  menu.css — профессионально доработанные стили навигации
+ *  Автор: ChatGPT / 2024
+ *  Основа: твой предыдущий дизайн с градиентом
+ *  Структура:
+ *    1. Базовая шапка
+ *    2. Логотип
+ *    3. Навигация (десктоп)
+ *    4. Бургер‑кнопка
+ *    5. Мобильное меню
+ *    6. Анимации
+ ********************************************************************/
+
+/* ==============================
+   1. БАЗОВАЯ ШАПКА
+   ============================== */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+
+  background: linear-gradient(to bottom, rgba(34,34,34,0.95), rgba(17,17,17,0.9));
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==============================
+   2. ЛОГОТИП
+   ============================== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-image {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f9f9f9;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.logo-text:hover {
+  transform: scale(1.1);
+  color: #ff5050;
+}
+
+/* Языки */
+.language-switcher {
+  display: flex;
+  gap: 8px;
+}
+.lang-btn {
+  background: none;
+  border: 1px solid #555;
+  color: #ddd;
+  border-radius: 20px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lang-btn--active,
+.lang-btn:hover {
+  background: #ff5050;
+  color: #fff;
+  border-color: #ff5050;
+}
+
+/* ==============================
+   3. НАВИГАЦИЯ (ДЕСКТОП)
+   ============================== */
+.navigation ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+/* По умолчанию показываем только иконки  */
+.navigation a span {
+  display: none;
+}
+.navigation a:hover {
+  color: #ff5050;
+}
+.navigation a i {
+  font-size: 18px;
+}
+.navigation a.current {
+  color: #ff5050;
+}
+
+/* Tooltip — всплывающее название пункта */
+.navigation a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.navigation a:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: none;
+}
+
+/* ==============================
+   4. БУРГЕР‑КНОПКА
+   ============================== */
+.menu-toggle {
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1100;
+}
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #f9f9f9;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+/* Анимация при активации */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+/* ----------  для десктопа ---------- */
+@media (min-width: 769px) {
+  .navigation ul {
+    flex-direction: row;
+  }
+  .navigation a i {
+    font-size: 20px;
+  }
+}
+
+
+/* ==============================
+   5. МОБИЛЬНОЕ МЕНЮ
+   ============================== */
+@media (max-width: 768px) {
+
+  /* показать бургер */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* прячем список */
+  .navigation ul {
+    display:none;
+
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background: #111;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+
+    width: 220px;
+    padding: 15px 20px;
+    gap: 15px;
+
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+
+  /* внутри активного меню — видим и текст, и иконки */
+  .navigation ul.active a span {
+    display: inline;
+    opacity: 0;
+    animation: fadeInText 0.4s forwards;
+    font-size: 15px;
+    color: #fff;
+  }
+
+  @keyframes fadeInText {
+  to { opacity: 1; }
+}
+
+  .navigation ul.active a {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  /* активное состояние */
+  .navigation ul.active {
+    display:flex !important;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* ссылки в меню */
+  .navigation a {
+    font-size: 16px;
+    width: 100%;
+  }
+  .navigation a::after {
+    display: none; /* убираем tooltip ради UX мобильных */
+  }
+
+  /* чтобы меню находилось поверх контента */
+  .navigation {
+    z-index: 1050;
+  }
+}
+
+/* ==============================
+   6. ЭФФЕКТЫ ПРИ СКРОЛЛЕ (опционально)
+   ============================== */
+#header.scrolled {
+  background: rgba(20,20,20,0.95);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* ==============================
+   7. ДОПОЛНИТЕЛЬНЫЕ МЕЛОЧИ
+   ============================== */
+#header,
+.navigation ul,
+.menu-toggle span {
+  transition: all 0.3s ease;
+}
+body.menu-open {
+  overflow: hidden;
+}
+</style>
+
+    

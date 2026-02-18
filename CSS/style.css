@@ -198,51 +198,45 @@ html {
 }
 
 /* Текстовая часть */
-.about-text {
+.about {
     max-width: 2000px;
-    text-align: left;
+    text-align: center;
 }
-.about-text h2 {
-    font-size: 2em;
-    color: #ffffff;
+.about h2 {
+    font-size: 1.5em;
+    color: #cccccc;
     margin-bottom: 20px;
     font-weight: 600;
 }
-.about-text p {
+.about h3 {
+    color: #cccccc;
+    font-size: 1.9em;
+    margin-bottom: 16px;
+}
+.about p {
     font-size: 1em;
     line-height: 1.0;
     color: #cccccc;
     margin: 10px 0;
 }
-.about-text a {
-    display: inline-block;
-    margin-top: 15px;
-    color: #a5a5ff;
-    text-decoration: underline;
-    font-size: 1em;
-    transition: color 0.3s ease;
+.about b {
+    font-size: 1.05em;
+    line-height: 1.0;
+    color: #cccccc;
+    margin: 12px 0;
 }
-.about-text li {
+.about li {
     font-size: 0.8em;
     line-height: 0.8;
     font-style: italic;
     color: #cccccc;
     margin: 10px 0;
 }
-.about-text a:hover {
-    color: #ffffff;
-}
-.about-text h3 {
-    color: #ff5050;
-    font-size: 1.9em;
-    margin-bottom: 16px;
-}
-.about-text ul {
+
+.about ul {
     font-size:  18px;
     line-height: 0.9;
     margin-bottom: 15px;
-}
-.about-text ul {
     list-style-type: none;
     padding: 0;
 }

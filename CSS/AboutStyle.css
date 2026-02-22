@@ -1,0 +1,536 @@
+
+html {
+    background: #0f0f0f;
+    color: #eaeaea;
+	  font-family: "Roboto", sans-serif;
+	  font-style: normal;
+    text-align: center;
+}
+
+.body {
+}
+
+.about {
+	    text-align: center;
+}
+
+.text-block {
+}
+
+h1 {
+    font-size: 2.5em;       /* Размер шрифта больше для главного заголовка */
+    font-weight: bold;      /* Полужирный */
+    margin: 20px 0;         /* Отступ сверху и снизу */
+}
+
+h2 {
+	  font-size: 2em;         /* Немного меньше чем h1 */
+    font-weight: bold;      /* Полужирный */
+    margin: 18px 0;
+}
+
+h3 {
+	  font-size: 1.75em;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 14px 0;
+}
+
+p {
+	  font-size: 1em;         /* Обычный размер шрифта */
+    line-height: 1.6;       /* Увеличенная высота строки для лучшей читаемости */
+    margin: 10px 0;         /* Отступы сверху и снизу */
+}
+
+b {
+    font-weight: bold;      /* Полужирный текст */
+}
+
+i {
+    font-style: italic;     /* Курсив */
+}
+
+a {
+    text-decoration: none;  /* Убираем подчеркивание */
+    font-weight: normal;    /* Обычный вес шрифта */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+ul {
+    list-style-type: none;  /* Стандартные маркеры списка (круг) */
+    margin: 10px 0;         /* Отступ сверху и снизу */
+    padding-left: 20px;     /* Отступ слева */
+}
+
+li {
+    font-size: 1em;         /* Размер шрифта */
+    margin-bottom: 8px;     /* Отступы между элементами списка */
+}
+
+/*///////////////////////////////////////////*/
+
+.hero-content {
+	    margin-top: 100px;
+}
+
+#Hero-video {
+	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	z-index: -1;
+}
+
+.Logo-photo {
+   	  width: 150px;
+   	  height: 150px;
+   	  border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+	    text-align: center;
+}
+
+.hero-text h1 {
+      color: #ff0000;
+}
+
+.hero-text p {
+	    line-height: 0.9;
+	    font-style: italic;
+	    margin: 10px 0;
+}
+
+.hero-text .btn {
+    	display: inline-block;
+    	padding: 10px 20px;
+    	background-color: #ff5050;
+    	color: white;
+    	border-radius: 5px;
+    	font-weight: bold;
+    	transition: background 0.3s ease;
+}
+
+
+/*///////////////////////////////////////////////*/
+  
+
+.about-content-block {
+    	margin-top: -100px;
+    	left: 0;
+      margin-left: -8px;
+      margin-right: -8px;
+    	padding: 100px;
+	    display: flex;
+	    justify-content: center;
+    	background: linear-gradient(1deg, rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0) 100%, transparent);
+}
+
+.about-content-block-2 {
+    	display: flex;
+    	align-items: center;
+    	margin-top: 60px;
+    	max-width: max-content;
+	    justify-content: center;
+    	flex-direction: row;
+    	flex-wrap: nowrap;
+}
+
+.about-images {
+    	width: 60%;
+	    text-align: center;
+	    display: flex
+}
+
+	.imageOne {
+		  width: 100%;
+	}
+		.imageOne img {
+			width: 90%;
+			position: relative;
+			top: 10%;
+			left: 20%;
+			border-radius: 8px;
+		}
+
+	.imageBlock {
+    		width: 100%;
+	}
+
+		.imageTwo {
+    			width: 100%;
+		}
+			.imageTwo img {
+    				width: 60%;
+				position: relative;
+				border-radius: 8px;
+				top: 35px;
+				right: 3%;
+			}
+		.imageThree {
+			width: 100%;
+		}
+			.imageThree img {
+				width: 50%;
+				position: relative;
+				right: 20%;
+				border-radius: 8px;
+
+			}
+
+.about-text-block {
+	    width: 60%;
+}
+
+.about-text-block h2 {
+      color: #ff0000;
+}
+
+.text-block ul li::before {
+    content: "• "; 
+    color: #ff5050;
+}
+
+
+/*/////////////////////////////////////////////////////*/
+
+
+.about-gallery-block h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.AboutGallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+	.image-frame {
+    width: 39%;
+    height: 100%;
+    border: 5px solid #141414;
+    border-radius: 15px;
+    background-color: #141414;
+		overflow: hidden;
+   	position: relative;
+
+aspect-ratio: 3 / 4;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+	}
+
+  .image-frame figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    z-index: 29;
+  }
+
+		.scattered-images {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 10px;
+		}
+
+			.scattered-images img {
+				width: 35%;
+				height: auto;
+				border-radius: 15px;
+				border: 1px solid #bdbdbd;
+				cursor: pointer;
+				transition: transform 0.3s ease;
+				position: absolute;
+			}
+
+
+
+
+/*////////////////////////////////////////*/
+
+
+.testimonials-section {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, rgba(30, 30, 30, 0.6) 0%, rgba(10, 10, 10, 0.9) 100%);
+}
+
+.testimonials-title {
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+	.testimonials-title::after {
+		content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ff5050;
+    margin: 15px auto 0;
+    border-radius: 3px;
+	}
+
+.testimonial-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+	.testimonials-slider {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.6s ease-in-out;
+    padding: 15px;
+	}
+		.testimonial-card {
+      flex: 0 0 calc(33.333% - 20px);
+      min-width: 300px;
+      background: rgba(35, 35, 35, 0.95);
+      border-left: 5px solid #ff5050;
+      border-radius: 15px;
+      padding: 25px 20px;
+
+      color: #eee;
+
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: all 0.35s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+		}
+
+			.client-photo {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 15px;
+        border: 2px solid #ff5050;
+			}
+
+				.client-photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+				}
+
+			.client-info {
+			}
+
+				.rating {
+          display: flex;
+          justify-content: center;
+          gap: 4px;
+          margin-bottom: 14px;
+				}
+
+					.rating .star {
+            color: #ffcc33;
+            text-shadow: 0 0 4px rgba(255, 204, 51, 0.7);
+            font-size: 1.1rem;
+           }
+
+        .testimonial-text {
+          font-style: italic;
+          color: #ccc;
+          max-height: 140px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: 15px;
+        }
+        
+        .project-info {
+          color: #ff5050;
+        }
+
+.testimonial-controls {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+  .prev-arrow, .next-arrow {
+    background: #ff5050;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+.testimonial-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 35px 0 10px;
+}
+
+  .filter-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 25px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+.add-testimonial-btn {
+    margin-top: 30px;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff5050, #ff3030);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonial-form-container {
+    display: none;
+    margin-top: 30px;
+    max-width: 600px;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(25, 25, 25, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/*///////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////*/
+
+
+
+@media (max-width: 1300px) {
+  h1 {
+    margin: 4px 0;         /* Отступ сверху и снизу */
+}
+
+h2 {
+  margin: 3px 0;
+}
+
+h3 {
+	  font-size: 1.75em;
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+h4 {
+  margin: 2px 0;
+}
+
+p {
+   margin: 5px 0;         /* Отступы сверху и снизу */
+}
+
+b {
+    font-weight: bold;      /* Полужирный текст */
+}
+
+i {
+    font-style: italic;     /* Курсив */
+}
+
+a {
+    text-decoration: none;  /* Убираем подчеркивание */
+    font-weight: normal;    /* Обычный вес шрифта */
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+ul {
+    list-style-type: none;  /* Стандартные маркеры списка (круг) */
+    margin: 10px 0;         /* Отступ сверху и снизу */
+    padding-left: 20px;     /* Отступ слева */
+}
+
+li {
+    font-size: 1em;         /* Размер шрифта */
+    margin-bottom: 8px;     /* Отступы между элементами списка */
+}
+
+  .hero-content {
+    font-size: 70%;
+  }
+  .Logo-photo {
+    width: 10%;
+    height: 10%;
+  }
+    
+
+  .about-content-block {
+    margin-top: -100px;
+    background: linear-gradient(1deg, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0.6) 85%, rgba(0, 0, 0, 0) 100%, transparent);
+  }
+  .about-content-block-2 {
+    flex-direction: co lumn;
+    gap: 5%;
+    }
+  .about-images {
+       width: 80%;
+       
+   }
+
+   .about-text-block {
+    width: 50%;
+    font-size: 70%;
+}
+
+.testimonials-section {
+    max-width: 100%;
+    padding: 50px 0px;
+}
+
+.testimonial-card {
+    flex: 0 0 calc(33.333% - 60px)
+}
+
+}
+
+
+/* Адаптация для планшетов */
+@media (max-width: 868px) {
+  .about-content-block-2 {
+    flex-direction: column;
+    }
+
+}

@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
 
-    <div id="site-head"></div>
+    <div id="site- head"></div>
+    <link rel="stylesheet" href="CSS/AboutStyle.css" />
 
 </head>
     
@@ -14,17 +15,18 @@
     <div id="site-header"></div>
     
     <section class="about">
+        
         <video autoplay muted loop id="Hero-video">
             <source src="images\gallery\1.mp4" type="video/mp4">
             Ваш браузер не поддерживает видео.
         </video>
         
-        <section id="hero-content">
+        <section class="hero-content">
             <!-- Использование <picture> для адаптивных изображений -->
             <picture>
                 <source srcset="images\gallery\vWcerz7k050.jpg" media="(min-width: 768px)">
                 <source srcset="images\gallery\vWcerz7k050.jpg" media="(max-width: 767px)">
-                <img src="assets/hero-photo.jpg" alt="Портрет фотографа" class="hero-photo">
+                <img class="Logo-photo" src="assets/hero-photo.jpg" alt="Лого фотографа" >
             </picture>
             <div class="hero-text">
                 <h1>Рада видеть Вас на&nbsp;моем сайте.</h1>
@@ -33,35 +35,37 @@
                 Если вы&nbsp;не&nbsp;можете почувствовать&nbsp;то, на&nbsp;что вы&nbsp;смотрите,<br>
                 вы&nbsp;никогда не&nbsp;сможете заставить других почувствовать что-либо,<br> 
                 когда они смотрят на&nbsp;ваши изображения&quot;</i></p>
-                <a href="#contact" class="btn">Связаться со&nbsp;мной</a>
+                <a class="btn" href="#contact" >Связаться со&nbsp;мной</a>
             </div>
         </section>
 
-        <section id="about">
-            <div class="about-content">
+        <section class="about-content-block">
+            <div class="about-content-block-2">
                 <div class="about-images">
                     <!-- Основные изображения с градиентным затуханием снизу -->
-                    <div class="image-fade1">
+                    <div class="imageOne">
                         <img src="images\gallery\1.jpg" alt="Фотограф">
                     </div>
-                    <div class="overlay-images">
-                        <div class="overlay-image">
-                            <img src="images\gallery\2.jpg" alt="Третье фото">
+                    <div class="imageBlock">
+                        <div class="imageTwo">
+                            <img src="images\gallery\2.jpg" alt="второе фото">
                         </div>
-                        <div class="overlay-image smaller">
-                            <img src="images\gallery\3.jpg" alt="Четвертое фото">
+                        <div class="imageThree">
+                            <img src="images\gallery\3.jpg" alt="Третье фото">
                         </div>
                     </div>
                 </div>
         
                 <!-- Текстовая часть -->
-                <div class="about-text">
+                <div class="about-text-block">
                     <h2>Обо мне</h2>
                     
-                    <div class="about-text">
+                    <div class="text-block">
+
                         <!-- Динамическое приветствие на основе времени суток -->
                         <h3 id="greeting"></h3>
-                        <h4><b>Фотография</b>&nbsp;&mdash; моя страсть, а&nbsp;не&nbsp;просто работа.</h4>
+
+                        <h3><b>Фотография</b>&nbsp;&mdash; моя страсть, а&nbsp;не&nbsp;просто работа.</h3>
                         <p>Всем привет! Меня зовут Юлия Бедулева, и&nbsp;я&nbsp;профессиональный фотограф в&nbsp;Перми.<br>
                         Мой путь в&nbsp;мир фотографии начался в&nbsp;17&nbsp;лет, когда мне подарили профессиональную камеру.<br>
                         С&nbsp;тех пор прошло более 5&nbsp;лет, и&nbsp;я&nbsp;ни&nbsp;дня не&nbsp;жалею о&nbsp;том, что выбрала этот путь.<br>
@@ -89,107 +93,103 @@
                 </div>
             </div>
         </section>
-    </section>
-
-
-
-
-        <section id="gallery" class="gallery">
-        <div class="gallery">
-            <h3>Галерея работ</h3>
-            <div class="gallery-images">
-              <div class="image-frame">
-                <div class="scattered-images">
-                  <img src="images\gallery\individual\1.jpg" alt="Card 1">
-                  <img src="images\gallery\individual\2.jpg" alt="Card 2">
-                  <img src="images\gallery\individual\3.jpg" alt="Card 3">
-                  <img src="images\gallery\individual\4.jpg" alt="Card 4">
-                  <img src="images\gallery\individual\5.jpg" alt="Card 5">
-                  <img src="images\gallery\individual\6.jpg" alt="Card 6">
-                  <img src="images\gallery\individual\7.jpg" alt="Card 7">
-                  <img src="images\gallery\individual\8.jpg" alt="Card 8">
-                  <img src="images\gallery\individual\9.jpg" alt="Card 9">
-                  <img src="images\gallery\individual\10.jpg" alt="Card 10">
-                  <img src="images\gallery\individual\11.jpg" alt="Card 11">
-                  <img src="images\gallery\individual\12.jpg" alt="Card 12">
-                  <img src="images\gallery\individual\13.jpg" alt="Card 13">
-                  <img src="images\gallery\individual\14.jpg" alt="Card 14">
-                  <img src="images\gallery\individual\15.jpg" alt="Card 15">
-                  <img src="images\gallery\individual\16.jpg" alt="Card 16">
-                  <img src="images\gallery\individual\17.jpg" alt="Card 17">
-                  <img src="images\gallery\individual\18.jpg" alt="Card 18">
-                  <img src="images\gallery\individual\19.jpg" alt="Card 19">
-                  <img src="images\gallery\individual\20.jpg" alt="Card 20">
-                  <img src="images\gallery\individual\21.jpg" alt="Card 21">
-                  <img src="images\gallery\individual\22.jpg" alt="Card 22">
-                  <img src="images\gallery\individual\23.jpg" alt="Card 23">
-                  <img src="images\gallery\individual\24.jpg" alt="Card 24">
-                  <img src="images\gallery\individual\25.jpg" alt="Card 25">
-                  <figcaption>Индивидуальная съемка</figcaption>
-                </div>
-              </div>
-              <div class="image-frame">
-                <div class="scattered-images">
-                  <img src="images\gallery\lovestory\1.jpg" alt="Card 1">
-                  <img src="images\gallery\lovestory\2.jpg" alt="Card 2">
-                  <img src="images\gallery\lovestory\3.jpg" alt="Card 3">
-                  <img src="images\gallery\lovestory\4.jpg" alt="Card 4">
-                  <img src="images\gallery\lovestory\5.jpg" alt="Card 5">
-                  <img src="images\gallery\lovestory\6.jpg" alt="Card 6">
-                  <img src="images\gallery\lovestory\7.jpg" alt="Card 7">
-                  <img src="images\gallery\lovestory\8.jpg" alt="Card 8">
-                  <img src="images\gallery\lovestory\9.jpg" alt="Card 9">
-                  <img src="images\gallery\lovestory\10.jpg" alt="Card 10">
-                  <img src="images\gallery\lovestory\11.jpg" alt="Card 11">
-                  <img src="images\gallery\lovestory\12.jpg" alt="Card 12">
-                  <img src="images\gallery\lovestory\13.jpg" alt="Card 13">
-                  <img src="images\gallery\lovestory\14.jpg" alt="Card 14">
-                  <img src="images\gallery\lovestory\15.jpg" alt="Card 15">
-                  <img src="images\gallery\lovestory\16.jpg" alt="Card 16">
-                  <img src="images\gallery\lovestory\17.jpg" alt="Card 17">
-                  <img src="images\gallery\lovestory\18.jpg" alt="Card 18">
-                  <img src="images\gallery\lovestory\19.jpg" alt="Card 19">
-                  <img src="images\gallery\lovestory\20.jpg" alt="Card 20">
-                  <img src="images\gallery\lovestory\21.jpg" alt="Card 21">
-                  <img src="images\gallery\lovestory\22.jpg" alt="Card 22">
-                  <img src="images\gallery\lovestory\23.jpg" alt="Card 23">
-                  <img src="images\gallery\lovestory\24.jpg" alt="Card 24">
-                  <img src="images\gallery\lovestory\25.jpg" alt="Card 25">
-                  <figcaption>LoveStory</figcaption>
-                </div>
-              </div>
-              <div class="image-frame">
-                <div class="scattered-images">
-                  <img src="images\gallery\family\1.jpg" alt="Card 1">
-                  <img src="images\gallery\family\2.jpg" alt="Card 2">
-                  <img src="images\gallery\family\3.jpg" alt="Card 3">
-                  <img src="images\gallery\family\4.jpg" alt="Card 4">
-                  <img src="images\gallery\family\5.jpg" alt="Card 5">
-                  <img src="images\gallery\family\6.jpg" alt="Card 6">
-                  <img src="images\gallery\family\7.jpg" alt="Card 7">
-                  <img src="images\gallery\family\8.jpg" alt="Card 8">
-                  <img src="images\gallery\family\9.jpg" alt="Card 9">
-                  <img src="images\gallery\family\10.jpg" alt="Card 10">
-                  <img src="images\gallery\family\11.jpg" alt="Card 11">
-                  <img src="images\gallery\family\12.jpg" alt="Card 12">
-                  <img src="images\gallery\family\13.jpg" alt="Card 13">
-                  <img src="images\gallery\family\14.jpg" alt="Card 14">
-                  <img src="images\gallery\family\15.jpg" alt="Card 15">
-                  <img src="images\gallery\family\16.jpg" alt="Card 16">
-                  <img src="images\gallery\family\17.jpg" alt="Card 17">
-                  <img src="images\gallery\family\18.jpg" alt="Card 18">
-                  <img src="images\gallery\family\19.jpg" alt="Card 19">
-                  <img src="images\gallery\family\20.jpg" alt="Card 20">
-                  <img src="images\gallery\family\21.jpg" alt="Card 21">
-                  <img src="images\gallery\family\22.jpg" alt="Card 22">
-                  <img src="images\gallery\family\23.jpg" alt="Card 23">
-                  <img src="images\gallery\family\24.jpg" alt="Card 24">
-                  <img src="images\gallery\family\25.jpg" alt="Card 25">
-                  <figcaption>Семейная съемка</figcaption>
-                </div>
-              </div>
+    
+        <section class="about-gallery">
+            <div class="about-gallery-block">
+                <h3>Галерея работ</h3>
+                    <div class="AboutGallery-images">
+                        <figure class="image-frame">
+                            <div class="scattered-images">
+                            <img src="images\gallery\individual\1.jpg" alt="Card 1">
+                            <img src="images\gallery\individual\2.jpg" alt="Card 2">
+                            <img src="images\gallery\individual\3.jpg" alt="Card 3">
+                            <img src="images\gallery\individual\4.jpg" alt="Card 4">
+                            <img src="images\gallery\individual\5.jpg" alt="Card 5">
+                            <img src="images\gallery\individual\6.jpg" alt="Card 6">
+                            <img src="images\gallery\individual\7.jpg" alt="Card 7">
+                            <img src="images\gallery\individual\8.jpg" alt="Card 8">
+                            <img src="images\gallery\individual\9.jpg" alt="Card 9">
+                            <img src="images\gallery\individual\10.jpg" alt="Card 10">
+                            <img src="images\gallery\individual\11.jpg" alt="Card 11">
+                            <img src="images\gallery\individual\12.jpg" alt="Card 12">
+                            <img src="images\gallery\individual\13.jpg" alt="Card 13">
+                            <img src="images\gallery\individual\14.jpg" alt="Card 14">
+                            <img src="images\gallery\individual\15.jpg" alt="Card 15">
+                            <img src="images\gallery\individual\16.jpg" alt="Card 16">
+                            <img src="images\gallery\individual\17.jpg" alt="Card 17">
+                            <img src="images\gallery\individual\18.jpg" alt="Card 18">
+                            <img src="images\gallery\individual\19.jpg" alt="Card 19">
+                            <img src="images\gallery\individual\20.jpg" alt="Card 20">
+                            <img src="images\gallery\individual\21.jpg" alt="Card 21">
+                            <img src="images\gallery\individual\22.jpg" alt="Card 22">
+                            <img src="images\gallery\individual\23.jpg" alt="Card 23">
+                            <img src="images\gallery\individual\24.jpg" alt="Card 24">
+                            <img src="images\gallery\individual\25.jpg" alt="Card 25">
+                            </div>
+                            <figcaption>Индивидуальная съемка</figcaption>
+                        </figure>
+                        <figure class="image-frame">
+                            <div class="scattered-images">
+                            <img src="images\gallery\lovestory\1.jpg" alt="Card 1">
+                            <img src="images\gallery\lovestory\2.jpg" alt="Card 2">
+                            <img src="images\gallery\lovestory\3.jpg" alt="Card 3">
+                            <img src="images\gallery\lovestory\4.jpg" alt="Card 4">
+                            <img src="images\gallery\lovestory\5.jpg" alt="Card 5">
+                            <img src="images\gallery\lovestory\6.jpg" alt="Card 6">
+                            <img src="images\gallery\lovestory\7.jpg" alt="Card 7">
+                            <img src="images\gallery\lovestory\8.jpg" alt="Card 8">
+                            <img src="images\gallery\lovestory\9.jpg" alt="Card 9">
+                            <img src="images\gallery\lovestory\10.jpg" alt="Card 10">
+                            <img src="images\gallery\lovestory\11.jpg" alt="Card 11">
+                            <img src="images\gallery\lovestory\12.jpg" alt="Card 12">
+                            <img src="images\gallery\lovestory\13.jpg" alt="Card 13">
+                            <img src="images\gallery\lovestory\14.jpg" alt="Card 14">
+                            <img src="images\gallery\lovestory\15.jpg" alt="Card 15">
+                            <img src="images\gallery\lovestory\16.jpg" alt="Card 16">
+                            <img src="images\gallery\lovestory\17.jpg" alt="Card 17">
+                            <img src="images\gallery\lovestory\18.jpg" alt="Card 18">
+                            <img src="images\gallery\lovestory\19.jpg" alt="Card 19">
+                            <img src="images\gallery\lovestory\20.jpg" alt="Card 20">
+                            <img src="images\gallery\lovestory\21.jpg" alt="Card 21">
+                            <img src="images\gallery\lovestory\22.jpg" alt="Card 22">
+                            <img src="images\gallery\lovestory\23.jpg" alt="Card 23">
+                            <img src="images\gallery\lovestory\24.jpg" alt="Card 24">
+                            <img src="images\gallery\lovestory\25.jpg" alt="Card 25">
+                            </div>
+                            <figcaption>LoveStory</figcaption>
+                        </figure>
+                        <figure class="image-frame">
+                            <div class="scattered-images">
+                            <img src="images\gallery\family\1.jpg" alt="Card 1">
+                            <img src="images\gallery\family\2.jpg" alt="Card 2">
+                            <img src="images\gallery\family\3.jpg" alt="Card 3">
+                            <img src="images\gallery\family\4.jpg" alt="Card 4">
+                            <img src="images\gallery\family\5.jpg" alt="Card 5">
+                            <img src="images\gallery\family\6.jpg" alt="Card 6">
+                            <img src="images\gallery\family\7.jpg" alt="Card 7">
+                            <img src="images\gallery\family\8.jpg" alt="Card 8">
+                            <img src="images\gallery\family\9.jpg" alt="Card 9">
+                            <img src="images\gallery\family\10.jpg" alt="Card 10">
+                            <img src="images\gallery\family\11.jpg" alt="Card 11">
+                            <img src="images\gallery\family\12.jpg" alt="Card 12">
+                            <img src="images\gallery\family\13.jpg" alt="Card 13">
+                            <img src="images\gallery\family\14.jpg" alt="Card 14">
+                            <img src="images\gallery\family\15.jpg" alt="Card 15">
+                            <img src="images\gallery\family\16.jpg" alt="Card 16">
+                            <img src="images\gallery\family\17.jpg" alt="Card 17">
+                            <img src="images\gallery\family\18.jpg" alt="Card 18">
+                            <img src="images\gallery\family\19.jpg" alt="Card 19">
+                            <img src="images\gallery\family\20.jpg" alt="Card 20">
+                            <img src="images\gallery\family\21.jpg" alt="Card 21">
+                            <img src="images\gallery\family\22.jpg" alt="Card 22">
+                            <img src="images\gallery\family\23.jpg" alt="Card 23">
+                            <img src="images\gallery\family\24.jpg" alt="Card 24">
+                            <img src="images\gallery\family\25.jpg" alt="Card 25">
+                            </div>
+                            <figcaption>Семейная съемка</figcaption>
+                        </figure>
+                    </div>
             </div>
-          </div>
         </section>
 
 
@@ -199,153 +199,156 @@
 
 
 <!-- Отзывы коллег (слайдер) -->
-      <section class="testimonials-section">
-    <h2 class="testimonials-title">Отзывы клиентов</h2>
-    <div class="testimonial-container">
-    <div class="testimonials-slider">
-        <div class="testimonial-card">
-            <div class="client-photo">
-                <img src="path-to-image/client1.jpg" alt="Фото клиента Татьяна Зотина" loading="lazy">
-            </div>
-            <div class="client-info">
-                <h3 class="client-name">Татьяна Зотина</h3>
-                <div class="rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">&laquo;Всем привет! Делала фотосессию у&nbsp;Юли еще осенью со&nbsp;своей собакой. Фотографии получились живые, цвета сочные и&nbsp;красивые. Юля прекрасно ловила моменты с&nbsp;собакой (кто фоткает животных, знает, что это сложно), также сделала мне несколько красивых портретов. Работать с&nbsp;ней очень комфортно, а&nbsp;это очень важно для фотографа 😍&raquo;</p>
-                <p class="project-info">Индивидуальная</p>
-            </div>
-        </div>
-        
-        <div class="testimonial-card">
-            <div class="client-photo">
-                <img src="path-to-image/client2.jpg" alt="Фото клиента Елена Хомякова" loading="lazy">
-            </div>
-            <div class="client-info">
-                <h3 class="client-name">Елена Хомякова</h3>
-                <div class="rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">&laquo;Решилась на&nbsp;свою первую фотосессию и&nbsp;не&nbsp;пожалела что выбрала Юлию. Юлия помогла с&nbsp;выбором образа, фотостудии и&nbsp;посоветовала визажиста. На&nbsp;съёмке Юля меня поддержала и&nbsp;помогла расслабиться, прошло всё очень легко и&nbsp;на&nbsp;позитиве. Фотографии очень понравились и&nbsp;знакомые оценили, даже попросили контакт. Большое спасибо Юле!!!&raquo;</p>
-                <p class="project-info">Проект:Индивидуальная</p>
-            </div>
-        </div>
+        <section class="testimonials-section">
+            <h2 class="testimonials-title">Отзывы клиентов</h2>
+            <div class="testimonial-container">
+                <div class="testimonials-slider">
 
-        <div class="testimonial-card">
-            <div class="client-photo">
-                <img src="path-to-image/client3.jpg" alt="Фото клиента Екатерина Мосина" loading="lazy">
-            </div>
-            <div class="client-info">
-                <h3 class="client-name">Екатерина Мосина</h3>
-                <div class="rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
+                    <div class="testimonial-card">
+                    <div class="client-photo">
+                        <img src="path-to-image/client1.jpg" alt="Фото клиента Татьяна Зотина" loading="lazy">
+                    </div>
+                    <div class="client-info">
+                        <h3 class="client-name">Татьяна Зотина</h3>
+                        <div class="rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <q class="testimonial-text">Всем привет! Делала фотосессию у&nbsp;Юли еще осенью со&nbsp;своей собакой. Фотографии получились живые, цвета сочные и&nbsp;красивые. Юля прекрасно ловила моменты с&nbsp;собакой (кто фоткает животных, знает, что это сложно), также сделала мне несколько красивых портретов. Работать с&nbsp;ней очень комфортно, а&nbsp;это очень важно для фотографа 😍</q>
+                        <p class="project-info">Проект:Индивидуальная</p>
+                    </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="client-photo">
+                            <img src="path-to-image/client2.jpg" alt="Фото клиента Елена Хомякова" loading="lazy">
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Елена Хомякова</h3>
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <q class="testimonial-text">Решилась на&nbsp;свою первую фотосессию и&nbsp;не&nbsp;пожалела что выбрала Юлию. Юлия помогла с&nbsp;выбором образа, фотостудии и&nbsp;посоветовала визажиста. На&nbsp;съёмке Юля меня поддержала и&nbsp;помогла расслабиться, прошло всё очень легко и&nbsp;на&nbsp;позитиве. Фотографии очень понравились и&nbsp;знакомые оценили, даже попросили контакт. Большое спасибо Юле!!!</q>
+                            <p class="project-info">Проект:Индивидуальная</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="client-photo">
+                            <img src="path-to-image/client3.jpg" alt="Фото клиента Екатерина Мосина" loading="lazy">
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Екатерина Мосина</h3>
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <q class="testimonial-text">Просто невероятная, потрясающая, яркая, гениальная фотосессия прошла у&nbsp;нас с&nbsp;Юлей! Профессионал своего дела &minus;100%. Помимо сверхбыстрой готовности фотографий, съемка прошла настолько легко, тепло и&nbsp;душевно, что не&nbsp;хотелось нарушать этот творческий момент! В&nbsp;голове появилась куча идей на&nbsp;дальнейшие фотосессии, некоторые с&nbsp;Юлей уже обсудили! Всем рекомендую Юлю- она профессионал своего дела❤</q>
+                            <p class="project-info">Проект:Индивидуальная</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="client-photo">
+                            <img src="path-to-image/client4.jpg" alt="Фото клиента Алёна Кузнецова" loading="lazy">
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Алёна Кузнецова</h3>
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <q class="testimonial-text">Спасибо Юлии за&nbsp;работу! Получились атмосферные кадры, смотря на&nbsp;которые будем с&nbsp;теплом вспоминать этот день. Юлия помогла определиться с&nbsp;локацией, проконсультировала насчет студий и&nbsp;помогала с&nbsp;выбором поз</q>
+                            <p class="project-info">Проект:portrait</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="client-photo">
+                            <img src="path-to-image/client5.jpg" alt="Фото клиента Ирина Зенкова" loading="lazy">
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Ирина Зенкова</h3>
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <q class="testimonial-text">Случайно нашла объявление на&nbsp;семейную фотосессию. Юля, Вы&nbsp;пунктуальный человек! Легко нашли контакт с&nbsp;детьми! Вся фотосессия прошла легко . Фотографии замечательные. Буду рекомендовать Вас однозначно !
+            Удачи Вам !!! Роста и&nbsp;развития в&nbsp;творчестве!</q>
+                            <p class="project-info">Проект:Семейная съемка</p>
+                        </div>
+                    </div>
+
                 </div>
-                <p class="testimonial-text">&laquo;Просто невероятная, потрясающая, яркая, гениальная фотосессия прошла у&nbsp;нас с&nbsp;Юлей! Профессионал своего дела &minus;100%. Помимо сверхбыстрой готовности фотографий, съемка прошла настолько легко, тепло и&nbsp;душевно, что не&nbsp;хотелось нарушать этот творческий момент! В&nbsp;голове появилась куча идей на&nbsp;дальнейшие фотосессии, некоторые с&nbsp;Юлей уже обсудили! Всем рекомендую Юлю- она профессионал своего дела❤&raquo;</p>
-                <p class="project-info">Проект:Индивидуальная</p>
             </div>
-        </div>
+            
+            <div class="testimonial-controls">
+                <button class="prev-arrow">Предыдущий</button>
+                <button class="next-arrow">Следующий</button>
+            </div>
+            
+            <div class="testimonial-filters">
+                <button class="filter-btn" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="wedding">Свадьба</button>
+                <button class="filter-btn" data-filter="portrait">Индивидуальная</button>
+                <button class="filter-btn" data-filter="event">События</button>
+                <button class="filter-btn" data-filter="family">Семейная</button>
+            </div>
+            
+            <button class="add-testimonial-btn">Оставить отзыв</button>
+            
+            <div class="testimonial-form-container" style="display: none;">
+                <h3>Оставить отзыв</h3>
+                <form id="testimonial-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="client-name">Ваше имя:</label>
+                        <input type="text" id="client-name" name="client-name" required placeholder="Введите имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="client-email">Email:</label>
+                        <input type="email" id="client-email" name="client-email" required placeholder="Введите email">
+                    </div>
+                    <div class="form-group">
+                        <label for="testimonial-text">Текст отзыва:</label>
+                        <textarea id="testimonial-text" name="testimonial-text" rows="5" required placeholder="Напишите ваш отзыв"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-photo">Фото (по желанию):</label>
+                        <input type="file" id="client-photo" name="client-photo" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Оценка:</label>
+                        <select id="rating" name="rating" required>
+                            <option value="5">5 звезд</option>
+                            <option value="4">4 звезды</option>
+                            <option value="3">3 звезды</option>
+                            <option value="2">2 звезды</option>
+                            <option value="1">1 звезда</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-testimonial">Отправить отзыв</button>
+                </form>
+                <div id="form-message" style="display: none;"></div>
+            </div>
+        </section>
 
-        <div class="testimonial-card">
-            <div class="client-photo">
-                <img src="path-to-image/client4.jpg" alt="Фото клиента Алёна Кузнецова" loading="lazy">
-            </div>
-            <div class="client-info">
-                <h3 class="client-name">Алёна Кузнецова</h3>
-                <div class="rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">&laquo;Спасибо Юлии за&nbsp;работу! Получились атмосферные кадры, смотря на&nbsp;которые будем с&nbsp;теплом вспоминать этот день. Юлия помогла определиться с&nbsp;локацией, проконсультировала насчет студий и&nbsp;помогала с&nbsp;выбором поз&raquo;</p>
-                <p class="project-info">Проект:portrait</p>
-            </div>
-        </div>
-
-        <div class="testimonial-card">
-            <div class="client-photo">
-                <img src="path-to-image/client5.jpg" alt="Фото клиента Ирина Зенкова" loading="lazy">
-            </div>
-            <div class="client-info">
-                <h3 class="client-name">Ирина Зенкова</h3>
-                <div class="rating">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <p class="testimonial-text">&laquo;Случайно нашла объявление на&nbsp;семейную фотосессию. Юля, Вы&nbsp;пунктуальный человек! Легко нашли контакт с&nbsp;детьми! Вся фотосессия прошла легко . Фотографии замечательные. Буду рекомендовать Вас однозначно !
-Удачи Вам !!! Роста и&nbsp;развития в&nbsp;творчестве!&raquo;</p>
-                <p class="project-info">Проект:Семейная съемка</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="testimonial-controls">
-        <button class="prev-arrow">Предыдущий</button>
-        <button class="next-arrow">Следующий</button>
-    </div>
-    
-    <div class="testimonial-filters">
-        <button class="filter-btn" data-filter="all">Все</button>
-        <button class="filter-btn" data-filter="wedding">Свадьба</button>
-        <button class="filter-btn" data-filter="portrait">Индивидуальная</button>
-        <button class="filter-btn" data-filter="event">События</button>
-        <button class="filter-btn" data-filter="family">Семейная</button>
-    </div>
-    
-    <button class="add-testimonial-btn">Оставить отзыв</button>
-    
-    <div class="testimonial-form-container" style="display: none;">
-        <h3>Оставить отзыв</h3>
-        <form id="testimonial-form" action="#" method="post">
-            <div class="form-group">
-                <label for="client-name">Ваше имя:</label>
-                <input type="text" id="client-name" name="client-name" required placeholder="Введите имя">
-            </div>
-            <div class="form-group">
-                <label for="client-email">Email:</label>
-                <input type="email" id="client-email" name="client-email" required placeholder="Введите email">
-            </div>
-            <div class="form-group">
-                <label for="testimonial-text">Текст отзыва:</label>
-                <textarea id="testimonial-text" name="testimonial-text" rows="5" required placeholder="Напишите ваш отзыв"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="client-photo">Фото (по желанию):</label>
-                <input type="file" id="client-photo" name="client-photo" accept="image/*">
-            </div>
-            <div class="form-group">
-                <label for="rating">Оценка:</label>
-                <select id="rating" name="rating" required>
-                    <option value="5">5 звезд</option>
-                    <option value="4">4 звезды</option>
-                    <option value="3">3 звезды</option>
-                    <option value="2">2 звезды</option>
-                    <option value="1">1 звезда</option>
-                </select>
-            </div>
-            <button type="submit" class="submit-testimonial">Отправить отзыв</button>
-        </form>
-        <div id="form-message" style="display: none;"></div>
-    </div>
-</section>
-
-
+    </section>
     <!-- Подключаем footer -->
     <div id="site-footer"></div>
      

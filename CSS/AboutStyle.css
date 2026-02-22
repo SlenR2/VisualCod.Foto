@@ -438,56 +438,6 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 
 @media (max-width: 1300px) {
-  h1 {
-    margin: 4px 0;         /* Отступ сверху и снизу */
-}
-
-h2 {
-  margin: 3px 0;
-}
-
-h3 {
-	  font-size: 1.75em;
-    font-weight: bold;
-    margin: 3px 0;
-}
-
-h4 {
-  margin: 2px 0;
-}
-
-p {
-   margin: 5px 0;         /* Отступы сверху и снизу */
-}
-
-b {
-    font-weight: bold;      /* Полужирный текст */
-}
-
-i {
-    font-style: italic;     /* Курсив */
-}
-
-a {
-    text-decoration: none;  /* Убираем подчеркивание */
-    font-weight: normal;    /* Обычный вес шрифта */
-}
-
-a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-
-ul {
-    list-style-type: none;  /* Стандартные маркеры списка (круг) */
-    margin: 10px 0;         /* Отступ сверху и снизу */
-    padding-left: 20px;     /* Отступ слева */
-}
-
-li {
-    font-size: 1em;         /* Размер шрифта */
-    margin-bottom: 8px;     /* Отступы между элементами списка */
-}
-
   .hero-content {
     font-size: 70%;
   }
@@ -525,12 +475,189 @@ li {
 }
 
 }
-
-
 /* Адаптация для планшетов */
 @media (max-width: 868px) {
   .about-content-block-2 {
     flex-direction: column;
     }
 
+}
+
+/* Стиль для экранов с шириной больше 1024px (десктопы) */
+@media (min-width: 1024px) {
+    .about-content-block {
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-images {
+        width: 60%;
+    }
+
+    .about-text-block {
+        width: 60%;
+    }
+
+    .about-gallery-block {
+        max-width: 60%;
+        margin: 0 auto;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .testimonial-container {
+        width: 70%;
+    }
+
+    .testimonials-slider {
+        gap: 25px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 calc(33.333% - 20px);
+        min-width: 300px;
+    }
+}
+
+/* Стиль для экранов с шириной от 768px до 1024px (планшеты) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-content-block {
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-images {
+        width: 100%;
+    }
+
+    .about-text-block {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .about-gallery-block {
+        max-width: 90%;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .testimonial-container {
+        width: 90%;
+    }
+
+    .testimonials-slider {
+        gap: 15px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 calc(50% - 20px);
+        min-width: 240px;
+    }
+}
+
+/* Стиль для экранов с шириной от 480px до 768px (мобильные планшеты) */
+@media (min-width: 480px) and (max-width: 768px) {
+    .about-content-block {
+        padding: 40px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-images {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-text-block {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .about-gallery-block {
+        max-width: 100%;
+        padding: 40px 10px;
+        text-align: center;
+    }
+
+    .testimonial-container {
+        width: 100%;
+    }
+
+    .testimonials-slider {
+        gap: 10px;
+    }
+
+    .testimonial-card {
+        flex: 0 0 calc(100% - 20px);
+        min-width: 100%;
+    }
+}
+
+/* Стиль для экранов с шириной меньше 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .about-content-block {
+        padding: 20px;
+        display: block;
+    }
+
+    .about-images {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .about-text-block {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .hero-content {
+        margin-top: 50px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .about-gallery-block {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .testimonial-card {
+        flex: 0 0 calc(100% - 20px);
+        min-width: 100%;
+    }
+
+    .testimonial-controls {
+        flex-direction: column;
+    }
+
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .add-testimonial-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
 }

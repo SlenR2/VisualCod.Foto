@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
 
 html {
     background: #0f0f0f;
@@ -5,6 +12,7 @@ html {
 	  font-family: "Roboto", sans-serif;
 	  font-style: normal;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
 
@@ -83,7 +91,9 @@ li {
     	top: 0;
     	left: 0;
     	width: 100%;
-    	z-index: -1;
+    	z-index: -99;
+      height: 100%;
+      object-fit: cover;
 }
 
 .Logo-photo {
@@ -529,5 +539,222 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 ////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////*/
 
+
+@media (max-width: 1024px) {
+
+.hero-content {
+    font-size: 75%;
+    margin-top: 10%;
+  }
+
+.Logo-photo {
+    width: 20%;
+    height: 20%;
+  }
+
+.hero-text {
+    font-size: 100%;
+    line-height: 0.6;
+    padding: 0px 100px;
+  }
+
+ .hero-text p {
+    padding: 0px 20%;
+  }
+
+.hero-text .btn {
+    font-size: 120%;
+  }
+
+.about-content-block {
+    background: linear-gradient(1deg, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.6) 85%, rgba(0, 0, 0, 0) 99%, transparent);
+    padding: 160px 10px;
+    margin-top: -240px;
+    padding-bottom: 60px;
+    display: block;
+  }	
+
+.about-images {
+    width: 85%;
+       
+  }
+
+.about-text-block {
+    width: 80%;
+    
+  }	
+
+.text-block {
+  padding: 0px 50px;
+}
+
+.text-block h3{
+    font-size: 1.25em;
+  }
+
+.text-block p{
+    line-height: 1;
+  }
+
+
+
+.testimonials-section { max-width: 100%; padding: 50px 0px; }
+  .testimonial-card { flex: 0 0 calc(50% - 60px); }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .hero-content {
+    font-size: 70%;
+    margin-top: 15%;
+  }
+
+
+  .Logo-photo {
+    width: 20%;
+    height: 20%;
+  }
+
+  .hero-text {
+    font-size: 150%;
+    line-height: 1;
+    padding: 0px 50px;
+  }
+
+  .hero-text p {
+    padding: 0px 26%;
+  }
+
+  .hero-text .btn {
+    font-size: 200%;
+    border-radius: 15px;
+  }
+
+  .about-content-block {
+    background: linear-gradient(1deg, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0.6) 85%, rgba(0, 0, 0, 0) 100%, transparent);
+    margin-top: -200px;
+  }
+
+  .about-content-block-2 {
+    flex-direction: column;
+    
+  }
+
+  .about-images {
+    width: 100%;
+       
+  }
+
+  .about-text-block {
+    width: 60%;
+    
+  }
+  
+
+  .about-text-block h2 {
+    font-size: 2.5em;
+  }
+  
+
+  .text-block h3{
+    font-size: 1.45em;
+  }
+
+  .text-block p{
+    line-height: 1.4;
+  }
+
+  .AboutGallery-images {
+    align-items: center;
+    flex-direction: column;
+     max-width: 100%;
+     padding: 20px 20px;
+  }
+
+  .image-frame {
+    width: 70%;
+}
+
+  .testimonials-section { max-width: 100%; padding: 50px 0px; }
+  .testimonial-card { padding: 20px;; flex: 0 0 42%; }
+  .testimonial-card { padding: 20px;; flex: 0 0 42%; }
+  .client-photo {width: 75px; height: 75px;}
+  .client-name { font-size: 1rem; }
+  .testimonial-text { max-height: none; }
+  .testimonials-title { font-size: 2rem; }
+
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+  .hero-content {
+    margin-top: 15%;
+  }
+
+
+  .Logo-photo {
+    width: 15%;
+    height: 15%;
+  }
+
+  .hero-text {
+    font-size: 1.2em;
+    padding: 0px 60px;
+  }
+
+  .hero-text p {
+    padding: 10px 20%;
+  }
+
+  .hero-text .btn {
+    font-size: 150%;
+  }
+
+  .about-content-block {
+    padding: 60px 10px;
+    margin-top: -100px;
+  }
+
+  .about-text-block {
+    width: 80%;
+    
+  }
+  
+
+  .about-text-block h2 {
+    font-size: 2em;
+  }
+  
+
+  .text-block h3{
+    font-size: 1.25em;
+  }
+
+  .text-block p{
+    line-height: 1.2;
+  }
+
+
+
+
+
+ 
+  .image-frame {
+    width: 80%;
+}
+
+  .testimonial-card { padding: 18px; flex: 0 0 calc(94% - 10px); }
+  .client-photo {width: 60px; height: 60px;}
+  .testimonial-text { font-size: 0.9rem; }
+
+}
 
 

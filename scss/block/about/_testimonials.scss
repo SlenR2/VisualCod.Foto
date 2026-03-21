@@ -23,7 +23,7 @@
   display: block;
   width: 80px;
   height: 3px;
-  background: #ff5050;
+  background: $color-Sunset-Orange;
   margin: 15px auto 0;
   border-radius: 3px;
 }
@@ -49,7 +49,7 @@
   flex: 0 0 calc(33.333% - 20px);
   min-width: 300px;
   background: rgba(35,35,35,0.95);
-  border-left: 5px solid #ff5050;
+  border-left: 5px solid $color-Sunset-Orange;
   border-radius: 10px;
   padding: 25px 20px;
   color: #eee;
@@ -73,7 +73,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 15px;
-  border: 2px solid #ff5050;
+  border: 2px solid $color-Sunset-Orange;
 }
 .client-photo img {
   width: 100%;
@@ -111,7 +111,7 @@
 .project-info {
   font-size: 0.9rem;
   font-style: italic;
-  color: #ff5050;
+  color: $color-Sunset-Orange;
 }
 
 /* ==========================================================
@@ -124,7 +124,7 @@
   gap: 15px;
 }
 .prev-arrow, .next-arrow {
-  background: #ff5050;
+  background: $color-Sunset-Orange;
   color: #fff;
   font-weight: 600;
   border: none;
@@ -161,8 +161,8 @@
 }
 .filter-btn:hover,
 .filter-btn.active {
-  background: #ff5050;
-  border-color: #ff5050;
+  background: $color-Sunset-Orange;
+  border-color: $color-Sunset-Orange;
   color: #fff;
 }
 
@@ -174,7 +174,7 @@
   padding: 12px 26px;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(90deg, #ff5050, #ff3030);
+  background: linear-gradient(90deg, $color-Sunset-Orange, #ff3030);
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
@@ -201,7 +201,7 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 .testimonial-form-container h3 {
-  color: #ff5050;
+  color: $color-Sunset-Orange;
   margin-bottom: 20px;
 }
 .form-group {
@@ -229,12 +229,12 @@
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-  border-color: #ff5050;
+  border-color: $color-Sunset-Orange;
   outline: none;
   background: #2e2e2e;
 }
 .submit-testimonial {
-  background: #ff5050;
+  background: $color-Sunset-Orange;
   color: #fff;
   border: none;
   padding: 12px 30px;

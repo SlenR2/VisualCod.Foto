@@ -66,10 +66,10 @@
 }
 
 .about-text-block h2 {
-      color: #ff0000;
+      color: $color-Red;
 }
 
 .text-block ul li::before {
     content: "• "; 
-    color: #ff5050;
+    color: $color-Sunset-Orange;
 }

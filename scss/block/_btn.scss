@@ -1,0 +1,36 @@
+.btn {
+  display: block;
+
+  font-weight: 600;
+
+  padding: 12px 30px;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  border: 1px solid #ff5050;
+  border-radius: 25px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff5050, #ff3030);
+
+
+  &:hover {
+    background: linear-gradient(90deg, #ff7373, #ff4040);
+    box-shadow: 0 4px 15px rgba(255,80,80,0.3);
+    transform: translateY(-2px);
+  }
+
+  &--after{
+    background: rgba(255,255,255,0.1);
+
+    &:hover {
+      background: #ff5050;
+      transform: translateY(-2px);
+    }
+  }
+
+}
+
+
+
+

@@ -1,0 +1,44 @@
+.hero-content {
+	    margin-top: 100px;
+} 
+
+#Hero-video {
+	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	z-index: -99;
+      height: 100%;
+      object-fit: cover;
+}
+
+.Logo-photo {
+   	  width: 150px;
+   	  height: 150px;
+   	  border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text {
+	    text-align: center;
+}
+
+.hero-text h1 {
+      color: #ff0000;
+}
+
+.hero-text p {
+	    line-height: 0.9;
+	    font-style: italic;
+	    margin: 10px 0;
+}
+
+.hero-text .btn {
+    	display: inline-block;
+    	padding: 10px 20px;
+    	background-color: #ff5050;
+    	color: white;
+    	border-radius: 5px;
+    	font-weight: bold;
+    	transition: background 0.3s ease;
+}

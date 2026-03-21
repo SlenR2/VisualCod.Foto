@@ -1,11 +1,22 @@
 /*Global*/
-@import "_normalize";
+@import "global";
+
+@import "global/variables";
+@import "global/mixins";
+
+@import "global/_normalize.scss";
 @import "global/_container";
 @import "global/_fonts";
 @import "global/_reboot";
 @import "global/_visually-hidden";
 
-@import "global";
-
 /*Block*/
-@import "";
+@import "block";
+
+/*Block/about*/
+@import "block/about/about-content-block";
+@import "block/about/hero";
+@import "block/about/about-gallery";
+@import "block/about/testimonials";
+
+/*Block/hero*/

@@ -7,7 +7,7 @@
     &__title{
        
         font-family: $ff-Alumni;
-        font-size: 28px;
+        font-size: 35px;
         margin: 0px;
     }
 
@@ -21,12 +21,11 @@
 .polaroid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px 0;
 
     &__block{
         display: flex;
         flex-direction: column;
-        margin: 0 auto;
         justify-content: space-between;
     }
 
@@ -39,12 +38,16 @@
 
     &__text--after{
         text-align: center;
-        font-size: 149px;
+        font-size: 14px;
         margin: 0;
     }
 
     &__img{
         margin: 0 auto;
+    }
+
+    &__img-1{
+        margin-left: auto;
     }
 
     

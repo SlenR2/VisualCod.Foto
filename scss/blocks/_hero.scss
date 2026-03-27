@@ -7,15 +7,19 @@
         font-size: 75px;
         text-align: center;
         margin: 0;
+        
+        .title-text{
+            position: relative;
+        }
     }
 
     &__title-block{
-        position: relative;
+        
         svg{
             position: absolute;
             background: $color-ghost-white;
-            top: 21px;
-            left: 251px;
+            top: 30px;
+            left: 150px;
             rotate: 20deg;
         }
     }

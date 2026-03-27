@@ -380,14 +380,14 @@ a {
   text-align: center;
   margin: 0;
 }
-.hero__title-block {
+.hero__title .title-text {
   position: relative;
 }
 .hero__title-block svg {
   position: absolute;
   background: #f4f4f5;
-  top: 21px;
-  left: 251px;
+  top: 30px;
+  left: 150px;
   rotate: 20deg;
 }
 .hero__text {
@@ -427,12 +427,12 @@ a {
 .polaroid__text {
   grid-column: span 2;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   margin: 0;
 }
 .polaroid__text--after {
   text-align: center;
-  font-size: 20px;
+  font-size: 14px;
   margin: 0;
 }
 .polaroid__img {

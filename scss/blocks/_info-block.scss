@@ -5,10 +5,17 @@
         gap: 7px;
     }
     &__title{
-       
         font-family: $ff-Alumni;
         font-size: 35px;
+        opacity: 0.6;
         margin: 0px;
+    }
+
+    &__title--after{
+        font-family: $ff-Alumni;
+        font-size: 25px;
+        opacity: 0.6;
+        margin: 0 0 0 40px;
     }
 
     &__content{
@@ -21,7 +28,7 @@
 .polaroid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px 0;
+    gap: 10px 10px;
 
     &__block{
         display: flex;
@@ -32,7 +39,17 @@
     &__text{
         grid-column: span 2;
         text-align: center;
+        font-weight: 500;
         font-size: 20px;
+        margin: 0;
+    }
+
+    &__text-2{
+        grid-column: span 2;
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 0 20px;
         margin: 0;
     }
 
@@ -40,6 +57,7 @@
         text-align: center;
         font-size: 14px;
         margin: 0;
+        padding: 0 20px;
     }
 
     &__img{

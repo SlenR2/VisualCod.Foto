@@ -405,7 +405,14 @@ a {
 .info-block__title {
   font-family: "Alumni Sans Pinstripe", sans-serif;
   font-size: 35px;
+  opacity: 0.6;
   margin: 0px;
+}
+.info-block__title--after {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 25px;
+  opacity: 0.6;
+  margin: 0 0 0 40px;
 }
 .info-block__content {
   display: flex;
@@ -416,7 +423,7 @@ a {
 .polaroid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px 0;
+  gap: 10px 10px;
 }
 .polaroid__block {
   display: flex;
@@ -426,13 +433,23 @@ a {
 .polaroid__text {
   grid-column: span 2;
   text-align: center;
+  font-weight: 500;
   font-size: 20px;
+  margin: 0;
+}
+.polaroid__text-2 {
+  grid-column: span 2;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0 20px;
   margin: 0;
 }
 .polaroid__text--after {
   text-align: center;
   font-size: 14px;
   margin: 0;
+  padding: 0 20px;
 }
 .polaroid__img {
   margin: 0 auto;

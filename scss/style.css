@@ -448,6 +448,11 @@ a {
   padding: 0 20px;
   margin: 0;
 }
+.polaroid__text-3 {
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+}
 .polaroid__text--after {
   text-align: center;
   font-size: 14px;
@@ -459,4 +464,14 @@ a {
 }
 .polaroid__img-1 {
   margin-left: auto;
+}
+
+.polaroid-3 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: solid 2px #ff0000;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */

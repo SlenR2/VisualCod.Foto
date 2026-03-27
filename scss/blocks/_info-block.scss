@@ -53,6 +53,13 @@
         margin: 0;
     }
 
+    &__text-3{
+        
+        font-weight: 400;
+        font-size: 12px;
+        margin: 0;
+    }
+
     &__text--after{
         text-align: center;
         font-size: 14px;
@@ -69,4 +76,15 @@
     }
 
     
+}
+
+.polaroid-3{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+
+    border: solid 2px #ff0000;
+    border-radius: 20px;
 }

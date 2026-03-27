@@ -374,6 +374,7 @@ a {
   margin: 280px 0 280px;
 }
 .hero__title {
+  position: relative;
   font-family: "Birthstone", cursive;
   font-weight: 800;
   font-size: 75px;
@@ -381,7 +382,9 @@ a {
   margin: 0;
 }
 .hero__title .title-text {
-  position: relative;
+  position: absolute;
+  top: -60px;
+  left: 85px;
 }
 .hero__title-block svg {
   position: relative;

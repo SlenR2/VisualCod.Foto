@@ -18,10 +18,10 @@
     &__title-block{
         
         svg{
-            position: absolute;
+            position: relative;
             background: $color-ghost-white;
-            top: 30px;
-            left: 150px;
+            top: -27px;
+            left: -47px;
             rotate: 20deg;
         }
     }

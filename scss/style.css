@@ -384,10 +384,10 @@ a {
   position: relative;
 }
 .hero__title-block svg {
-  position: absolute;
+  position: relative;
   background: #f4f4f5;
-  top: 30px;
-  left: 150px;
+  top: -27px;
+  left: -47px;
   rotate: 20deg;
 }
 .hero__text {

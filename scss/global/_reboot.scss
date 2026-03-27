@@ -1,19 +1,20 @@
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 body {
+  font-family: $ff-Alegreya;
+  font-style: normal;
+  font-weight: 400;
+  color: $color-nero;
   margin: 0;
   padding: 0;
-  font-family: "Play", "Arial", sans-serif;
-  font-weight: 400;
-  color: $color-Gallery;
-  background-color: $color-bg;
+  background-color: $color-ghost-white;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 main{
@@ -23,15 +24,11 @@ main{
 img {
   display: block;
   max-width: 100%;
-  height: auto;
   object-fit: cover;
+  height: auto;
 }
 
 a {
-  color: inherit;
+  color: $color-nero;
   text-decoration: none;
-}
-
-textarea {
-  resize: none;
 }

@@ -1,0 +1,21 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-image {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #f9f9f9;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.logo-text:hover {
+  transform: scale(1.1);
+  color: #ff5050;
+}

@@ -1,0 +1,50 @@
+.info-block{
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+    &__title{
+        font-family: $ff-Alumni;
+        font-size: 28px;
+        margin: 0px;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.polaroid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    &__block{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    &__text{
+        grid-column: span 2;
+        text-align: center;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    &__text--after{
+        text-align: center;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    &__img{
+        margin: 0 auto;
+    }
+
+    
+}

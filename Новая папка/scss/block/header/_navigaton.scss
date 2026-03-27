@@ -1,0 +1,58 @@
+/* ==============================
+   3. НАВИГАЦИЯ (ДЕСКТОП)
+   ============================== */
+.navigation ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+/* По умолчанию показываем только иконки  */
+.navigation a span {
+  display: none;
+}
+.navigation a:hover {
+  color: #ff5050;
+}
+.navigation a i {
+  font-size: 18px;
+}
+.navigation a.current {
+  color: #ff5050;
+}
+
+/* Tooltip — всплывающее название пункта */
+.navigation a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.navigation a:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: none;
+}

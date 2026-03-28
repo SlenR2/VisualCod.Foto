@@ -37,10 +37,9 @@
 
         &-3{
             font-size: 12px;
+            margin: 0;
         }
     }
-
-   
 
     &__img{
         margin: 0 auto;
@@ -48,6 +47,23 @@
 
     &__img-1{
         margin-left: auto;
+    }
+
+    &__batton{
+        width: 300px;
+        height: auto;
+        margin: 5px auto;
+        text-align: center;
+        border: 1px solid #ff0000;
+        border-radius: 10px;
+
+        &-text{
+            display: flex;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 14px;
+            margin: 0;
+        }
     }
 
     
@@ -58,7 +74,7 @@
     grid-template-columns: 1fr 3fr;
     gap: 10px;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
 
     border: solid 2px #ff0000;
     border-radius: 20px;

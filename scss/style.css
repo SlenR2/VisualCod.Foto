@@ -461,6 +461,7 @@ a {
 }
 .polaroid__text-3 {
   font-size: 12px;
+  margin: 0;
 }
 .polaroid__img {
   margin: 0 auto;
@@ -468,13 +469,28 @@ a {
 .polaroid__img-1 {
   margin-left: auto;
 }
+.polaroid__batton {
+  width: 300px;
+  height: auto;
+  margin: 5px auto;
+  text-align: center;
+  border: 1px solid #ff0000;
+  border-radius: 10px;
+}
+.polaroid__batton-text {
+  display: flex;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 14px;
+  margin: 0;
+}
 
 .polaroid-3 {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 10px;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   border: solid 2px #ff0000;
   border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */

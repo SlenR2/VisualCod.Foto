@@ -350,7 +350,7 @@ a {
 
 .container {
   width: 100%;
-  width: 391px;
+  width: 390px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -371,26 +371,29 @@ a {
 /* Blocks */
 /* ------------------------------------ */
 .hero {
-  margin: 280px 0 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
 .hero__title {
   position: relative;
   font-family: "Birthstone", cursive;
-  font-weight: 800;
-  font-size: 75px;
   text-align: center;
   margin: 0;
 }
-.hero__title .title-text {
-  position: absolute;
-  top: -60px;
-  left: 85px;
-}
-.hero__title-block svg {
+.hero__title-text {
   position: relative;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 75px;
+}
+.hero__title-text svg {
+  position: absolute;
   background: #f4f4f5;
-  top: -27px;
-  left: -51px;
+  top: 30px;
+  left: 143px;
   rotate: 20deg;
 }
 .hero__text {
@@ -403,7 +406,7 @@ a {
 .info-block .container {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 47px;
 }
 .info-block__title {
   font-family: "Alumni Sans Pinstripe", sans-serif;
@@ -420,18 +423,28 @@ a {
 .info-block__content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
-.polaroid {
+.info-block__content--margin {
+  margin: 0 0 40px;
+}
+
+.polaroid--after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 10px;
 }
+
 .polaroid__block {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+.polaroid__text-signature {
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  padding: 0 20px;
 }
 .polaroid__text {
   grid-column: span 2;
@@ -441,23 +454,10 @@ a {
   margin: 0;
 }
 .polaroid__text-2 {
-  grid-column: span 2;
-  text-align: center;
-  font-weight: 400;
-  font-size: 18px;
   padding: 0 20px;
-  margin: 0;
 }
 .polaroid__text-3 {
-  font-weight: 400;
   font-size: 12px;
-  margin: 0;
-}
-.polaroid__text--after {
-  text-align: center;
-  font-size: 14px;
-  margin: 0;
-  padding: 0 20px;
 }
 .polaroid__img {
   margin: 0 auto;

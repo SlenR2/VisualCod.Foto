@@ -1,31 +1,31 @@
 .hero{
-    margin: 280px 0 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    
 
     &__title{
         position: relative;
         font-family: $ff-Birthstone;
-        font-weight: 800;
-        font-size: 75px;
         text-align: center;
         margin: 0;
-        
-        .title-text{
-            position: absolute;
-            top: -60px;
-            left: 85px;
-        }
-    }
 
-    
-
-    &__title-block{
         
-        svg{
+        &-text{
             position: relative;
-            background: $color-ghost-white;
-            top: -27px;
-            left: -51px;
-            rotate: 20deg;
+            font-weight: 500;
+            line-height: 20px;
+            font-size: 75px;
+            
+            svg{
+                position: absolute;
+                background: $color-ghost-white;
+                top: 30px;
+                left: 143px;
+                rotate: 20deg;
+            }
         }
     }
 

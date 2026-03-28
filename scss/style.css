@@ -446,6 +446,9 @@ a {
   margin: 0;
   padding: 0 20px;
 }
+.polaroid__text-signature-1 {
+  margin-left: 31px;
+}
 .polaroid__text {
   grid-column: span 2;
   text-align: center;

@@ -426,10 +426,6 @@ a {
   gap: 20px;
 }
 
-.info-block__content--margin {
-  margin: 0 0 40px;
-}
-
 .polaroid--after {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -500,6 +496,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  margin: 0 0 40px;
 }
 .Attention-block__title-block {
   display: flex;
@@ -526,9 +523,9 @@ a {
 .Attention-block__itam {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 .Attention-block__logo {
-  display: block;
   width: 24px;
   height: 24px;
 }

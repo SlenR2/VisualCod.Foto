@@ -1,0 +1,29 @@
+.instax{
+    width: auto;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 0 0 40px;
+    padding: 10px;
+
+    border-radius: 20px;
+
+    background-color: #5447B3;
+
+    &__contet{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__text{
+        grid-column: span 2;
+    }
+
+}

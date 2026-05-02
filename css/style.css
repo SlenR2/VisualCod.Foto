@@ -391,9 +391,8 @@ a {
   line-height: 20px;
   font-size: 75px;
 }
-.hero__title-text svg {
+.hero__title-text img {
   position: absolute;
-  background: #f4f4f5;
   top: 30px;
   left: 145px;
   rotate: 20deg;

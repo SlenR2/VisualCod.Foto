@@ -373,34 +373,22 @@ a {
 /* ------------------------------------ */
 .hero {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   height: 100vh;
 }
-.hero__title {
-  position: relative;
-  font-family: "Birthstone", cursive;
-  text-align: center;
-  margin: 0;
+.hero__logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.hero__title-text {
-  position: relative;
-  font-weight: 500;
-  line-height: 20px;
-  font-size: 75px;
-}
-.hero__title-text img {
-  position: absolute;
-  top: 21px;
-  left: 140px;
-  rotate: 20deg;
+.hero__logo-icon {
+  width: 209px;
+  height: 98px;
 }
 .hero__text {
   font-family: "Alumni Sans Pinstripe", sans-serif;
   font-size: 35px;
-  text-align: center;
   margin: 0;
 }
 

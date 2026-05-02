@@ -1,39 +1,24 @@
 .hero{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 100vh;
     
 
-    &__title{
-        position: relative;
-        font-family: $ff-Birthstone;
-        text-align: center;
-        margin: 0;
-
-        
-        &-text{
-            position: relative;
-            font-weight: 500;
-            line-height: 20px;
-            font-size: 75px;
-            
-            img{
-                position: absolute;
-                //background: $color-ghost-white;
-                top: 21px;
-                left: 140px;
-                rotate: 20deg;
-            }
-        }
+    &__logo-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+ 
+    &__logo-icon{
+        width: 209px;
+        height: 98px;
     }
 
     &__text{
         font-family: $ff-Alumni;
         font-size: 35px;
-        text-align: center;
         margin: 0;
     }
 }

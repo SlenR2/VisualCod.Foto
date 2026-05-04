@@ -1,6 +1,16 @@
 .container {
-  width: 360px;
-  margin: 0;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
   padding: 0 20px;
-  
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+    padding: 0 32px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 960px;
+    padding: 0 40px;
+  }
 }

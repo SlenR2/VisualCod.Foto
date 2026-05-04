@@ -1,81 +1,156 @@
-.polaroid--after{
+/* Polaroid cards */
+/* ------------------------------------ */
+
+.polaroid {
+  width: 100%;
+  padding: 12px 0;
+
+  @media (min-width: 768px) {
+    padding: 16px 0;
+  }
+
+  &--after {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px 10px;
-}
+    gap: 12px 10px;
+    align-items: start;
 
-.polaroid{
-    
+    @media (min-width: 768px) {
+      gap: 18px 24px;
+    }
+  }
 
-    &__block{
-        display: flex;
-        flex-direction: column;
-        
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__text-signature {
+    margin: 0;
+    padding: 0 20px;
+
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    color: $color-nero;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
     }
 
-     &__text-signature{
-        text-align: center;
+    &-1 {
+      margin-left: 31px;
+
+      @include vp-767 {
+        margin-left: 18px;
+      }
+    }
+  }
+
+  &__text {
+    grid-column: span 2;
+
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-align: center;
+    color: $color-nero;
+
+    @media (min-width: 768px) {
+      font-size: 21px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 23px;
+    }
+
+    &-2 {
+      padding: 0 20px;
+
+      @media (min-width: 768px) {
+        padding: 0 40px;
+      }
+    }
+
+    &-3 {
+      margin: 0;
+
+      font-size: 12px;
+      line-height: 1.35;
+
+      @media (min-width: 768px) {
         font-size: 14px;
-        margin: 0;
-        padding: 0 20px;
-
-        &-1{
-            margin-left: 31px;
-        }
+      }
     }
+  }
 
-    &__text{
-        grid-column: span 2;
-        text-align: center;
-        font-weight: 400;
-        font-size: 18px;
-        margin: 0;
+  &__img {
+    margin: 0 auto;
 
-        &-2{
-            padding: 0 20px;
-        }
+    border-radius: 10px;
+  }
 
-        &-3{
-            font-size: 12px;
-            margin: 0;
-        }
-    }
+  &__img-1 {
+    margin-left: auto;
 
-    &__img{
-        margin: 0 auto;
-    }
+    border-radius: 10px;
+  }
 
-    &__img-1{
-        margin-left: auto;
-    }
+  &__img-2 {
+    margin: 0 auto;
 
-    &__batton{
-        width: 300px;
-        height: auto;
-        margin: 5px auto;
-        text-align: center;
-        border: 1px solid #ff0000;
-        border-radius: 10px;
+    border-radius: 10px;
+  }
 
-        &-text{
-            display: flex;
-            font-weight: normal;
-            font-size: 11px;
-            line-height: 14px;
-            margin: 0;
-        }
-    }
+  /*
+    Название селектора оставлено как в исходнике: batton.
+    Визуально блок сделан мягче: красная рамка заменена
+    на спокойный сиреневый акцент.
+  */
+  &__batton {
+    width: 100%;
+    max-width: 300px;
+    min-height: 48px;
+    margin: 8px auto 0;
+    padding: 8px 12px;
 
-    
-}
-
-.polaroid-3{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 10px;
+    display: flex;
     align-items: center;
-    padding: 5px;
+    justify-content: center;
 
-    border: solid 2px #ff0000;
-    border-radius: 20px;
+    text-align: center;
+
+    border: 1px solid $color-deep-lilac-50;
+    border-radius: 14px;
+    background-color: $color-white-50;
+
+    @media (min-width: 768px) {
+      max-width: 420px;
+      padding: 10px 16px;
+    }
+
+    &-text {
+      margin: 0;
+
+      display: flex;
+
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.35;
+      color: $color-nero;
+
+      @media (min-width: 768px) {
+        font-size: 13px;
+      }
+    }
+  }
 }

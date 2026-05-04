@@ -1,29 +1,121 @@
-.instax{
-    width: auto;
-    height: 110px;
+/* Instax app block */
+/* ------------------------------------ */
+
+.instax {
+  width: 100%;
+  min-height: 110px;
+  margin: 0 0 40px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border-radius: 22px;
+  background-color: #5447B3;
+  box-shadow: 0 10px 30px rgba(84, 71, 179, 0.18);
+
+  @media (min-width: 768px) {
+    max-width: 420px;
+    min-height: 128px;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 460px;
+  }
+
+  &__img {
+    flex-shrink: 0;
+
+    img {
+      width: 72px;
+      height: 72px;
+
+      border-radius: 18px;
+
+      @media (min-width: 768px) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  /*
+    Название contet оставлено как в исходнике,
+    чтобы не менять HTML.
+  */
+  &__contet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+    gap: 6px;
+
+    @media (min-width: 768px) {
+      gap: 8px;
+    }
+  }
+
+  &__text {
+    grid-column: span 2;
+
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.2;
+    color: $color-white;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 
-    margin: 0 0 40px;
-    padding: 10px;
+    border-radius: 8px;
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
 
-    border-radius: 20px;
+    img {
+      width: 110px;
+      height: auto;
 
-    background-color: #5447B3;
-
-    &__contet{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        justify-items: center;
-        align-items: center;
-        gap: 5px;
+      @include vp-767 {
+        width: 96px;
+      }
     }
 
-    &__text{
-        grid-column: span 2;
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
     }
 
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+
+/* Motion preferences */
+/* ------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
 }

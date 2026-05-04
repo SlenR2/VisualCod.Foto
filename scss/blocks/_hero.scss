@@ -1,25 +1,60 @@
-.hero{
+/* Hero */
+/* ------------------------------------ */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 40px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at 50% 42%, $color-white 0%, rgba(255, 255, 255, 0) 58%),
+    $color-ghost-white;
+
+  &__logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    text-align: center;
+  }
+
+  &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    
+  }
 
-    &__logo-block{
-        display: flex;
-        flex-direction: column;
-        align-items: center
+  &__logo-icon {
+    width: 209px;
+    height: 98px;
+
+    @include vp-767 {
+      width: 190px;
+      height: auto;
     }
- 
-    &__logo-icon{
-        width: 209px;
-        height: 98px;
+  }
+
+  &__text {
+    margin: 0;
+
+    font-family: $ff-Alumni;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: $color-nero;
+
+    @media (min-width: 768px) {
+      font-size: 46px;
     }
 
-    &__text{
-        font-family: $ff-Alumni;
-        font-size: 35px;
-        margin: 0;
+    @media (min-width: 1024px) {
+      font-size: 54px;
     }
+  }
 }
-

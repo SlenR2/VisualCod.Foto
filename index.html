@@ -1,227 +1,474 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Базовые настройки документа -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="description" content="Инструкция по использованию камеры Polaroid: как сделать снимок, заменить картридж и пользоваться приложением Instax UP.">
+
+    <!-- Подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alumni+Sans+Pinstripe:ital@0;1&family=Birthstone&display=swap" rel="stylesheet">
-        
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alumni+Sans+Pinstripe:ital@0;1&family=Birthstone&display=swap"
+        rel="stylesheet"
+    >
 
-
-
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Polaroid</title>
+
+    <title>Polaroid — инструкция с любовью</title>
 </head>
+
 <body>
-    <header></header>
-    <main> 
-
-       <section>
-            <div class="hero">
-                <div class="container">
-                    <div class="hero__logo-block">
-                        <div class="hero__logo">
-                            <svg class="hero__logo-icon" width="209" height="98">
-                                <use xlink:href="images/icon.svg#icon-logo"></use>
-                            </svg>
-                        </div>
-                        <h2 class="hero__text">инструкция с любовью</h2>
-                    </div>
-                </div>
-            </div> 
-        </section>
-        
-        
-        <section class="info-block">
+    <!-- Основное содержимое страницы -->
+    <main>
+        <!-- Первый экран / логотип -->
+        <section class="hero" aria-labelledby="hero-title">
             <div class="container">
+                <div class="hero__logo-block">
+                    <div class="hero__logo">
+                        <svg class="hero__logo-icon" width="209" height="98" aria-hidden="true" focusable="false">
+                            <use href="images/icon.svg#icon-logo"></use>
+                        </svg>
+                    </div>
 
-                <h2 class="info-block__title">Как сделать снимок</h2>
+                    <h1 class="hero__text" id="hero-title">Инструкция с любовью</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основной информационный блок -->
+        <section class="info-block" aria-labelledby="photo-instruction-title">
+            <div class="container">
+                <!-- Раздел: как сделать снимок -->
+                <h2 class="info-block__title" id="photo-instruction-title">Как сделать снимок</h2>
 
                 <div class="info-block__content">
-
-                    <div class="polaroid polaroid--after">
+                    <!-- Шаг 1 -->
+                    <article class="polaroid polaroid--after">
                         <div class="polaroid__block">
                             <span class="polaroid__text-signature">Голубой</span>
-                            <img class="polaroid__img" src="images/Frame2.png" srcset="images/Frame2@2x.png 2x" alt="изображения Polaroid" width="194" height="134">
+                            <img
+                                class="polaroid__img"
+                                src="images/Frame2.png"
+                                srcset="images/Frame2@2x.png 2x"
+                                alt="Голубой Polaroid с включением через кнопку"
+                                width="194"
+                                height="134"
+                                decoding="async"
+                            >
                         </div>
+
                         <div class="polaroid__block">
                             <span class="polaroid__text-signature polaroid__text-signature-1">Белый</span>
-                            <img class="polaroid__img-1" src="images/Frame3.png" srcset="images/Frame3@2x.png 2x" alt="изображения Polaroid" width="139" height="134">
+                            <img
+                                class="polaroid__img-1"
+                                src="images/Frame3.png"
+                                srcset="images/Frame3@2x.png 2x"
+                                alt="Белый Polaroid с включением через объектив"
+                                width="139"
+                                height="134"
+                                decoding="async"
+                            >
                         </div>
-                        <p class="polaroid__text">Нажми кнопку включения или прокрути объектив</p>
-                    </div>
 
-                    <div class="polaroid">
+                        <p class="polaroid__text">Нажми кнопку включения или прокрути объектив.</p>
+                    </article>
+
+                    <!-- Шаг 2 -->
+                    <article class="polaroid">
                         <div class="polaroid__top">
                             <div class="polaroid__block">
-                                <img class="polaroid__img" src="images/Frame6.png" srcset="images/Frame6@2x.png 2x" alt="изображения Polaroid" width="280" height="210">
+                                <img
+                                    class="polaroid__img"
+                                    src="images/Frame6.png"
+                                    srcset="images/Frame6@2x.png 2x"
+                                    alt="Наведение камеры Polaroid на объект съёмки"
+                                    width="280"
+                                    height="210"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
                             </div>
-                            <p class="polaroid__text">Наведи камеру и&nbsp;нажми кнопку</p>
+
+                            <p class="polaroid__text">Наведи камеру и&nbsp;нажми кнопку.</p>
                         </div>
+
                         <div class="polaroid__batton">
-                            <span class="polaroid__batton-text"><i>Когда ты&nbsp;фотографируешь кого-то, при наведении камеры смести фокус повыше и&nbsp;правее чем он&nbsp;отображается в&nbsp;видоискателе</i></span>
+                            <p class="polaroid__batton-text">
+                                <i>
+                                    Когда ты&nbsp;фотографируешь кого-то, при наведении камеры смести фокус немного выше
+                                    и&nbsp;правее, чем он&nbsp;отображается в&nbsp;видоискателе.
+                                </i>
+                            </p>
                         </div>
-                        
-                    </div>
+                    </article>
 
-                    <div class="polaroid">
+                    <!-- Шаг 3 -->
+                    <article class="polaroid">
                         <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame7.png" srcset="images/Frame7@2x.png 2x" alt="изображения Polaroid" width="280" height="210">
+                            <img
+                                class="polaroid__img"
+                                src="images/Frame7.png"
+                                srcset="images/Frame7@2x.png 2x"
+                                alt="Извлечение фотобумаги из камеры Polaroid"
+                                width="280"
+                                height="210"
+                                loading="lazy"
+                                decoding="async"
+                            >
                         </div>
-                        <p class="polaroid__text">Когда камера перестанет издавать характерный звук, аккуратно возьмись за&nbsp;край фотобумаги</p>
-                    </div>
 
+                        <p class="polaroid__text">
+                            Когда камера перестанет издавать характерный звук, аккуратно возьмись за&nbsp;край фотобумаги.
+                        </p>
+                    </article>
+
+                    <!-- Подраздел: фотографирование себя -->
                     <h3 class="info-block__title--after">Фотографирование себя</h3>
 
-                    <div class="polaroid polaroid--after">
+                    <!-- Шаг 4 -->
+                    <article class="polaroid polaroid--after">
                         <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame9.png" srcset="images/Frame9@2x.png 2x" alt="изображения Polaroid" width="140" height="105">
-                            <p class="polaroid__text">Держите камеру так, чтобы расстояние между вами и&nbsp;краем объектива составляло 35-50&nbsp;см</p>
+                            <img
+                                class="polaroid__img"
+                                src="images/Frame9.png"
+                                srcset="images/Frame9@2x.png 2x"
+                                alt="Правильное расстояние между камерой и человеком при селфи"
+                                width="140"
+                                height="105"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <p class="polaroid__text">
+                                Держи камеру так, чтобы расстояние между вами и&nbsp;краем объектива составляло
+                                35&ndash;50&nbsp;см.
+                            </p>
                         </div>
+
                         <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame10.png" srcset="images/Frame10@2x.png 2x" alt="изображения Polaroid" width="140" height="105">
-                            <p class="polaroid__text">Проверь композицию с помощью зеркальца и сделай снимок</p>
+                            <img
+                                class="polaroid__img"
+                                src="images/Frame10.png"
+                                srcset="images/Frame10@2x.png 2x"
+                                alt="Проверка композиции через зеркальце камеры Polaroid"
+                                width="140"
+                                height="105"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <p class="polaroid__text">
+                                Проверь композицию с&nbsp;помощью зеркальца и&nbsp;сделай снимок.
+                            </p>
                         </div>
-                    </div>
-                    <div class="polaroid polaroid--after">
+                    </article>
+
+                    <!-- Шаг 5 -->
+                    <article class="polaroid polaroid--after">
                         <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame11.png" srcset="images/Frame11@2x.png 2x" alt="изображения Polaroid" width="140" height="105">
+                            <img
+                                class="polaroid__img"
+                                src="images/Frame11.png"
+                                srcset="images/Frame11@2x.png 2x"
+                                alt="Выключение камеры Polaroid нажатием на кольцо объектива"
+                                width="140"
+                                height="105"
+                                loading="lazy"
+                                decoding="async"
+                            >
                         </div>
+
                         <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame12.png" srcset="images/Frame12@2x.png 2x" alt="изображения Polaroid" width="140" height="105">
+                            <img
+                                class="polaroid__img"
+                                src="images/Frame12.png"
+                                srcset="images/Frame12@2x.png 2x"
+                                alt="Выключение камеры Polaroid поворотом объектива"
+                                width="140"
+                                height="105"
+                                loading="lazy"
+                                decoding="async"
+                            >
                         </div>
-                        <p class="polaroid__text polaroid__text-2">По&nbsp;окончании съемки надави на&nbsp;кольцо объектива или закрути объектив против часовой стрелки, чтобы выключить камеру</p>
-                    </div>
-                    <div class="polaroid-3">
+
+                        <p class="polaroid__text polaroid__text-2">
+                            По&nbsp;окончании съёмки надави на&nbsp;кольцо объектива или закрути объектив против часовой
+                            стрелки, чтобы выключить камеру.
+                        </p>
+                    </article>
+
+                    <!-- Дополнительная подсказка про счётчик кадров -->
+                    <aside class="polaroid-3">
                         <div class="polaroid__block">
-                            <img class="polaroid__img-2" src="images/2.png" srcset="images/2@2x.png 2x" alt="изображения Polaroid" width="153" height="108">
+                            <img
+                                class="polaroid__img-2"
+                                src="images/2.png"
+                                srcset="images/2@2x.png 2x"
+                                alt="Счётчик оставшихся кадров на камере Polaroid"
+                                width="153"
+                                height="108"
+                                loading="lazy"
+                                decoding="async"
+                            >
                         </div>
-                        <p class="polaroid__text-3"><i>Каждый раз, когда ты&nbsp;делаешь снимок, число оставшихся кадров 
-                                                    на&nbsp;счетчике уменьшается на&nbsp;единицу, показывая количество 
-                                                    оставшихся кадров. когда на&nbsp;счетчике отображается &laquo;0&raquo;, 
-                                                    это значит, что неиспользованная фотобумага 
-                                                    в&nbsp;кассете закончилась.
-                        </i></p>
-                    </div>
+
+                        <p class="polaroid__text-3">
+                            <i>
+                                Каждый раз, когда ты&nbsp;делаешь снимок, число оставшихся кадров на&nbsp;счётчике
+                                уменьшается на&nbsp;единицу, показывая количество оставшихся кадров. Когда на&nbsp;счётчике
+                                отображается &laquo;0&raquo;, это значит, что неиспользованная фотобумага в&nbsp;кассете
+                                закончилась.
+                            </i>
+                        </p>
+                    </aside>
                 </div>
 
-                <h2 class="info-block__title">Как заменить картридж</h2>
+                <!-- Раздел: как заменить картридж -->
+                <section aria-labelledby="cartridge-title">
+                    <h2 class="info-block__title" id="cartridge-title">Как заменить картридж</h2>
 
-                <div class="info-block__content info-block__content--margin">
-                    <div class="polaroid">
-                        <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame14.png" alt="изображения Polaroid" width="300" height="200">
-                        </div>
-                        <p class="polaroid__text">Нажми на&nbsp;замок задней крышки, чтобы открыть ее</p>
+                    <div class="info-block__content info-block__content--margin">
+                        <!-- Шаг 1 -->
+                        <article class="polaroid">
+                            <div class="polaroid__block">
+                                <img
+                                    class="polaroid__img"
+                                    src="images/Frame14.png"
+                                    alt="Открытие задней крышки камеры Polaroid"
+                                    width="300"
+                                    height="200"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </div>
+
+                            <p class="polaroid__text">Нажми на&nbsp;замок задней крышки, чтобы открыть её.</p>
+                        </article>
+
+                        <!-- Шаг 2 -->
+                        <article class="polaroid">
+                            <div class="polaroid__block">
+                                <img
+                                    class="polaroid__img"
+                                    src="images/Frame15.png"
+                                    alt="Извлечение использованного картриджа из камеры Polaroid"
+                                    width="300"
+                                    height="200"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </div>
+
+                            <p class="polaroid__text">
+                                Возьмись за&nbsp;прямоугольные отверстия и&nbsp;вытащи использованный блок.
+                            </p>
+                        </article>
+
+                        <!-- Шаг 3 -->
+                        <article class="polaroid">
+                            <div class="polaroid__block">
+                                <img
+                                    class="polaroid__img"
+                                    src="images/Frame16.png"
+                                    alt="Установка нового картриджа в камеру Polaroid"
+                                    width="300"
+                                    height="200"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </div>
+
+                            <p class="polaroid__text">
+                                Возьми кассету за&nbsp;боковые грани, совмести жёлтые отметки на&nbsp;кассете и&nbsp;камере,
+                                затем аккуратно вставь новую кассету.
+                            </p>
+                        </article>
+
+                        <!-- Шаг 4 -->
+                        <article class="polaroid">
+                            <div class="polaroid__block">
+                                <img
+                                    class="polaroid__img"
+                                    src="images/Frame17.png"
+                                    alt="Закрытие задней крышки камеры Polaroid"
+                                    width="300"
+                                    height="200"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+                            </div>
+
+                            <p class="polaroid__text">Закрой заднюю крышку до&nbsp;щелчка.</p>
+                        </article>
+
+                        <!-- Шаг 5 -->
+                        <article class="polaroid polaroid--after">
+                            <div class="polaroid__block">
+                                <img
+                                    class="polaroid__img"
+                                    src="images/Frame18.png"
+                                    alt="Извлечение защитного экрана после установки картриджа"
+                                    width="160"
+                                    height="150"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <p class="polaroid__text polaroid__text-3">
+                                    При нажатии на&nbsp;кнопку спуска затвора защитный экран чёрного цвета будет извлечён
+                                    из&nbsp;камеры, а&nbsp;на&nbsp;счётчике кадров на&nbsp;задней панели появится цифра
+                                    &laquo;10&raquo; вместо буквы &laquo;S&raquo;.
+                                </p>
+                            </div>
+
+                            <div class="polaroid__block">
+                                <img
+                                    class="polaroid__img"
+                                    src="images/Frame19.png"
+                                    alt="Полное извлечение защитного экрана из камеры Polaroid"
+                                    width="160"
+                                    height="150"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                                <p class="polaroid__text polaroid__text-3">
+                                    Когда защитный экран будет выведен из&nbsp;камеры и&nbsp;камера перестанет издавать
+                                    характерный звук, возьмись за&nbsp;край экрана и&nbsp;извлеки его полностью. Теперь
+                                    камера готова к&nbsp;съёмке.
+                                </p>
+                            </div>
+                        </article>
                     </div>
-                    <div class="polaroid">
-                        <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame15.png" alt="изображения Polaroid" width="300" height="200">
-                        </div>
-                        <p class="polaroid__text">Возьмись за&nbsp;прямоугольные отверстия и&nbsp;вытащи использованный блок</p>
+                </section>
+
+                <!-- Блок предупреждений -->
+                <section class="Attention-block" aria-labelledby="attention-title">
+                    <div class="Attention-block__title-block">
+                        <h2 class="Attention-block__title" id="attention-title">Обрати внимание!</h2>
                     </div>
-                    <div class="polaroid">
-                        <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame16.png" alt="изображения Polaroid" width="300" height="200">
-                        </div>
-                        <p class="polaroid__text">Возьми кассету за&nbsp;боковые грани, совмести желтые отметки на&nbsp;кассете и&nbsp;камере и&nbsp;аккуратно вставь новую кассету</p>
-                    </div>
-                    <div class="polaroid">
-                        <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame17.png" alt="изображения Polaroid" width="300" height="200">
-                        </div>
-                        <p class="polaroid__text">Закрой заднюю крышку до&nbsp;щелчка</p>
-                    </div>
-                    <div class="polaroid polaroid--after">
-                        <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame18.png" alt="изображения Polaroid" width="160" height="150">
-                            <p class="polaroid__text polaroid__text-3">При нажатии на&nbsp;камеру спуска затвора защитный экран (черного цвета) будет извлечен из&nbsp;камеры, а&nbsp;на&nbsp;счетчике кадров на&nbsp;задней панели камеры появится цифра &laquo;10&raquo; вместо буквы &laquo;S&raquo;</p>
-                        </div>
-                        <div class="polaroid__block">
-                            <img class="polaroid__img" src="images/Frame19.png" alt="изображения Polaroid" width="160" height="150">
-                            <p class="polaroid__text polaroid__text-3">Когда защитный экран будет выведен из&nbsp;камеры (Камера перестанет издавать характерный звук), возьмись за&nbsp;его край и&nbsp;извлеки полностью. Теперь камера готова к&nbsp;съемке</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="Attention-block">
-                        <div class="Attention-block__title-block">
-                            <h2 class="Attention-block__title">Обрати внимание!</h2>
-                        </div>
-                        <ul class="Attention-block__list">
+                    <ul class="Attention-block__list">
+                        <li class="Attention-block__itam">
+                            <div class="Attention-block__logo" aria-hidden="true">
+                                <svg width="24" height="24" focusable="false">
+                                    <use href="images/icon.svg#icon-battery"></use>
+                                </svg>
+                            </div>
 
-                            <li class="Attention-block__itam">
-                                <div class="Attention-block__logo">
-                                    <svg  width="24" height="24">
-                                        <use xlink:href="images/icon.svg#icon-battery"></use>
-                                    </svg>
-                                </div>
-                                <span class="Attention-block__text">Вставляя кассету с&nbsp;фотобумагой, убедись, что в&nbsp;камере уже установлены батареи</span>
-                            </li>
+                            <span class="Attention-block__text">
+                                Вставляя кассету с&nbsp;фотобумагой, убедись, что в&nbsp;камере уже установлены батареи.
+                            </span>
+                        </li>
 
-                            <li class="Attention-block__itam">
-                                <div class="Attention-block__logo">
-                                    <svg width="24" height="24">
-                                        <use xlink:href="images/icon.svg#icon-sun"></use>
-                                    </svg>
-                                </div>
-                                <span class="Attention-block__text">Не&nbsp;допускайте попадания солнечного света на&nbsp;картридж с&nbsp;фотобумагой и&nbsp;на&nbsp;только что отпечатанный снимок</span>
-                            </li>
+                        <li class="Attention-block__itam">
+                            <div class="Attention-block__logo" aria-hidden="true">
+                                <svg width="24" height="24" focusable="false">
+                                    <use href="images/icon.svg#icon-sun"></use>
+                                </svg>
+                            </div>
 
-                            <li class="Attention-block__itam">
-                                <div class="Attention-block__logo">
-                                    <svg  id="icon-nottouch" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.000000" height="24.000000" fill="none">
-                                        <path id="Вектор 1" d="M12 0C5.38298 0 0 5.38298 0 12C0 18.617 5.38298 24 12 24C18.617 24 24 18.617 24 12C24 5.38298 18.617 0 12 0ZM12 23C5.93498 23 0.999984 18.065 0.999984 12C0.999984 9.147 2.10098 6.55298 3.888 4.596L8.99902 9.70702L8.99902 12.998L8.166 12.233C7.22302 11.289 5.57602 11.288 4.63102 12.233C4.443 12.421 4.43503 12.723 4.61302 12.921L8.646 17.404C9.70898 18.467 11.104 18.998 12.5 18.998C13.896 18.998 15.291 18.466 16.353 17.404C16.41 17.346 16.455 17.277 16.508 17.216L19.404 20.112C17.447 21.899 14.853 23 12 23ZM9.15998 14.504C9.306 14.638 9.51698 14.674 9.69998 14.594C9.882 14.514 9.999 14.334 9.999 14.136L9.999 10.707L15.809 16.517C15.757 16.579 15.703 16.64 15.646 16.697C13.91 18.431 11.087 18.432 9.37102 16.716L5.724 12.66C6.28102 12.38 6.99998 12.479 7.473 12.954L9.15998 14.504ZM20.111 19.405L16.83 16.124C16.829 16.123 16.829 16.122 16.828 16.121L9.85298 9.14597C9.852 9.14498 9.852 9.14498 9.85097 9.14498L4.59502 3.88898C6.552 2.10098 9.147 0.999984 12 0.999984C18.065 0.999984 23 5.93498 23 12C23 14.853 21.899 17.448 20.111 19.405Z" fill="rgb(0,0,0)" fill-rule="nonzero" />
-                                        <path id="Вектор 2" d="M16.5 6.99898C16.302 6.99898 16.115 7.04 15.942 7.109C15.769 6.47197 15.191 5.99998 14.5 5.99998C14.303 5.99998 14.115 6.041 13.942 6.11C13.769 5.47302 13.191 5 12.5 5C11.8089 5 11.231 5.47302 11.058 6.11C10.885 6.041 10.697 5.99998 10.5 5.99998C10.047 5.99998 9.62101 6.21397 9.32903 6.58799C9.16004 6.806 9.19801 7.11997 9.41603 7.28998C9.63301 7.45897 9.94801 7.421 10.118 7.20298C10.177 7.127 10.305 6.99997 10.5 6.99997C10.776 6.99997 11 7.22399 11 7.49998L11 8.672L11 8.99998C11 9.27598 11.224 9.5 11.5 9.5C11.776 9.5 12 9.27598 12 8.99998L12 8.672L12 7.49998L12 6.5C12 6.224 12.224 5.99998 12.5 5.99998C12.776 5.99998 13 6.224 13 6.5L13 7.49998L13 10.5C13 10.776 13.2241 11 13.5001 11C13.7761 11 14.0001 10.776 14.0001 10.5L14.0001 7.49998C14.0001 7.22398 14.2241 6.99997 14.5001 6.99997C14.7761 6.99997 15 7.22398 15 7.49998L15 8.49898L15 10.5L15 11.499C15 11.775 15.224 11.999 15.5 11.999C15.776 11.999 16 11.775 16 11.499L16 10.5L16 8.49898C16 8.22298 16.2241 7.99897 16.5001 7.99897C16.7761 7.99897 17.0001 8.22298 17.0001 8.49898L17.0001 13.499C17.0001 13.794 16.9631 14.1 16.8871 14.435C16.8261 14.705 16.9951 14.972 17.2641 15.034C17.3011 15.042 17.3381 15.046 17.3751 15.046C17.6031 15.046 17.8101 14.889 17.8621 14.656C17.9551 14.247 18.0001 13.869 18.0001 13.499L18.0001 8.49898C18 7.67197 17.327 6.99898 16.5 6.99898Z" fill="rgb(0,0,0)" fill-rule="nonzero" />      
-                                    </svg>
-                                </div>
-                                <span class="Attention-block__text">При установке картриджа нельзя надавливать на&nbsp;два прямоугольных отверстия на&nbsp;ее&nbsp;задней стороне</span>
-                            </li>
+                            <span class="Attention-block__text">
+                                Не&nbsp;допускай попадания солнечного света на&nbsp;картридж с&nbsp;фотобумагой
+                                и&nbsp;на&nbsp;только что отпечатанный снимок.
+                            </span>
+                        </li>
 
-                            <li class="Attention-block__itam">
-                                <div class="Attention-block__logo">
-                                    <svg width="24" height="24">
-                                        <use xlink:href="images/icon.svg#icon-bolt"></use>
-                                    </svg>
-                                </div>
-                                <span class="Attention-block__text">Не&nbsp;открывайте заднюю крышку камеры, если у&nbsp;вас остались неиспользованные кадры, иначе оставшаяся бумага может быть засвечена и&nbsp;станет белой</span>
-                            </li>
+                        <li class="Attention-block__itam">
+                            <div class="Attention-block__logo" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" focusable="false">
+                                    <path
+                                        d="M12 0C5.38298 0 0 5.38298 0 12C0 18.617 5.38298 24 12 24C18.617 24 24 18.617 24 12C24 5.38298 18.617 0 12 0ZM12 23C5.93498 23 0.999984 18.065 0.999984 12C0.999984 9.147 2.10098 6.55298 3.888 4.596L8.99902 9.70702L8.99902 12.998L8.166 12.233C7.22302 11.289 5.57602 11.288 4.63102 12.233C4.443 12.421 4.43503 12.723 4.61302 12.921L8.646 17.404C9.70898 18.467 11.104 18.998 12.5 18.998C13.896 18.998 15.291 18.466 16.353 17.404C16.41 17.346 16.455 17.277 16.508 17.216L19.404 20.112C17.447 21.899 14.853 23 12 23ZM9.15998 14.504C9.306 14.638 9.51698 14.674 9.69998 14.594C9.882 14.514 9.999 14.334 9.999 14.136L9.999 10.707L15.809 16.517C15.757 16.579 15.703 16.64 15.646 16.697C13.91 18.431 11.087 18.432 9.37102 16.716L5.724 12.66C6.28102 12.38 6.99998 12.479 7.473 12.954L9.15998 14.504ZM20.111 19.405L16.83 16.124C16.829 16.123 16.829 16.122 16.828 16.121L9.85298 9.14597C9.852 9.14498 9.852 9.14498 9.85097 9.14498L4.59502 3.88898C6.552 2.10098 9.147 0.999984 12 0.999984C18.065 0.999984 23 5.93498 23 12C23 14.853 21.899 17.448 20.111 19.405Z"
+                                        fill="currentColor"
+                                    />
+                                    <path
+                                        d="M16.5 6.99898C16.302 6.99898 16.115 7.04 15.942 7.109C15.769 6.47197 15.191 5.99998 14.5 5.99998C14.303 5.99998 14.115 6.041 13.942 6.11C13.769 5.47302 13.191 5 12.5 5C11.8089 5 11.231 5.47302 11.058 6.11C10.885 6.041 10.697 5.99998 10.5 5.99998C10.047 5.99998 9.62101 6.21397 9.32903 6.58799C9.16004 6.806 9.19801 7.11997 9.41603 7.28998C9.63301 7.45897 9.94801 7.421 10.118 7.20298C10.177 7.127 10.305 6.99997 10.5 6.99997C10.776 6.99997 11 7.22399 11 7.49998V8.99998C11 9.27598 11.224 9.5 11.5 9.5C11.776 9.5 12 9.27598 12 8.99998V6.5C12 6.224 12.224 5.99998 12.5 5.99998C12.776 5.99998 13 6.224 13 6.5V10.5C13 10.776 13.2241 11 13.5001 11C13.7761 11 14.0001 10.776 14.0001 10.5V7.49998C14.0001 7.22398 14.2241 6.99997 14.5001 6.99997C14.7761 6.99997 15 7.22398 15 7.49998V11.499C15 11.775 15.224 11.999 15.5 11.999C15.776 11.999 16 11.775 16 11.499V8.49898C16 8.22298 16.2241 7.99897 16.5001 7.99897C16.7761 7.99897 17.0001 8.22298 17.0001 8.49898V13.499C17.0001 13.794 16.9631 14.1 16.8871 14.435C16.8261 14.705 16.9951 14.972 17.2641 15.034C17.3011 15.042 17.3381 15.046 17.3751 15.046C17.6031 15.046 17.8101 14.889 17.8621 14.656C17.9551 14.247 18.0001 13.869 18.0001 13.499V8.49898C18 7.67197 17.327 6.99898 16.5 6.99898Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </div>
 
-                            <li class="Attention-block__itam">
-                                <div class="Attention-block__logo">
-                                    <svg width="24" height="24">
-                                        <use xlink:href="images/icon.svg#icon-clock"></use>
-                                    </svg>
-                                </div>
-                                <span class="Attention-block__text">Время проявки изображения 90&nbsp;секунд и&nbsp;зависит от&nbsp;температуры воздуха (при более низкой температуре проявка займет больше времени)</span>
-                            </li>
+                            <span class="Attention-block__text">
+                                При установке картриджа нельзя надавливать на&nbsp;два прямоугольных отверстия
+                                на&nbsp;его задней стороне.
+                            </span>
+                        </li>
 
-                            <li class="Attention-block__itam">
-                                <div class="Attention-block__logo">
-                                    <svg width="24" height="24">
-                                        <use xlink:href="images/icon.svg#icon-temperature"></use>
-                                    </svg>
-                                </div>
-                                <span class="Attention-block__text">Температурный режим корректировки проявки от&nbsp;+5℃ до&nbsp;+40℃. При проявке ниже +5℃ изображения может быть засвеченным</span>
-                            </li>
+                        <li class="Attention-block__itam">
+                            <div class="Attention-block__logo" aria-hidden="true">
+                                <svg width="24" height="24" focusable="false">
+                                    <use href="images/icon.svg#icon-bolt"></use>
+                                </svg>
+                            </div>
 
-                        </ul>
-                </div>
+                            <span class="Attention-block__text">
+                                Не&nbsp;открывай заднюю крышку камеры, если остались неиспользованные кадры, иначе
+                                оставшаяся бумага может быть засвечена и&nbsp;станет белой.
+                            </span>
+                        </li>
 
-                
-                <div class="info-block__instax">
-                    <h2 class="info-block__title">Приложение &laquo;Instax&nbsp;UP&raquo;</h2>
+                        <li class="Attention-block__itam">
+                            <div class="Attention-block__logo" aria-hidden="true">
+                                <svg width="24" height="24" focusable="false">
+                                    <use href="images/icon.svg#icon-clock"></use>
+                                </svg>
+                            </div>
 
-                    <p>Официальное приложение для сканирования мгновенных фотографий FUJIFILM instax</p>
+                            <span class="Attention-block__text">
+                                Время проявки изображения — около 90&nbsp;секунд. Оно зависит от&nbsp;температуры воздуха:
+                                при более низкой температуре проявка может занять больше времени.
+                            </span>
+                        </li>
+
+                        <li class="Attention-block__itam">
+                            <div class="Attention-block__logo" aria-hidden="true">
+                                <svg width="24" height="24" focusable="false">
+                                    <use href="images/icon.svg#icon-temperature"></use>
+                                </svg>
+                            </div>
+
+                            <span class="Attention-block__text">
+                                Рекомендуемый температурный режим проявки — от&nbsp;+5&nbsp;&deg;C до&nbsp;+40&nbsp;&deg;C.
+                                При температуре ниже +5&nbsp;&deg;C изображение может получиться засвеченным.
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Раздел: приложение Instax UP -->
+                <section class="info-block__instax" aria-labelledby="instax-title">
+                    <h2 class="info-block__title" id="instax-title">Приложение &laquo;Instax&nbsp;UP&raquo;</h2>
+
+                    <p>
+                        Официальное приложение для сканирования мгновенных фотографий FUJIFILM instax.
+                    </p>
 
                     <div class="instax">
+                        <!-- Иконка приложения -->
                         <div class="instax__img">
-                            <img src="images\logo_app_icon.png" alt="Приложения" width="80" height="80">
+                            <img
+                                src="images/logo_app_icon.png"
+                                alt="Иконка приложения Instax UP"
+                                width="80"
+                                height="80"
+                                loading="lazy"
+                                decoding="async"
+                            >
                         </div>
+
+                        <!-- Ссылки на приложение -->
                         <div class="instax__contet">
-                            <svg class="instax__text" xmlns="http://www.w3.org/2000/svg" width="200" height="30" viewBox="0 0 246.04 46.02">
+                            <svg 
+                                class="instax__text" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="200" 
+                                height="30" 
+                                viewBox="0 0 246.04 46.02" 
+                                aria-label="Instax UP"
+                            >
                                 <defs>
                                     <style>.cls-1{fill:#c0f2ea;}</style>
                                 </defs>
@@ -241,8 +488,25 @@
                                     <path class="cls-1" d="M238.73.75h2.1l1.59,4.67h.02l1.5-4.67h2.1v6.79h-1.4V2.73h-.02l-1.66,4.81h-1.15l-1.67-4.76h-.02v4.76h-1.4V.75Z"/>
                                 </g>
                             </svg>
-                            <a class="instax__link" href="https://apps.apple.com/app/apple-store/id1664064756?pt=406104&ct=instaxcomup-top-2310seo&mt=8">
-                                <svg width="110" height="37" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                            <a
+                                class="instax__link"
+                                href="https://apps.apple.com/app/apple-store/id1664064756?pt=406104&ct=instaxcomup-top-2310seo&mt=8"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Скачать приложение Instax UP в App Store"
+                            >
+
+                                <svg 
+                                    width="110" 
+                                    height="37" 
+                                    viewBox="0 0 160 48" fill="none"  
+                                    alt="Скачать в App Store" 
+                                    loading="lazy"
+                                    decoding="async"
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                >
+
                                     <path d="M154.074 0H5.92593C2.65313 0 0 2.68629 0 6V42C0 45.3137 2.65313 48 5.92593 48H154.074C157.347 48 160 45.3137 160 42V6C160 2.68629 157.347 0 154.074 0Z" fill="black"/>
                                     <path d="M154.074 0.96C155.394 0.96 156.66 1.491 157.594 2.43618C158.527 3.38137 159.052 4.66331 159.052 6V42C159.052 43.3367 158.527 44.6186 157.594 45.5638C156.66 46.509 155.394 47.04 154.074 47.04H5.92593C4.60574 47.04 3.33962 46.509 2.40611 45.5638C1.47259 44.6186 0.948148 43.3367 0.948148 42V6C0.948148 4.66331 1.47259 3.38137 2.40611 2.43618C3.33962 1.491 4.60574 0.96 5.92593 0.96H154.074ZM154.074 0H5.92593C4.35427 0 2.84699 0.632141 1.73566 1.75736C0.624337 2.88258 0 4.4087 0 6V42C0 43.5913 0.624337 45.1174 1.73566 46.2426C2.84699 47.3679 4.35427 48 5.92593 48H154.074C155.646 48 157.153 47.3679 158.264 46.2426C159.376 45.1174 160 43.5913 160 42V6C160 4.4087 159.376 2.88258 158.264 1.75736C157.153 0.632141 155.646 0 154.074 0Z" fill="#A6A6A6"/>
                                     <path d="M38.0597 23.1756C38.027 19.4905 41.0398 17.6977 41.1776 17.6143C39.4713 15.0954 36.8266 14.7513 35.8972 14.7238C33.676 14.4871 31.5214 16.0696 30.3898 16.0696C29.2358 16.0696 27.4933 14.7467 25.6154 14.7856C23.1988 14.8233 20.938 16.2399 19.6981 18.4398C17.1392 22.9252 19.0476 29.5167 21.4992 33.1423C22.7256 34.918 24.1586 36.9006 26.0343 36.8308C27.8694 36.7542 28.5548 35.6463 30.7693 35.6463C32.9634 35.6463 33.6071 36.8308 35.52 36.7862C37.4895 36.7542 38.7294 35.0026 39.9128 33.2109C41.33 31.1757 41.8992 29.1714 41.9218 29.0685C41.8755 29.0525 38.097 27.5924 38.0597 23.1756Z" fill="white"/>
@@ -266,8 +530,24 @@
                                     <path d="M109.66 15.75V10.0335H111.95C112.722 10.0335 113.31 10.1709 113.714 10.4456C114.117 10.7168 114.319 11.1078 114.319 11.6185C114.319 11.8827 114.237 12.1204 114.074 12.3317C113.914 12.5395 113.676 12.6998 113.359 12.8125C113.728 12.89 114.02 13.0467 114.236 13.2827C114.451 13.5187 114.559 13.797 114.559 14.1175C114.559 14.6493 114.364 15.0544 113.975 15.3326C113.589 15.6109 113.032 15.75 112.305 15.75H109.66ZM110.927 13.3144V14.7356H112.315C112.966 14.7356 113.291 14.4996 113.291 14.0277C113.291 13.5522 112.961 13.3144 112.3 13.3144H110.927ZM110.927 12.3951H111.971C112.691 12.3951 113.051 12.1803 113.051 11.7506C113.051 11.2997 112.71 11.0673 112.028 11.0532H110.927V12.3951Z" fill="white"/>
                                 </svg>
                             </a>
-                            <a class="instax__link" href="https://play.google.com/store/apps/details?id=com.fujifilm.instaxup&utm_source=instaxcomup&utm_campaign=top-2310seo">
-                                <svg width="110" height="37" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                            <a
+                                class="instax__link"
+                                href="https://play.google.com/store/apps/details?id=com.fujifilm.instaxup&utm_source=instaxcomup&utm_campaign=top-2310seo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Скачать приложение Instax UP в Google Play"
+                            >
+                                <svg 
+                                    width="110" 
+                                    height="37" 
+                                    viewBox="0 0 160 48" 
+                                    fill="none" 
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="Скачать в Google Play"
+                                >
                                     <path d="M154.074 0H5.92593C2.65313 0 0 2.68629 0 6V42C0 45.3137 2.65313 48 5.92593 48H154.074C157.347 48 160 45.3137 160 42V6C160 2.68629 157.347 0 154.074 0Z" fill="black"/>
                                     <path d="M154.074 0.96C155.394 0.96 156.66 1.491 157.594 2.43618C158.527 3.38137 159.052 4.66331 159.052 6V42C159.052 43.3367 158.527 44.6186 157.594 45.5638C156.66 46.509 155.394 47.04 154.074 47.04H5.92593C4.60574 47.04 3.33962 46.509 2.40611 45.5638C1.47259 44.6186 0.948148 43.3367 0.948148 42V6C0.948148 4.66331 1.47259 3.38137 2.40611 2.43618C3.33962 1.491 4.60574 0.96 5.92593 0.96H154.074ZM154.074 0H5.92593C4.35427 0 2.84699 0.632141 1.73566 1.75736C0.624337 2.88258 0 4.4087 0 6V42C0 43.5913 0.624337 45.1174 1.73566 46.2426C2.84699 47.3679 4.35427 48 5.92593 48H154.074C155.646 48 157.153 47.3679 158.264 46.2426C159.376 45.1174 160 43.5913 160 42V6C160 4.4087 159.376 2.88258 158.264 1.75736C157.153 0.632141 155.646 0 154.074 0Z" fill="#A6A6A6"/>
                                     <path d="M80.7586 26.1C79.7634 26.1047 78.7919 26.4079 77.9666 26.9711C77.1414 27.5344 76.4995 28.3326 76.1219 29.2649C75.7443 30.1972 75.6479 31.2219 75.8449 32.2096C76.042 33.1973 76.5236 34.1038 77.2289 34.8146C77.9343 35.5255 78.8319 36.0088 79.8083 36.2037C80.7847 36.3985 81.7963 36.2961 82.7153 35.9094C83.6343 35.5227 84.4196 34.8691 84.9721 34.0309C85.5245 33.1927 85.8193 32.2077 85.8193 31.2C85.829 30.5255 85.7045 29.856 85.4533 29.2312C85.2021 28.6065 84.8293 28.0393 84.3571 27.5634C83.8849 27.0875 83.323 26.7128 82.7048 26.4613C82.0865 26.2099 81.4247 26.087 80.7586 26.1ZM80.7586 34.296C80.1465 34.3393 79.5358 34.1952 79.0057 33.8825C78.4756 33.5697 78.0506 33.1027 77.7862 32.5421C77.5217 31.9816 77.4299 31.3535 77.5226 30.7394C77.6154 30.1253 77.8885 29.5537 78.3064 29.0988C78.7243 28.644 79.2677 28.327 79.8659 28.1889C80.4641 28.0509 81.0895 28.0983 81.6607 28.3249C82.232 28.5515 82.7227 28.9469 83.0691 29.4596C83.4155 29.9724 83.6015 30.5788 83.603 31.2C83.6221 31.5936 83.5632 31.9871 83.4297 32.3573C83.2962 32.7275 83.0908 33.0669 82.8257 33.3554C82.5606 33.644 82.2411 33.8758 81.8861 34.0374C81.5311 34.1989 81.1477 34.2869 80.7586 34.296ZM69.7245 26.1C68.7288 26.1024 67.7561 26.4035 66.9293 26.9653C66.1025 27.5272 65.4588 28.3245 65.0794 29.2566C64.6999 30.1887 64.6019 31.2138 64.7976 32.2023C64.9932 33.1908 65.4739 34.0984 66.1788 34.8105C66.8837 35.5225 67.7813 36.0071 68.758 36.2029C69.7348 36.3987 70.747 36.297 71.6667 35.9106C72.5864 35.5243 73.3724 34.8706 73.9253 34.0322C74.4783 33.1937 74.7734 32.2082 74.7734 31.2C74.7831 30.5255 74.6586 29.856 74.4074 29.2312C74.1562 28.6065 73.7834 28.0393 73.3112 27.5634C72.839 27.0875 72.2771 26.7128 71.6588 26.4613C71.0406 26.2099 70.3788 26.087 69.7127 26.1H69.7245ZM69.7245 34.296C69.1122 34.3418 68.5004 34.1998 67.9688 33.8887C67.4373 33.5775 67.0105 33.1115 66.7442 32.5513C66.4779 31.9911 66.3843 31.3628 66.4756 30.748C66.5669 30.1332 66.8389 29.5605 67.2561 29.1044C67.6734 28.6484 68.2166 28.33 68.8151 28.1909C69.4135 28.0518 70.0395 28.0983 70.6115 28.3244C71.1834 28.5505 71.6749 28.9458 72.0219 29.4586C72.369 29.9715 72.5554 30.5783 72.5571 31.2C72.5762 31.5936 72.5173 31.9871 72.3837 32.3573C72.2502 32.7275 72.0449 33.0669 71.7798 33.3554C71.5147 33.644 71.1952 33.8758 70.8402 34.0374C70.4852 34.1989 70.1018 34.2869 69.7127 34.296H69.7245ZM56.5808 27.672V29.832H61.7008C61.6205 30.8494 61.2028 31.8094 60.5156 32.556C60.0034 33.0843 59.3876 33.4981 58.7079 33.7709C58.0282 34.0438 57.2996 34.1695 56.569 34.14C55.0602 34.14 53.6132 33.5331 52.5463 32.4529C51.4794 31.3727 50.8801 29.9076 50.8801 28.38C50.8801 26.8524 51.4794 25.3873 52.5463 24.3071C53.6132 23.2269 55.0602 22.62 56.569 22.62C58.0123 22.5962 59.406 23.1529 60.4445 24.168L61.9497 22.644C61.2486 21.9252 60.4122 21.3563 59.49 20.9708C58.5678 20.5853 57.5785 20.3912 56.5808 20.4C55.5272 20.3585 54.4761 20.5327 53.4906 20.9124C52.5051 21.292 51.6054 21.8691 50.8454 22.6092C50.0855 23.3493 49.4809 24.2371 49.0679 25.2194C48.6549 26.2018 48.4421 27.2584 48.4421 28.326C48.4421 29.3936 48.6549 30.4502 49.0679 31.4326C49.4809 32.4149 50.0855 33.3027 50.8454 34.0428C51.6054 34.7829 52.5051 35.36 53.4906 35.7396C54.4761 36.1193 55.5272 36.2935 56.5808 36.252C57.5953 36.2984 58.6078 36.1243 59.5502 35.7414C60.4927 35.3584 61.3432 34.7756 62.0445 34.032C63.2862 32.6507 63.9492 30.8349 63.8934 28.968C63.8972 28.5132 63.8575 28.0591 63.7749 27.612L56.5808 27.672ZM110.282 29.352C109.972 28.4313 109.394 27.6273 108.624 27.0466C107.854 26.4659 106.927 26.1358 105.967 26.1C105.319 26.0987 104.678 26.2321 104.082 26.4918C103.487 26.7516 102.95 27.1322 102.506 27.6102C102.062 28.0882 101.719 28.6534 101.499 29.2709C101.279 29.8883 101.186 30.5449 101.227 31.2C101.212 31.8707 101.332 32.5374 101.577 33.1604C101.823 33.7834 102.19 34.3498 102.657 34.8259C103.124 35.3019 103.681 35.6778 104.295 35.9311C104.908 36.1844 105.566 36.3098 106.228 36.3C107.057 36.3045 107.874 36.1008 108.607 35.7071C109.339 35.3134 109.963 34.742 110.424 34.044L108.705 32.844C108.449 33.2769 108.086 33.635 107.651 33.8832C107.217 34.1315 106.727 34.2613 106.228 34.26C105.715 34.2798 105.207 34.1428 104.772 33.8667C104.337 33.5906 103.993 33.1883 103.787 32.712L110.53 29.892L110.282 29.352ZM103.407 31.056C103.383 30.6848 103.433 30.3125 103.553 29.9609C103.673 29.6093 103.86 29.2855 104.106 29.0083C104.351 28.7312 104.648 28.5063 104.98 28.3469C105.312 28.1875 105.672 28.0968 106.039 28.08C106.421 28.0545 106.802 28.1433 107.135 28.3353C107.468 28.5273 107.738 28.814 107.911 29.16L103.407 31.056ZM97.9319 36H100.148V21H97.9319V36ZM94.3053 27.24H94.2223C93.8883 26.8619 93.4791 26.5595 93.0216 26.3527C92.564 26.1459 92.0685 26.0393 91.5675 26.04C90.2723 26.1036 89.0509 26.6693 88.1565 27.6199C87.2621 28.5705 86.7631 29.8331 86.7631 31.146C86.7631 32.4589 87.2621 33.7215 88.1565 34.6721C89.0509 35.6227 90.2723 36.1884 91.5675 36.252C92.0697 36.2605 92.5677 36.1575 93.0264 35.9502C93.4851 35.7429 93.8933 35.4363 94.2223 35.052H94.2934V35.784C94.2934 37.74 93.2623 38.784 91.603 38.784C91.0504 38.7709 90.5141 38.5916 90.0625 38.2689C89.6108 37.9462 89.2642 37.4948 89.0667 36.972L87.1349 37.788C87.4985 38.6836 88.1181 39.4488 88.9142 39.9855C89.7104 40.5222 90.6466 40.8058 91.603 40.8C94.1986 40.8 96.3438 39.252 96.3438 35.484V26.4H94.3053V27.24ZM91.769 34.296C91.0045 34.2278 90.2929 33.8721 89.7746 33.299C89.2563 32.7259 88.9688 31.9771 88.9688 31.2C88.9688 30.4229 89.2563 29.6741 89.7746 29.101C90.2929 28.5279 91.0045 28.1722 91.769 28.104C92.148 28.1237 92.5193 28.22 92.8611 28.3872C93.2028 28.5545 93.508 28.7893 93.7587 29.0778C94.0094 29.3663 94.2006 29.7027 94.3209 30.0672C94.4412 30.4317 94.4883 30.8168 94.4593 31.2C94.4917 31.5848 94.4466 31.9723 94.3268 32.339C94.207 32.7057 94.015 33.0439 93.7624 33.3333C93.5098 33.6227 93.2019 33.8573 92.8572 34.0227C92.5125 34.1882 92.1383 34.2812 91.7571 34.296H91.769ZM120.664 21H115.366V36H117.582V30.312H120.676C121.307 30.3579 121.942 30.2716 122.539 30.0585C123.136 29.8453 123.683 29.5098 124.147 29.073C124.611 28.6361 124.98 28.1073 125.233 27.5194C125.486 26.9315 125.616 26.2972 125.616 25.656C125.616 25.0148 125.486 24.3805 125.233 23.7926C124.98 23.2047 124.611 22.6759 124.147 22.239C123.683 21.8022 123.136 21.4667 122.539 21.2535C121.942 21.0404 121.307 20.9541 120.676 21H120.664ZM120.664 28.2H117.57V23.088H120.711C121.385 23.088 122.032 23.3592 122.509 23.8419C122.986 24.3246 123.253 24.9793 123.253 25.662C123.253 26.3447 122.986 26.9994 122.509 27.4821C122.032 27.9648 121.385 28.236 120.711 28.236L120.664 28.2ZM134.329 26.04C133.522 25.9912 132.719 26.1821 132.018 26.5893C131.316 26.9965 130.748 27.6022 130.382 28.332L132.35 29.16C132.544 28.798 132.837 28.5009 133.195 28.3049C133.553 28.1089 133.959 28.0224 134.365 28.056C134.646 28.0227 134.931 28.0465 135.203 28.126C135.475 28.2055 135.729 28.339 135.95 28.5188C136.17 28.6987 136.353 28.9212 136.488 29.1735C136.623 29.4257 136.707 29.7026 136.735 29.988V30.144C136.023 29.7624 135.229 29.5645 134.424 29.568C132.302 29.568 130.157 30.768 130.157 32.94C130.178 33.4031 130.29 33.8573 130.488 34.2757C130.685 34.694 130.963 35.0681 131.306 35.3758C131.648 35.6834 132.048 35.9184 132.482 36.0669C132.916 36.2153 133.375 36.2742 133.831 36.24C134.389 36.2806 134.948 36.1683 135.448 35.9149C135.949 35.6615 136.373 35.2764 136.676 34.8H136.747V36H138.88V30.228C138.88 27.6 136.913 26.076 134.388 26.076L134.329 26.04ZM134.056 34.26C133.333 34.26 132.326 33.888 132.326 32.988C132.326 31.788 133.582 31.392 134.696 31.392C135.4 31.3744 136.096 31.5485 136.711 31.896C136.637 32.5457 136.334 33.1464 135.857 33.5874C135.38 34.0284 134.761 34.2801 134.116 34.296L134.056 34.26ZM146.655 26.4L144.119 32.904H144.047L141.416 26.4H139.046L142.993 35.496L140.741 40.548H143.052L149.12 26.4H146.655ZM126.732 36H128.948V21H126.732V36Z" fill="white"/>
@@ -311,13 +591,9 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                
+                </section>
             </div>
-            
         </section>
-
     </main>
-    <footer></footer>
 </body>
 </html>

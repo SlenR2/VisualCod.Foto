@@ -1,31 +1,248 @@
 // =====================================================
-// POLAROID / PIXAR-LIKE HEART ANIMATION
+// POLAROID / PIXAR-LIKE HEART
 // HTML + SCSS only / без JS
+// =====================================================
+
+
+// =====================================================
+// 1) ГЛАВНЫЕ ПЕРЕМЕННЫЕ ДЛЯ НАСТРОЙКИ
 // -----------------------------------------------------
-// Логика:
-// 1) основная история сердца проигрывается 1 раз
-// 2) сердце остаётся на месте точки над "i"
-// 3) после этого отдельно стартует бесконечная левитация
+// Здесь можно очень точно подкручивать:
+// - длительности
+// - тайминги сцен
+// - высоту прыжков
+// - паузы перед прыжком на точку
+// - паузы перед финальным тяжёлым прыжком
+// - посадки по X/Y
+// - силу squash/stretch
 // =====================================================
 
 // ---------------------------------
-// Настройки
+// Общая длительность
 // ---------------------------------
-$story-duration: 8.6s; // длительность основной сцены
-$float-duration: 2.2s; // длительность одного цикла левитации
+$story-duration: 10.2s;     // вся основная сцена до финальной посадки
+$float-duration: 2.3s;     // длительность одного цикла левитации после сцены
 
-$logo-black: #000;
-$dot-color: #111;
-
-// Если понадобится подвинуть всю сцену сердца/тени/точки
-// относительно логотипа, меняй эти значения:
+// ---------------------------------
+// Смещение всей сцены сердца/точки/тени
+// ---------------------------------
 $seat-x: -2%;
 $seat-y: 0%;
+
+// ---------------------------------
+// Цвета
+// ---------------------------------
+$logo-black: #000;
+$dot-color: #111;
+$shadow-fill: rgba(0, 0, 0, 0.18);
+
+// ---------------------------------
+// ТАЙМЛАЙН STORY
+// Меняй эти значения, если хочешь
+// сдвигать конкретные моменты
+// ---------------------------------
+$t-hidden-end: 1%;
+$t-enter-visible: 3%;
+$t-first-prep: 6%;
+
+// прыжки по буквам
+$t-jump-1-apex: 11%;
+$t-jump-1-land: 16%;
+
+$t-jump-2-apex: 18%;
+$t-jump-2-land: 20%;
+
+$t-jump-3-apex: 22%;
+$t-jump-3-land: 26%;
+
+$t-jump-4-apex: 30%;
+$t-jump-4-land: 33%;
+
+// пауза перед прыжком на точку
+$t-dot-pause-start: 47.5%;
+$t-dot-pause-end: 50.5%;
+
+// прыжок на точку
+$t-dot-apex: 55%;
+$t-dot-land: 58.5%;
+
+// милые подпрыги на точке
+$t-hop-1-apex: 62%;
+$t-hop-1-land: 64.5%;
+
+$t-hop-2-apex: 68%;
+$t-hop-2-land: 70%;
+
+// пауза перед финальным тяжёлым прыжком
+$t-final-pause-start: 79.5%;
+$t-final-pause-end: 84%;
+
+// подготовка / взлёт / удар
+$t-final-prep: 84%;
+$t-final-apex: 88.5%;
+$t-final-impact: 92%;
+$t-final-settle: 94.5%;
+$t-end: 100%;
+
+// ---------------------------------
+// ПАДЕНИЕ ТОЧКИ
+// ---------------------------------
+$t-dot-visible-start: 61%;
+$t-dot-visible-end: 95%;
+$t-dot-fade-out: 97%;
+
+$t-dot-drop-start: 92%;
+$t-dot-drop-nudge: 93%;
+$t-dot-drop-mid: 96%;
+$t-dot-drop-end: 100%;
+
+// ---------------------------------
+// ГОРИЗОНТАЛЬНЫЕ ПОЗИЦИИ СЕРДЦА
+// X
+// ---------------------------------
+$x-hidden: -196%;
+$x-enter: -190%;
+
+$x-1-apex: -82%;
+$x-1-land: -70%;
+
+$x-2-apex: -60%;
+$x-2-land: -49%;
+
+$x-3-apex: -39%;
+$x-3-land: -28%;
+
+$x-4-apex: -17%;
+$x-4-land: -9%;
+
+// перед прыжком на точку
+$x-dot-prep: -7%;
+$x-dot-apex: -1.8%;
+$x-dot-land: 0%;
+
+// ---------------------------------
+// ВЕРТИКАЛЬНЫЕ ПОЗИЦИИ СЕРДЦА
+// Y
+// Чем более отрицательное значение — тем выше прыжок
+// ---------------------------------
+$y-hidden: 18%;
+$y-enter: 18%;
+$y-first-prep: 25%;
+
+$y-1-apex: -16%;
+$y-1-land: 10%;
+
+$y-2-apex: -14.5%;
+$y-2-land: 9%;
+
+$y-3-apex: -15.8%;
+$y-3-land: 8%;
+
+$y-4-apex: -14%;
+$y-4-land: 7%;
+
+// прыжок на точку — заметно выше
+$y-dot-prep: 8.8%;
+$y-dot-apex: -17%;
+$y-dot-land: 0%;
+
+// милые подпрыги
+$y-hop-1-apex: -12%;
+$y-hop-2-apex: -10%;
+
+// финальный тяжёлый прыжок
+$y-final-prep: 4.2%;
+$y-final-apex: -29%;
+$y-final-impact: 0%;
+$y-final-settle: 1.1%;
+$y-final-rest: 0%;
+
+// ---------------------------------
+// ЛЕВИТАЦИЯ ПОСЛЕ СЦЕНЫ
+// ---------------------------------
+$float-y: -19%;
+$float-tilt-right: .9deg;
+$float-tilt-left: -.4deg;
+$float-scale-x-1: 1.01;
+$float-scale-y-1: .99;
+$float-scale-x-2: .995;
+$float-scale-y-2: 1.005;
+
+// ---------------------------------
+// НАКЛОНЫ ВО ВРЕМЯ STORY
+// ---------------------------------
+$tilt-start: -12deg;
+$tilt-apex-forward: 8deg;
+$tilt-land-back: -6deg;
+$tilt-small-forward: 4deg;
+$tilt-small-back: -3deg;
+$tilt-hop: 2deg;
+$tilt-final-prep: -4deg;
+$tilt-final-apex: 3deg;
+$tilt-final-impact: -4deg;
+
+// ---------------------------------
+// SQUASH & STRETCH
+// ---------------------------------
+$scale-neutral-x: 1;
+$scale-neutral-y: 1;
+
+$scale-prep-x: 1.22;
+$scale-prep-y: .78;
+
+$scale-jump-x: .88;
+$scale-jump-y: 1.16;
+
+$scale-land-x: 1.16;
+$scale-land-y: .84;
+
+$scale-dot-land-x: 1.2;
+$scale-dot-land-y: .8;
+
+$scale-hop-jump-x: .95;
+$scale-hop-jump-y: 1.1;
+
+$scale-hop-land-x: 1.08;
+$scale-hop-land-y: .92;
+
+$scale-final-prep-x: 1.32;
+$scale-final-prep-y: .7;
+
+$scale-final-jump-x: .83;
+$scale-final-jump-y: 1.23;
+
+$scale-final-impact-x: 1.29;
+$scale-final-impact-y: .75;
+
+// ---------------------------------
+// ТЕНЬ
+// Только по "полу":
+// - двигается только по X
+// - не прыгает по Y
+// - не масштабируется
+// - только меняет opacity
+// ---------------------------------
+$shadow-opacity-hidden: 0;
+$shadow-opacity-enter: .50;
+$shadow-opacity-ground: 1;
+$shadow-opacity-air: .40;
+$shadow-opacity-hop-air: .60;
+$shadow-opacity-float-min: .70;
+
+// ---------------------------------
+// ПАДЕНИЕ ТОЧКИ
+// ---------------------------------
+$dot-drop-nudge-y: 1.8%;
+$dot-drop-mid-y: 78%;
+$dot-drop-end-y: 118%;
 
 // ---------------------------------
 // Корневой блок
 // ---------------------------------
 .polaroid-pixar {
+  width: min(820px, 100%);
+  --story-duration: #{$story-duration};
+  --float-duration: #{$float-duration};
   --seat-x: #{$seat-x};
   --seat-y: #{$seat-y};
 
@@ -33,19 +250,14 @@ $seat-y: 0%;
     display: block;
     width: 100%;
     height: auto;
-    overflow: hidden; // скрывает вход сердца слева и падение точки вниз
+    overflow: hidden;
   }
 
-  // Текст логотипа
   .word path {
     fill: $logo-black;
   }
 
-  // ---------------------------------
-  // Общие настройки SVG-transform
-  // ---------------------------------
-
-  // Служебные группы-сцены, которые можно смещать целиком
+  // общие transform-настройки
   .heart-seat,
   .heart-shadow-seat,
   .i-dot-seat {
@@ -54,7 +266,6 @@ $seat-y: 0%;
     transform: translate(var(--seat-x), var(--seat-y));
   }
 
-  // Основные двигающиеся группы
   .heart-rig,
   .heart-shadow-rig,
   .i-dot-rig {
@@ -64,7 +275,6 @@ $seat-y: 0%;
     pointer-events: none;
   }
 
-  // Внутренние группы для характера / squash / левитации
   .heart-float,
   .heart-idle,
   .heart-attitude,
@@ -77,34 +287,30 @@ $seat-y: 0%;
     pointer-events: none;
   }
 
-  // ---------------------------------
+  // ----------------------------
   // Сердце
-  // ---------------------------------
-
-  // Основная история: один раз и остаётся в финале
+  // ----------------------------
   .heart-rig {
     opacity: 0;
-    animation: heart-story $story-duration linear 1 forwards;
+    animation: heart-story var(--story-duration) linear 1 forwards;
   }
 
-  // Отдельная бесконечная левитация, стартует только после story
+  // отдельная бесконечная левитация после story
   .heart-float {
-    animation: heart-float $float-duration ease-in-out $story-duration infinite;
+    animation: heart-float var(--float-duration) ease-in-out var(--story-duration) infinite;
   }
 
-  // Дополнительный "живой" idle-поворот после посадки
+  // лёгкий "idle" характер после story
   .heart-idle {
-    animation: heart-idle $float-duration ease-in-out $story-duration infinite;
+    animation: heart-idle var(--float-duration) ease-in-out var(--story-duration) infinite;
   }
 
-  // Характер сердца во время основной анимации
   .heart-attitude {
-    animation: heart-tilt $story-duration linear 1 forwards;
+    animation: heart-tilt var(--story-duration) linear 1 forwards;
   }
 
-  // Squash & stretch во время основной анимации
   .heart-squash {
-    animation: heart-squash $story-duration linear 1 forwards;
+    animation: heart-squash var(--story-duration) linear 1 forwards;
     filter: drop-shadow(0 0.45px 0.85px rgba(0, 0, 0, 0.22));
   }
 
@@ -114,181 +320,174 @@ $seat-y: 0%;
 
   .heart-gloss {
     fill: url(#heartGloss);
-    opacity: 0.8;
+    opacity: .8;
   }
 
-  // ---------------------------------
+  // ----------------------------
   // Точка над i
-  // ---------------------------------
-
-  // Точка падает один раз вниз и больше не возвращается
+  // ----------------------------
   .i-dot-rig {
-    animation: dot-drop $story-duration linear 1 forwards;
+    animation: dot-drop var(--story-duration) linear 1 forwards;
   }
 
   .i-dot {
     fill: $dot-color;
     opacity: 0;
     animation:
-      dot-opacity $story-duration linear 1 forwards,
-      dot-squash $story-duration linear 1 forwards;
+      dot-opacity var(--story-duration) linear 1 forwards,
+      dot-squash var(--story-duration) linear 1 forwards;
   }
 
-  // ---------------------------------
-  // Тень сердца
-  // ---------------------------------
-
-  // Основной путь тени во время story
+  // ----------------------------
+  // Тень
+  // ВАЖНО:
+  // 1) path-x — только движение по полу по X
+  // 2) opacity-story — только изменение прозрачности
+  // 3) после story — отдельная пульсация opacity
+  // ----------------------------
   .heart-shadow-rig {
     opacity: 0;
-    animation: shadow-path $story-duration linear 1 forwards;
+    animation:
+      shadow-path-x var(--story-duration) linear 1 forwards,
+      shadow-opacity-story var(--story-duration) linear 1 forwards;
   }
 
-  // Отдельная бесконечная "левитация" тени после story
   .heart-shadow-float {
-    animation: shadow-float $float-duration ease-in-out $story-duration infinite;
+    opacity: 1;
+    animation: shadow-float-opacity var(--float-duration) ease-in-out var(--story-duration) infinite;
   }
 
   .heart-shadow {
-    fill: rgba(0, 0, 0, 0.18);
-    animation: shadow-scale $story-duration linear 1 forwards;
+    fill: $shadow-fill;
   }
 }
 
+
 // =====================================================
-// ОСНОВНОЙ ПУТЬ СЕРДЦА
-// -----------------------------------------------------
-// 0%  - 6%   : появление и подготовка
-// 6%  - 60%  : прыжки по буквам
-// 60% - 73%  : милые подпрыги на точке
-// 73% - 76%  : мини-пауза
-// 76% - 84%  : тяжёлый прыжок / stomp
-// 84% - 100% : сердце уже осталось на точке
+// 2) ОСНОВНОЙ ПУТЬ СЕРДЦА
 // =====================================================
 @keyframes heart-story {
-  // За кадром
   0%,
-  2% {
+  #{$t-hidden-end} {
     opacity: 0;
-    transform: translate(-92%, 18%);
+    transform: translate($x-hidden, $y-hidden);
   }
 
-  // Появление
-  3% {
+  #{$t-enter-visible} {
     opacity: 1;
-    transform: translate(-88%, 18%);
+    transform: translate($x-enter, $y-enter);
   }
 
-  // Подготовка перед первым прыжком
-  5.5% {
+  // anticipation
+  #{$t-first-prep} {
     opacity: 1;
-    transform: translate(-88%, 2%);
+    transform: translate($x-enter, $y-first-prep);
   }
 
-  // Прыжок 1
-  9% {
-    transform: translate(-78%, 2%);
-  }
-  14% {
-    transform: translate(-68%, 18%);
-  }
-  16% {
-    transform: translate(-67%, 19%);
+  // jump 1
+  #{$t-jump-1-apex} {
+    transform: translate($x-1-apex, $y-1-apex);
   }
 
-  // Прыжок 2
-  20% {
-    transform: translate(-58%, 3%);
-  }
-  26% {
-    transform: translate(-48%, 17%);
-  }
-  28% {
-    transform: translate(-47%, 18%);
+  #{$t-jump-1-land} {
+    transform: translate($x-1-land, $y-1-land);
   }
 
-  // Прыжок 3
-  32% {
-    transform: translate(-39%, 3%);
-  }
-  38% {
-    transform: translate(-28%, 16%);
-  }
-  40% {
-    transform: translate(-27%, 17%);
+  // jump 2
+  #{$t-jump-2-apex} {
+    transform: translate($x-2-apex, $y-2-apex);
   }
 
-  // Прыжок 4
-  45% {
-    transform: translate(-18%, 2%);
-  }
-  52% {
-    transform: translate(-9%, 16%);
-  }
-  54% {
-    transform: translate(-8%, 17%);
+  #{$t-jump-2-land} {
+    transform: translate($x-2-land, $y-2-land);
   }
 
-  // Прыжок на точку над i
-  57% {
-    transform: translate(-4%, 1%);
-  }
-  60% {
-    transform: translate(0%, 0%);
+  // jump 3
+  #{$t-jump-3-apex} {
+    transform: translate($x-3-apex, $y-3-apex);
   }
 
-  // Милые подпрыги
-  64% {
-    transform: translate(0%, -16.8%);
-  }
-  67% {
-    transform: translate(0%, 0%);
+  #{$t-jump-3-land} {
+    transform: translate($x-3-land, $y-3-land);
   }
 
-  70% {
-    transform: translate(0%, -13.9%);
-  }
-  73% {
-    transform: translate(0%, 0%);
+  // jump 4
+  #{$t-jump-4-apex} {
+    transform: translate($x-4-apex, $y-4-apex);
   }
 
-  // Мини-пауза перед тяжёлым stomp
-  74.5%,
-  75.2% {
-    transform: translate(0%, 0%);
+  #{$t-jump-4-land} {
+    transform: translate($x-4-land, $y-4-land);
   }
 
-  // Глубокая подготовка
-  77% {
-    transform: translate(0%, 2.9%);
+  // пауза перед прыжком на точку
+  #{$t-dot-pause-start},
+  #{$t-dot-pause-end} {
+    transform: translate($x-dot-prep, $y-dot-prep);
   }
 
-  // Тяжёлый прыжок
-  80.5% {
-    transform: translate(0%, -20.8%);
+  // прыжок на точку
+  #{$t-dot-apex} {
+    transform: translate($x-dot-apex, $y-dot-apex);
   }
 
-  // Удар
-  84% {
-    transform: translate(0%, 0%);
+  #{$t-dot-land} {
+    transform: translate($x-dot-land, $y-dot-land);
   }
 
-  // Посадка и маленькое "оседание"
-  85.4% {
-    transform: translate(0%, 1.1%);
+  // милые подпрыги
+  #{$t-hop-1-apex} {
+    transform: translate($x-dot-land, $y-hop-1-apex);
   }
 
-  // Финал — сердце остаётся на месте
-  87%,
-  100% {
+  #{$t-hop-1-land} {
+    transform: translate($x-dot-land, $y-dot-land);
+  }
+
+  #{$t-hop-2-apex} {
+    transform: translate($x-dot-land, $y-hop-2-apex);
+  }
+
+  #{$t-hop-2-land} {
+    transform: translate($x-dot-land, $y-dot-land);
+  }
+
+  // пауза перед тяжёлым прыжком
+  #{$t-final-pause-start},
+  #{$t-final-pause-end} {
+    transform: translate($x-dot-land, $y-dot-land);
+  }
+
+  // глубокая подготовка
+  #{$t-final-prep} {
+    transform: translate($x-dot-land, $y-final-prep);
+  }
+
+  // мощный взлёт
+  #{$t-final-apex} {
+    transform: translate($x-dot-land, $y-final-apex);
+  }
+
+  // тяжёлый удар
+  #{$t-final-impact} {
+    transform: translate($x-dot-land, $y-final-impact);
+  }
+
+  // маленькое оседание
+  #{$t-final-settle} {
+    transform: translate($x-dot-land, $y-final-settle);
+  }
+
+  // финал
+  #{$t-end} {
     opacity: 1;
-    transform: translate(0%, 0%);
+    transform: translate($x-dot-land, $y-final-rest);
   }
 }
 
+
 // =====================================================
-// ОТДЕЛЬНАЯ ЛЕВИТАЦИЯ СЕРДЦА
-// Запускается только после завершения story
+// 3) ОТДЕЛЬНАЯ ЛЕВИТАЦИЯ ПОСЛЕ СЦЕНЫ
 // =====================================================
 @keyframes heart-float {
   0% {
@@ -296,7 +495,7 @@ $seat-y: 0%;
   }
 
   50% {
-    transform: translateY(-12.7%);
+    transform: translateY($float-y);
   }
 
   100% {
@@ -304,15 +503,13 @@ $seat-y: 0%;
   }
 }
 
-// Микро-"характер" в левитации:
-// лёгкий наклон и почти незаметное дыхание
 @keyframes heart-idle {
   0% {
     transform: rotate(.2deg) scale(1, 1);
   }
 
   25% {
-    transform: rotate(.15deg) scale(1.01, .99);
+    transform: rotate($float-tilt-right) scale($float-scale-x-1, $float-scale-y-1);
   }
 
   50% {
@@ -320,444 +517,511 @@ $seat-y: 0%;
   }
 
   75% {
-    transform: rotate(-.14deg) scale(.995, 1.005);
+    transform: rotate($float-tilt-left) scale($float-scale-x-2, $float-scale-y-2);
   }
 
   100% {
-    transform: rotate(.10deg) scale(1, 1);
+    transform: rotate(.2deg) scale(1, 1);
   }
 }
 
+
 // =====================================================
-// НАКЛОНЫ СЕРДЦА ВО ВРЕМЯ STORY
+// 4) НАКЛОНЫ СЕРДЦА ВО ВРЕМЯ STORY
 // =====================================================
 @keyframes heart-tilt {
   0%,
-  5.5% {
-    transform: rotate(-15deg);
+  #{$t-first-prep} {
+    transform: rotate($tilt-start);
   }
 
-  9% {
-    transform: rotate(13deg);
-  }
-  14% {
-    transform: rotate(-15deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  26% {
-    transform: rotate(-14deg);
-  }
-  32% {
-    transform: rotate(11.5deg);
-  }
-  38% {
-    transform: rotate(-10deg);
-  }
-  45% {
-    transform: rotate(11deg);
-  }
-  52% {
-    transform: rotate(-8.5deg);
+  #{$t-jump-1-apex} {
+    transform: rotate($tilt-apex-forward);
   }
 
-  60% {
-    transform: rotate(0deg);
+  #{$t-jump-1-land} {
+    transform: rotate($tilt-land-back);
   }
 
-  64% {
-    transform: rotate(8.2deg);
-  }
-  67% {
-    transform: rotate(-4.8deg);
+  #{$t-jump-2-apex} {
+    transform: rotate(6deg);
   }
 
-  70% {
-    transform: rotate(3.3deg);
-  }
-  73% {
-    transform: rotate(0deg);
+  #{$t-jump-2-land} {
+    transform: rotate(-5deg);
   }
 
-  75.2% {
-    transform: rotate(0deg);
+  #{$t-jump-3-apex} {
+    transform: rotate(5deg);
   }
 
-  77% {
-    transform: rotate(-10deg);
-  }
-
-  80.5% {
-    transform: rotate(9.2deg);
-  }
-
-  84% {
+  #{$t-jump-3-land} {
     transform: rotate(-4deg);
   }
 
-  87%,
-  100% {
+  #{$t-jump-4-apex} {
+    transform: rotate($tilt-small-forward);
+  }
+
+  #{$t-jump-4-land} {
+    transform: rotate($tilt-small-back);
+  }
+
+  #{$t-dot-pause-start},
+  #{$t-dot-pause-end} {
+    transform: rotate(0deg);
+  }
+
+  #{$t-dot-apex} {
+    transform: rotate(3deg);
+  }
+
+  #{$t-dot-land} {
+    transform: rotate(0deg);
+  }
+
+  #{$t-hop-1-apex} {
+    transform: rotate($tilt-hop);
+  }
+
+  #{$t-hop-1-land} {
+    transform: rotate(-1.5deg);
+  }
+
+  #{$t-hop-2-apex} {
+    transform: rotate(1.4deg);
+  }
+
+  #{$t-hop-2-land} {
+    transform: rotate(0deg);
+  }
+
+  #{$t-final-pause-start},
+  #{$t-final-pause-end} {
+    transform: rotate(0deg);
+  }
+
+  #{$t-final-prep} {
+    transform: rotate($tilt-final-prep);
+  }
+
+  #{$t-final-apex} {
+    transform: rotate($tilt-final-apex);
+  }
+
+  #{$t-final-impact} {
+    transform: rotate($tilt-final-impact);
+  }
+
+  #{$t-end} {
     transform: rotate(0deg);
   }
 }
 
+
 // =====================================================
-// SQUASH & STRETCH СЕРДЦА
+// 5) SQUASH & STRETCH
 // =====================================================
 @keyframes heart-squash {
   0%,
-  3% {
+  #{$t-enter-visible} {
+    transform: scale($scale-neutral-x, $scale-neutral-y);
+  }
+
+  // anticipation
+  #{$t-first-prep} {
+    transform: scale($scale-prep-x, $scale-prep-y);
+  }
+
+  // jump 1
+  #{$t-jump-1-apex} {
+    transform: scale($scale-jump-x, $scale-jump-y);
+  }
+
+  #{$t-jump-1-land} {
+    transform: scale($scale-land-x, $scale-land-y);
+  }
+
+  // jump 2
+  #{$t-jump-2-apex} {
+    transform: scale(.9, 1.14);
+  }
+
+  #{$t-jump-2-land} {
+    transform: scale(1.12, .88);
+  }
+
+  // jump 3
+  #{$t-jump-3-apex} {
+    transform: scale(.89, 1.15);
+  }
+
+  #{$t-jump-3-land} {
+    transform: scale(1.11, .89);
+  }
+
+  // jump 4
+  #{$t-jump-4-apex} {
+    transform: scale(.93, 1.1);
+  }
+
+  #{$t-jump-4-land} {
+    transform: scale(1.08, .92);
+  }
+
+  // пауза перед прыжком на точку
+  #{$t-dot-pause-start},
+  #{$t-dot-pause-end} {
+    transform: scale(1.03, .97);
+  }
+
+  // прыжок на точку
+  #{$t-dot-apex} {
+    transform: scale(.87, 1.18);
+  }
+
+  #{$t-dot-land} {
+    transform: scale($scale-dot-land-x, $scale-dot-land-y);
+  }
+
+  // милые подпрыги
+  #{$t-hop-1-apex} {
+    transform: scale($scale-hop-jump-x, $scale-hop-jump-y);
+  }
+
+  #{$t-hop-1-land} {
+    transform: scale($scale-hop-land-x, $scale-hop-land-y);
+  }
+
+  #{$t-hop-2-apex} {
+    transform: scale(.97, 1.06);
+  }
+
+  #{$t-hop-2-land} {
+    transform: scale(1.05, .95);
+  }
+
+  // пауза
+  #{$t-final-pause-start},
+  #{$t-final-pause-end} {
     transform: scale(1, 1);
   }
 
-  // Подготовка
-  5.5% {
-    transform: scale(1.2, 0.8);
+  // подготовка к stomp
+  #{$t-final-prep} {
+    transform: scale($scale-final-prep-x, $scale-final-prep-y);
   }
 
-  // Прыжок 1
-  9% {
-    transform: scale(0.9, 1.14);
-  }
-  14% {
-    transform: scale(1.14, 0.86);
-  }
-  16% {
-    transform: scale(1.16, 0.84);
+  // тяжёлый прыжок
+  #{$t-final-apex} {
+    transform: scale($scale-final-jump-x, $scale-final-jump-y);
   }
 
-  // Прыжок 2
-  20% {
-    transform: scale(0.93, 1.1);
-  }
-  26% {
-    transform: scale(1.11, 0.89);
-  }
-  28% {
-    transform: scale(1.12, 0.88);
+  // сильный удар
+  #{$t-final-impact} {
+    transform: scale($scale-final-impact-x, $scale-final-impact-y);
   }
 
-  // Прыжок 3
-  32% {
-    transform: scale(0.96, 1.07);
-  }
-  38% {
-    transform: scale(1.08, 0.92);
-  }
-  40% {
-    transform: scale(1.09, 0.91);
+  // затухание
+  #{$t-final-settle} {
+    transform: scale(.98, 1.02);
   }
 
-  // Прыжок 4
-  45% {
-    transform: scale(0.97, 1.05);
-  }
-  52% {
-    transform: scale(1.07, 0.93);
-  }
-  54% {
-    transform: scale(1.1, 0.9);
-  }
-
-  // Прыжок на точку
-  57% {
-    transform: scale(0.92, 1.12);
-  }
-  60% {
-    transform: scale(1.21, 0.79);
-  }
-
-  // Милые подпрыги
-  64% {
-    transform: scale(0.95, 1.09);
-  }
-  67% {
-    transform: scale(1.1, 0.9);
-  }
-  70% {
-    transform: scale(0.98, 1.04);
-  }
-  73% {
-    transform: scale(1.04, 0.96);
-  }
-
-  // Пауза
-  75.2% {
-    transform: scale(1, 1);
-  }
-
-  // Подготовка к тяжёлому прыжку
-  77% {
-    transform: scale(1.28, 0.72);
-  }
-
-  // Тяжёлый взлёт
-  80.5% {
-    transform: scale(0.86, 1.19);
-  }
-
-  // Сильный удар
-  84% {
-    transform: scale(1.25, 0.78);
-  }
-
-  // Затухание
-  85.4% {
-    transform: scale(0.98, 1.02);
-  }
-
-  87%,
-  100% {
+  #{$t-end} {
     transform: scale(1, 1);
   }
 }
 
-// =====================================================
-// ОСНОВНОЙ ПУТЬ ТЕНИ
-// =====================================================
-// @keyframes shadow-path {
-//   0%,
-//   2% {
-//     opacity: 0;
-//     transform: translate(-92%, 0%);
-//   }
-
-//   3% {
-//     opacity: 10.08;
-//     transform: translate(-88%, 0%);
-//   }
-
-//   14% {
-//     opacity: 10.16;
-//     transform: translate(-68%, 0%);
-//   }
-
-//   26% {
-//     opacity: 10.15;
-//     transform: translate(-48%, 0%);
-//   }
-
-//   38% {
-//     opacity: 10.14;
-//     transform: translate(-28%, 0%);
-//   }
-
-//   52% {
-//     opacity: 10.14;
-//     transform: translate(-9%, 0%);
-//   }
-
-//   60% {
-//     opacity: 10.17;
-//     transform: translate(0%, 0%);
-//   }
-
-//   84% {
-//     opacity: 10.2;
-//     transform: translate(0%, 0%);
-//   }
-
-//   100% {
-//     opacity: 0.15;
-//     transform: translate(0%, 0%);
-//   }
-// }
-
-// // =====================================================
-// // ОТДЕЛЬНАЯ ЛЕВИТАЦИЯ ТЕНИ
-// // =====================================================
-// @keyframes shadow-float {
-//   0% {
-//     transform: scale(1, 1);
-//     opacity: 0.16;
-//   }
-
-//   50% {
-//     transform: scale(0.86, 0.86);
-//     opacity: 0.1;
-//   }
-
-//   100% {
-//     transform: scale(1, 1);
-//     opacity: 0.16;
-//   }
-// }
-
-// // Масштаб тени во время основной сцены
-// @keyframes shadow-scale {
-//   0%,
-//   3% {
-//     transform: scale(0.34, 0.78);
-//   }
-
-//   5.5% {
-//     transform: scale(1.05, 1.05);
-//   }
-
-//   9% {
-//     transform: scale(0.46, 0.62);
-//   }
-//   14% {
-//     transform: scale(0.96, 1);
-//   }
-//   16% {
-//     transform: scale(1.08, 1.08);
-//   }
-
-//   20% {
-//     transform: scale(0.58, 0.72);
-//   }
-//   26% {
-//     transform: scale(0.88, 0.98);
-//   }
-//   28% {
-//     transform: scale(0.97, 1.02);
-//   }
-
-//   32% {
-//     transform: scale(0.64, 0.76);
-//   }
-//   38% {
-//     transform: scale(0.84, 0.94);
-//   }
-//   40% {
-//     transform: scale(0.9, 0.98);
-//   }
-
-//   45% {
-//     transform: scale(0.67, 0.8);
-//   }
-//   52% {
-//     transform: scale(0.84, 0.94);
-//   }
-//   54% {
-//     transform: scale(0.9, 0.98);
-//   }
-
-//   60% {
-//     transform: scale(1, 1);
-//   }
-//   64% {
-//     transform: scale(0.68, 0.8);
-//   }
-//   67% {
-//     transform: scale(0.95, 1);
-//   }
-//   70% {
-//     transform: scale(0.79, 0.88);
-//   }
-//   73% {
-//     transform: scale(0.96, 1);
-//   }
-
-//   77% {
-//     transform: scale(1.12, 1.1);
-//   }
-
-//   80.5% {
-//     transform: scale(0.42, 0.56);
-//   }
-
-//   84% {
-//     transform: scale(1.22, 1.08);
-//   }
-
-//   87%,
-//   100% {
-//     transform: scale(0.96, 0.96);
-//   }
-// }
 
 // =====================================================
-// ТОЧКА НАД i
+// 6) ТЕНЬ
+// -----------------------------------------------------
+// Тень движется только по X по "полу".
+// Никаких прыжков по Y.
+// Никаких scale.
+// Только opacity.
 // =====================================================
 
-// Видимость точки
+// только X-траектория по полу
+@keyframes shadow-path-x {
+  0%,
+  #{$t-hidden-end} {
+    transform: translate($x-hidden, 0%);
+  }
+
+  #{$t-enter-visible} {
+    transform: translate($x-enter, 0%);
+  }
+
+  #{$t-first-prep} {
+    transform: translate($x-enter, 0%);
+  }
+
+  #{$t-jump-1-apex} {
+    transform: translate($x-1-apex, 0%);
+  }
+
+  #{$t-jump-1-land} {
+    transform: translate($x-1-land, 0%);
+  }
+
+  #{$t-jump-2-apex} {
+    transform: translate($x-2-apex, 0%);
+  }
+
+  #{$t-jump-2-land} {
+    transform: translate($x-2-land, 0%);
+  }
+
+  #{$t-jump-3-apex} {
+    transform: translate($x-3-apex, 0%);
+  }
+
+  #{$t-jump-3-land} {
+    transform: translate($x-3-land, 0%);
+  }
+
+  #{$t-jump-4-apex} {
+    transform: translate($x-4-apex, 0%);
+  }
+
+  #{$t-jump-4-land} {
+    transform: translate($x-4-land, 0%);
+  }
+
+  #{$t-dot-pause-start},
+  #{$t-dot-pause-end} {
+    transform: translate($x-dot-prep, 0%);
+  }
+
+  #{$t-dot-apex} {
+    transform: translate($x-dot-apex, 0%);
+  }
+
+  #{$t-dot-land},
+  #{$t-hop-1-apex},
+  #{$t-hop-1-land},
+  #{$t-hop-2-apex},
+  #{$t-hop-2-land},
+  #{$t-final-pause-start},
+  #{$t-final-pause-end},
+  #{$t-final-prep},
+  #{$t-final-apex},
+  #{$t-final-impact},
+  #{$t-final-settle},
+  #{$t-end} {
+    transform: translate($x-dot-land, 0%);
+  }
+}
+
+// только opacity в зависимости от высоты сердца
+@keyframes shadow-opacity-story {
+  0%,
+  #{$t-hidden-end} {
+    opacity: $shadow-opacity-hidden;
+  }
+
+  #{$t-enter-visible} {
+    opacity: $shadow-opacity-enter;
+  }
+
+  #{$t-first-prep} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-jump-1-apex} {
+    opacity: $shadow-opacity-air;
+  }
+
+  #{$t-jump-1-land} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-jump-2-apex} {
+    opacity: .48;
+  }
+
+  #{$t-jump-2-land} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-jump-3-apex} {
+    opacity: .45;
+  }
+
+  #{$t-jump-3-land} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-jump-4-apex} {
+    opacity: .52;
+  }
+
+  #{$t-jump-4-land} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-dot-pause-start},
+  #{$t-dot-pause-end} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-dot-apex} {
+    opacity: .34;
+  }
+
+  #{$t-dot-land} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-hop-1-apex} {
+    opacity: $shadow-opacity-hop-air;
+  }
+
+  #{$t-hop-1-land} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-hop-2-apex} {
+    opacity: .74;
+  }
+
+  #{$t-hop-2-land} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-final-pause-start},
+  #{$t-final-pause-end} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-final-prep} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-final-apex} {
+    opacity: .28;
+  }
+
+  #{$t-final-impact} {
+    opacity: $shadow-opacity-ground;
+  }
+
+  #{$t-final-settle},
+  #{$t-end} {
+    opacity: $shadow-opacity-ground;
+  }
+}
+
+// отдельная бесконечная opacity-пульсация после story
+@keyframes shadow-float-opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: $shadow-opacity-float-min;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// =====================================================
+// 7) ТОЧКА НАД i
+// =====================================================
 @keyframes dot-opacity {
   0%,
-  52% {
+  #{$t-dot-visible-start} {
     opacity: 1;
   }
 
-  54%,
-  84% {
+  #{$t-dot-pause-end},
+  #{$t-dot-visible-end} {
     opacity: 1;
   }
 
-  90%,
+  #{$t-dot-fade-out},
   100% {
     opacity: 0;
   }
 }
 
-// Деформация точки от ударов
 @keyframes dot-squash {
   0%,
-  59% {
+  #{$t-dot-land} {
     transform: scale(1, 1);
   }
 
-  60% {
-    transform: scale(1.16, 0.84);
+  // сердце приземлилось на точку
+  #{$t-dot-land} {
+    transform: scale(1.16, .84);
   }
 
-  67% {
-    transform: scale(1.1, 0.9);
+  // милые подпрыги
+  #{$t-hop-1-land} {
+    transform: scale(1.08, .92);
   }
 
-  73% {
-    transform: scale(1.05, 0.95);
+  #{$t-hop-2-land} {
+    transform: scale(1.04, .96);
   }
 
-  75.2% {
+  // пауза
+  #{$t-final-pause-start},
+  #{$t-final-pause-end} {
     transform: scale(1, 1);
   }
 
-  77% {
-    transform: scale(1.22, 0.78);
+  // точка "напрягается"
+  #{$t-final-prep} {
+    transform: scale(1.22, .78);
   }
 
-  80.5% {
-    transform: scale(0.9, 1.1);
+  // перед ударом
+  #{$t-final-apex} {
+    transform: scale(.9, 1.1);
   }
 
-  84% {
-    transform: scale(1.34, 0.68);
+  // сильный удар
+  #{$t-final-impact} {
+    transform: scale(1.34, .68);
   }
 
-  87% {
-    transform: scale(0.95, 1.06);
+  // проваливание
+  #{$t-final-settle} {
+    transform: scale(.96, 1.04);
   }
 
-  100% {
-    transform: scale(0.82, 1.22);
+  #{$t-end} {
+    transform: scale(.82, 1.22);
   }
 }
 
-// Проваливание точки вниз за экран
 @keyframes dot-drop {
   0%,
-  83% {
+  #{$t-dot-drop-start} {
     transform: translate(0%, 0%);
   }
 
-  84% {
-    transform: translate(0%, 1.5%);
+  #{$t-dot-drop-nudge} {
+    transform: translate(0%, $dot-drop-nudge-y);
   }
 
-  90% {
-    transform: translate(0%, 74%);
+  #{$t-dot-drop-mid} {
+    transform: translate(0%, $dot-drop-mid-y);
   }
 
-  94%,
-  100% {
-    transform: translate(0%, 114%);
+  #{$t-dot-drop-end} {
+    transform: translate(0%, $dot-drop-end-y);
   }
 }
 
+
 // =====================================================
-// PREFERS REDUCED MOTION
+// 8) REDUCED MOTION
 // =====================================================
 @media (prefers-reduced-motion: reduce) {
   .polaroid-pixar {
@@ -768,7 +1032,6 @@ $seat-y: 0%;
     .heart-squash,
     .heart-shadow-rig,
     .heart-shadow-float,
-    .heart-shadow,
     .i-dot-rig,
     .i-dot {
       animation: none !important;
@@ -776,19 +1039,19 @@ $seat-y: 0%;
 
     .heart-rig {
       opacity: 1;
-      transform: translate(0%, 0%);
+      transform: translate($x-dot-land, $y-dot-land);
     }
 
-    .heart-attitude,
-    .heart-squash,
     .heart-float,
-    .heart-idle {
+    .heart-idle,
+    .heart-attitude,
+    .heart-squash {
       transform: none;
     }
 
     .heart-shadow-rig {
-      opacity: 0.15;
-      transform: translate(0%, 0%);
+      opacity: 1;
+      transform: translate($x-dot-land, 0%);
     }
 
     .i-dot {

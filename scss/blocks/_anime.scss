@@ -916,15 +916,15 @@ $dot-drop-end-y: 118%;
 // отдельная бесконечная opacity-пульсация после story
 @keyframes shadow-float-opacity {
   0% {
-    opacity: 1;
+    opacity: 0.4;
   }
 
   50% {
-    opacity: $shadow-opacity-float-min;
+    opacity: 0.1;
   }
 
   100% {
-    opacity: 1;
+    opacity: 0.4;
   }
 }
 

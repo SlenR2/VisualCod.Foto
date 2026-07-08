@@ -379,7 +379,7 @@ button {
 a:focus-visible,
 button:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid #9e5fc4;
+  outline: 2px solid #881818;
   outline-offset: 4px;
   border-radius: 8px;
 }
@@ -874,7 +874,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9e5fc4;
+  color: #881818;
 }
 .Attention-block__logo svg {
   width: 24px;

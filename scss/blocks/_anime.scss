@@ -20,7 +20,7 @@
 // ---------------------------------
 // Общая длительность
 // ---------------------------------
-$story-duration: 10.2s;     // вся основная сцена до финальной посадки
+$story-duration: 8.2s;     // вся основная сцена до финальной посадки
 $float-duration: 2.3s;     // длительность одного цикла левитации после сцены
 
 // ---------------------------------
@@ -47,19 +47,19 @@ $t-first-prep: 6%;
 
 // прыжки по буквам
 $t-jump-1-apex: 11%;
-$t-jump-1-land: 16%;
+$t-jump-1-land: 14%;
 
 $t-jump-2-apex: 18%;
 $t-jump-2-land: 20%;
 
 $t-jump-3-apex: 22%;
-$t-jump-3-land: 26%;
+$t-jump-3-land: 24%;
 
-$t-jump-4-apex: 30%;
-$t-jump-4-land: 33%;
+$t-jump-4-apex: 26%;
+$t-jump-4-land: 28%;
 
 // пауза перед прыжком на точку
-$t-dot-pause-start: 47.5%;
+$t-dot-pause-start: 37.5%;
 $t-dot-pause-end: 50.5%;
 
 // прыжок на точку
@@ -956,21 +956,24 @@ $dot-drop-end-y: 118%;
 
   // сердце приземлилось на точку
   #{$t-dot-land} {
-    transform: scale(1.16, .84);
+    transform: scale(1.26, .74);
   }
 
   // милые подпрыги
   #{$t-hop-1-land} {
-    transform: scale(1.08, .92);
+    transform: scale(1.18, .82);
   }
 
   #{$t-hop-2-land} {
-    transform: scale(1.04, .96);
+    transform: scale(1.14, .86);
   }
 
   // пауза
   #{$t-final-pause-start},
-  #{$t-final-pause-end} {
+  #{$t-final-pause-end},
+  #{$t-hop-2-apex},
+  #{$t-hop-1-apex},
+  #{$t-dot-apex} {
     transform: scale(1, 1);
   }
 

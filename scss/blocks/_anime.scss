@@ -104,19 +104,19 @@ $x-hidden: -196%;
 $x-enter: -190%;
 
 $x-1-apex: -82%;
-$x-1-land: -70%;
+$x-1-land: -72%;
 
-$x-2-apex: -60%;
-$x-2-land: -49%;
+$x-2-apex: -58%;
+$x-2-land: -50%;
 
 $x-3-apex: -39%;
-$x-3-land: -28%;
+$x-3-land: -29%;
 
-$x-4-apex: -17%;
+$x-4-apex: -18%;
 $x-4-land: -9%;
 
 // перед прыжком на точку
-$x-dot-prep: -7%;
+$x-dot-prep: -9%;
 $x-dot-apex: -1.8%;
 $x-dot-land: 0%;
 
@@ -240,7 +240,6 @@ $dot-drop-end-y: 118%;
 // Корневой блок
 // ---------------------------------
 .polaroid-pixar {
-  width: min(820px, 100%);
   --story-duration: #{$story-duration};
   --float-duration: #{$float-duration};
   --seat-x: #{$seat-x};

@@ -1004,7 +1004,6 @@ h3 {
   }
 }
 .polaroid-pixar {
-  width: min(820px, 100%);
   --story-duration: 10.2s;
   --float-duration: 2.3s;
   --seat-x: -2%;
@@ -1106,28 +1105,28 @@ h3 {
     transform: translate(-82%, -16%);
   }
   16% {
-    transform: translate(-70%, 10%);
+    transform: translate(-72%, 10%);
   }
   18% {
-    transform: translate(-60%, -14.5%);
+    transform: translate(-58%, -14.5%);
   }
   20% {
-    transform: translate(-49%, 9%);
+    transform: translate(-50%, 9%);
   }
   22% {
     transform: translate(-39%, -15.8%);
   }
   26% {
-    transform: translate(-28%, 8%);
+    transform: translate(-29%, 8%);
   }
   30% {
-    transform: translate(-17%, -14%);
+    transform: translate(-18%, -14%);
   }
   33% {
     transform: translate(-9%, 7%);
   }
   47.5%, 50.5% {
-    transform: translate(-7%, 8.8%);
+    transform: translate(-9%, 8.8%);
   }
   55% {
     transform: translate(-1.8%, -17%);
@@ -1345,28 +1344,28 @@ h3 {
     transform: translate(-82%, 0%);
   }
   16% {
-    transform: translate(-70%, 0%);
+    transform: translate(-72%, 0%);
   }
   18% {
-    transform: translate(-60%, 0%);
+    transform: translate(-58%, 0%);
   }
   20% {
-    transform: translate(-49%, 0%);
+    transform: translate(-50%, 0%);
   }
   22% {
     transform: translate(-39%, 0%);
   }
   26% {
-    transform: translate(-28%, 0%);
+    transform: translate(-29%, 0%);
   }
   30% {
-    transform: translate(-17%, 0%);
+    transform: translate(-18%, 0%);
   }
   33% {
     transform: translate(-9%, 0%);
   }
   47.5%, 50.5% {
-    transform: translate(-7%, 0%);
+    transform: translate(-9%, 0%);
   }
   55% {
     transform: translate(-1.8%, 0%);
